@@ -1,16 +1,5 @@
 /* Human-facing publication styling only. */
 
-/* The site has one published document, so the primary navigation only wastes space. */
-.md-sidebar--primary {
-  display: none;
-}
-
-@media screen and (min-width: 60em) {
-  .md-content {
-    margin-left: 0;
-  }
-}
-
 /* Make each case category read as a real section, not as another case heading. */
 a[id^="case-domain-"] + h3 {
   margin-top: 3.2rem;
