@@ -21490,7 +21490,7 @@
 
 
 
-<div style="color: var(--md-default-fg-color--light); font-size: 0.72em; margin-bottom: 0.8rem;">Сгенерировано: 11.09.2026 16:03 GMT+3 · Версия: 360bd1239513</div>
+<div style="color: var(--md-default-fg-color--light); font-size: 0.72em; margin-bottom: 0.8rem;">Сгенерировано: 11.09.2026 16:10 GMT+3 · Версия: 039d62241cc5</div>
 
 <h1 id="-geolog">Правила и бизнес-кейсы системы Geolog<a class="headerlink" href="#-geolog" title="Permanent link">&para;</a></h1>
 <blockquote>
@@ -24467,6 +24467,7 @@
 <p><a id="goal-case-006"></a></p>
 <h4 id="goal-case-006">GOAL-CASE-006. Реализация профинансированной финансовой цели<a class="headerlink" href="#goal-case-006" title="Permanent link">&para;</a></h4>
 <p><strong>Требования:</strong> <a href="#goal-req-003">GOAL-REQ-003</a>, <a href="#goal-req-004">GOAL-REQ-004</a>, <a href="#goal-req-005">GOAL-REQ-005</a>, <a href="#fin-req-014">FIN-REQ-014</a>, <a href="#fin-req-018">FIN-REQ-018</a>, <a href="#fin-req-028">FIN-REQ-028</a></p>
+<p><strong>REQ-GAP:</strong> требуется отдельно закрепить требования к завершению успешно реализованной цели: кто и на каком основании подтверждает достижение результата, а также что происходит с неиспользованным остатком средств после успешной реализации. До этого соответствующие шаги кейса не должны трактоваться как новое самостоятельное бизнес-правило.</p>
 <h5 id="_164">Предусловия<a class="headerlink" href="#_164" title="Permanent link">&para;</a></h5>
 <ul>
 <li>финансовая цель создана на надлежащем основании;</li>
@@ -25017,6 +25018,7 @@
 <p><a id="report-case-002"></a></p>
 <h4 id="report-case-002">REPORT-CASE-002. Удаление файла не уничтожает историю операции<a class="headerlink" href="#report-case-002" title="Permanent link">&para;</a></h4>
 <p><strong>Требования:</strong> <a href="#file-req-001">FILE-REQ-001</a>, <a href="#file-req-002">FILE-REQ-002</a>, <a href="#file-req-003">FILE-REQ-003</a>, <a href="#file-req-004">FILE-REQ-004</a>, <a href="#aud-req-003">AUD-REQ-003</a></p>
+<p><strong>REQ-GAP:</strong> требования пока не определяют, какие роли вправе удалять разные типы файлов, означает ли удаление физическое уничтожение файла или только прекращение доступа к нему и какие сроки хранения применяются. Кейс фиксирует только уже установленный инвариант: удаление файла не должно уничтожать историю связанной бизнес-операции.</p>
 <h5 id="_245">Предусловия<a class="headerlink" href="#_245" title="Permanent link">&para;</a></h5>
 <ul>
 <li>файл связан с существующим бизнес-объектом, например платежом, возмещением, отчётом о работе или исполнением решения.</li>
@@ -25037,6 +25039,7 @@
 <p><a id="season-case-001"></a></p>
 <h4 id="season-case-001">SEASON-CASE-001. Создание сезона и фиксация параметров<a class="headerlink" href="#season-case-001" title="Permanent link">&para;</a></h4>
 <p><strong>Требования:</strong> <a href="#season-req-001">SEASON-REQ-001</a>, <a href="#season-req-002">SEASON-REQ-002</a>, <a href="#season-req-008">SEASON-REQ-008</a>, <a href="#work-req-010">WORK-REQ-010</a>, <a href="#work-req-011">WORK-REQ-011</a></p>
+<p><strong>REQ-GAP:</strong> требуется явно закрепить, кто имеет право создавать сезон и утверждать или изменять его параметры, кроме уже отдельно определённых решений правления по датам периода субботников. До уточнения формулировка участника этого кейса не создаёт новое полномочие.</p>
 <h5 id="_248">Участники<a class="headerlink" href="#_248" title="Permanent link">&para;</a></h5>
 <ul>
 <li>член правления или иное уполномоченное лицо.</li>
