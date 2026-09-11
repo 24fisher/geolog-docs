@@ -1,0 +1,11 @@
+/* Human-facing publication styling only. */
+
+a[id^="case-domain-"] + h3 {
+  margin-top: 2.4rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--md-default-fg-color--lightest);
+}
+
+a[id^="case-domain-"] + h3:first-of-type {
+  margin-top: 1rem;
+}
