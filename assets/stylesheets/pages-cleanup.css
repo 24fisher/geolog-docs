@@ -1,11 +1,34 @@
 /* Human-facing publication styling only. */
 
+/* The site has one published document, so the primary navigation only wastes space. */
+.md-sidebar--primary {
+  display: none;
+}
+
+@media screen and (min-width: 60em) {
+  .md-content {
+    margin-left: 0;
+  }
+}
+
+/* Make each case category read as a real section, not as another case heading. */
 a[id^="case-domain-"] + h3 {
-  margin-top: 2.4rem;
-  padding-top: 1rem;
+  margin-top: 3.2rem;
+  padding: 0.8rem 1rem;
   border-top: 2px solid var(--md-default-fg-color--lightest);
+  border-left: 0.2rem solid var(--md-primary-fg-color);
+  background: var(--md-default-fg-color--lightest);
+  font-size: 1.35rem;
+  font-weight: 700;
 }
 
 a[id^="case-domain-"] + h3:first-of-type {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+}
+
+/* Separate individual cases inside a category. */
+a[id*="-case-"] + h4 {
+  margin-top: 2rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
 }
