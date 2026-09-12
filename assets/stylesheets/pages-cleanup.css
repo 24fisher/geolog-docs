@@ -15,11 +15,12 @@ a[id^="case-domain-"] + h3:first-of-type {
   margin-top: 1.2rem;
 }
 
-/* Separate individual cases inside a category. */
+/* Separate individual cases inside a category and emphasize their human-readable titles. */
 a[id*="-case-"] + h4 {
   margin-top: 2rem;
   padding-top: 0.9rem;
   border-top: 1px solid var(--md-default-fg-color--lightest);
+  font-weight: 700;
 }
 
 /* Technical REQ/CASE identifiers are reference metadata, not the primary title. */
