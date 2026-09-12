@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://24fisher.github.io/geolog-docs/</loc>
-         <lastmod>2026-09-11</lastmod>
+         <lastmod>2026-09-12</lastmod>
     </url>
     <url>
          <loc>https://24fisher.github.io/geolog-docs/ui/</loc>
-         <lastmod>2026-09-11</lastmod>
+         <lastmod>2026-09-12</lastmod>
     </url>
     <url>
          <loc>https://24fisher.github.io/geolog-docs/ui/board-dashboard/</loc>
-         <lastmod>2026-09-11</lastmod>
+         <lastmod>2026-09-12</lastmod>
+    </url>
+    <url>
+         <loc>https://24fisher.github.io/geolog-docs/ui/member-initiative/</loc>
+         <lastmod>2026-09-12</lastmod>
     </url>
 </urlset>
