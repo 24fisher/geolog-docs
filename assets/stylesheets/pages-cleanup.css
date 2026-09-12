@@ -21,3 +21,34 @@ a[id*="-case-"] + h4 {
   padding-top: 0.9rem;
   border-top: 1px solid var(--md-default-fg-color--lightest);
 }
+
+/* Implementation state is always shown as text + color, never color alone. */
+.implementation-status {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.08rem 0.42rem;
+  border-radius: 999px;
+  font-size: 0.68em;
+  font-weight: 700;
+  line-height: 1.45;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.implementation-status--not_implemented {
+  background: #6b7280;
+}
+
+.implementation-status--partial {
+  background: #b45309;
+}
+
+.implementation-status--implemented {
+  background: #15803d;
+}
+
+.md-nav__link .implementation-status,
+.md-nav__title .implementation-status {
+  font-size: 0.62rem;
+}
