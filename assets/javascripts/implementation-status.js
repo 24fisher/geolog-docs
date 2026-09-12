@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     partial: "Частично",
     implemented: "Реализовано",
   };
+  const specLabels = {
+    draft: "Черновик",
+    needs_clarification: "Требует уточнения",
+    ready: "Проработан",
+  };
 
   const makeBadge = (item) => {
     const badge = document.createElement("span");
@@ -20,9 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
     return badge;
   };
 
+  const makeSpecBadge = (item) => {
+    const badge = document.createElement("span");
+    badge.className = `spec-status spec-status--${item.spec_status}`;
+    badge.textContent = specLabels[item.spec_status] || item.spec_status;
+    if (item.spec_note) badge.title = item.spec_note;
+    return badge;
+  };
+
   const appendOnce = (element, item) => {
-    if (!element || !item || element.querySelector(":scope > .implementation-status")) return;
-    element.append(" ", makeBadge(item));
+    if (!element || !item) return;
+    if (item.spec_status && !element.querySelector(":scope > .spec-status")) {
+      element.append(" ", makeSpecBadge(item));
+    }
+    if (!element.querySelector(":scope > .implementation-status")) {
+      element.append(" ", makeBadge(item));
+    }
   };
 
   const caseByHref = (href) => {
@@ -79,7 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".md-sidebar--primary .md-nav__title").forEach((title) => {
     if (title.textContent.trim() === "Интерфейсы") {
-      appendOnce(title, { status: data.aggregate.interfaces });
+      appendOnce(title, {
+        status: data.aggregate.interfaces,
+        spec_status: data.aggregate.interface_specs,
+      });
     }
   });
 });

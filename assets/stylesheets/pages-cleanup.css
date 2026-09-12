@@ -33,7 +33,8 @@ a[id*="-case-"] + h4 {
 }
 
 /* Implementation state is always shown as text + color, never color alone. */
-.implementation-status {
+.implementation-status,
+.spec-status {
   display: inline-block;
   margin-left: 0.35rem;
   padding: 0.08rem 0.42rem;
@@ -58,7 +59,22 @@ a[id*="-case-"] + h4 {
   background: #15803d;
 }
 
+/* UI specification readiness is independent from implementation state. */
+.spec-status--draft {
+  background: #6b7280;
+}
+
+.spec-status--needs_clarification {
+  background: #b45309;
+}
+
+.spec-status--ready {
+  background: #15803d;
+}
+
 .md-nav__link .implementation-status,
-.md-nav__title .implementation-status {
+.md-nav__title .implementation-status,
+.md-nav__link .spec-status,
+.md-nav__title .spec-status {
   font-size: 0.62rem;
 }
