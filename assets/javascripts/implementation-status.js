@@ -89,7 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const url = new URL(href, window.location.href);
       const path = url.pathname.replace(/^.*\/geolog-docs\//, "").replace(/^\//, "").replace(/\/$/, "");
-      if (path === "cases") appendOnce(link, { status: data.aggregate.cases });
+      if (path === "cases") {
+        appendOnce(link, {
+          status: data.aggregate.cases,
+          spec_status: data.aggregate.case_specs,
+        });
+      }
     } catch {
       // Ignore malformed navigation links.
     }
