@@ -22,6 +22,16 @@ a[id*="-case-"] + h4 {
   border-top: 1px solid var(--md-default-fg-color--lightest);
 }
 
+/* Technical REQ/CASE identifiers are reference metadata, not the primary title. */
+.technical-id {
+  margin-top: -0.45rem;
+  margin-bottom: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
 /* Implementation state is always shown as text + color, never color alone. */
 .implementation-status {
   display: inline-block;
