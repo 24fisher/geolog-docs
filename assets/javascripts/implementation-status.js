@@ -33,14 +33,21 @@ const renderImplementationStatus = () => {
     return badge;
   };
 
+  const makeStatusPair = (item) => {
+    const pair = document.createElement("span");
+    pair.className = "status-pair";
+    if (item.spec_status) pair.append(makeSpecBadge(item));
+    pair.append(makeBadge(item));
+    return pair;
+  };
+
   const appendOnce = (element, item) => {
     if (!element || !item) return;
-    if (item.spec_status && !element.querySelector(":scope > .spec-status")) {
-      element.append(" ", makeSpecBadge(item));
-    }
-    if (!element.querySelector(":scope > .implementation-status")) {
-      element.append(" ", makeBadge(item));
-    }
+    if (element.querySelector(":scope > .status-pair")) return;
+
+    // Clean up badges created by an older version of the script before grouping them.
+    element.querySelectorAll(":scope > .spec-status, :scope > .implementation-status").forEach((badge) => badge.remove());
+    element.append(" ", makeStatusPair(item));
   };
 
   const caseByHref = (href) => {
