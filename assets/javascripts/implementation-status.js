@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+const renderImplementationStatus = () => {
   const data = window.GEOLOG_IMPLEMENTATION_STATUS;
   if (!data) return;
 
@@ -101,11 +101,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelectorAll(".md-sidebar--primary .md-nav__title").forEach((title) => {
-    if (title.textContent.trim() === "Интерфейсы") {
+    if (title.textContent.trim().startsWith("Интерфейсы")) {
       appendOnce(title, {
         status: data.aggregate.interfaces,
         spec_status: data.aggregate.interface_specs,
       });
     }
   });
-});
+};
+
+if (typeof document$ !== "undefined" && document$ && typeof document$.subscribe === "function") {
+  document$.subscribe(renderImplementationStatus);
+} else if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", renderImplementationStatus);
+} else {
+  renderImplementationStatus();
+}
