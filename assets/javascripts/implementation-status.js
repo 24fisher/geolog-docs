@@ -45,7 +45,6 @@ const renderImplementationStatus = () => {
     if (!element || !item) return;
     if (element.querySelector(":scope > .status-pair")) return;
 
-    // Clean up badges created by an older version of the script before grouping them.
     element.querySelectorAll(":scope > .spec-status, :scope > .implementation-status").forEach((badge) => badge.remove());
     element.append(" ", makeStatusPair(item));
   };
@@ -74,10 +73,20 @@ const renderImplementationStatus = () => {
     appendOnce(link, caseByHref(link.getAttribute("href")) || interfaceByHref(link.getAttribute("href")));
   });
 
+  // Case details in the document body. Support both the raw anchor layout and the
+  // cleaned layout where pages-cleanup.js moves CASE-ID into a .technical-id line.
   document.querySelectorAll('a[id*="-case-"]').forEach((anchor) => {
     const id = anchor.id.toUpperCase();
     const heading = anchor.nextElementSibling;
     if (heading && /^H[1-6]$/.test(heading.tagName)) appendOnce(heading, data.cases[id]);
+  });
+
+  document.querySelectorAll(".md-content .technical-id").forEach((idLine) => {
+    const id = idLine.textContent.trim().toUpperCase();
+    const item = data.cases[id];
+    if (!item) return;
+    const heading = idLine.previousElementSibling;
+    if (heading && /^H[1-6]$/.test(heading.tagName)) appendOnce(heading, item);
   });
 
   const currentPath = window.location.pathname.replace(/^.*\/geolog-docs\//, "").replace(/^\//, "");
