@@ -33,15 +33,16 @@ a[id*="-case-"] + h4 {
   line-height: 1.4;
 }
 
-/* Keep specification and implementation badges as one atomic inline group.
-   If the pair does not fit after the title, the whole pair moves to the next line. */
+/* Treat specification + implementation badges as one indivisible inline object.
+   The browser may wrap before the pair, but never between the two badges. */
 .status-pair {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
+  display: inline-block;
   margin-left: 0.35rem;
   vertical-align: middle;
   white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  break-inside: avoid;
 }
 
 /* Implementation state is always shown as text + color, never color alone. */
@@ -57,6 +58,10 @@ a[id*="-case-"] + h4 {
   vertical-align: middle;
   white-space: nowrap;
   color: #fff;
+}
+
+.status-pair > .implementation-status {
+  margin-left: 0.35rem;
 }
 
 .implementation-status--not_implemented {
