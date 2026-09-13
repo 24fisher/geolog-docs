@@ -69,6 +69,10 @@ const renderImplementationStatus = () => {
     }
   };
 
+  // Statuses belong to page content and the page TOC, not to the primary/mobile navigation.
+  // Remove any badges left there by an older script version so SPA navigation cannot preserve them.
+  document.querySelectorAll(".md-sidebar--primary .status-pair, .md-sidebar--primary .spec-status, .md-sidebar--primary .implementation-status").forEach((badge) => badge.remove());
+
   document.querySelectorAll(".md-content a[href], .md-sidebar--secondary a[href]").forEach((link) => {
     appendOnce(link, caseByHref(link.getAttribute("href")) || interfaceByHref(link.getAttribute("href")));
   });
@@ -92,36 +96,6 @@ const renderImplementationStatus = () => {
     (item) => currentPath === item.href || currentPath === item.href.replace(/\/$/, "")
   );
   if (currentInterface) appendOnce(document.querySelector(".md-content h1"), currentInterface);
-
-  document.querySelectorAll(".md-sidebar--primary .md-nav__link[href]").forEach((link) => {
-    const href = link.getAttribute("href") || "";
-    const item = caseByHref(href) || interfaceByHref(href);
-    if (item) {
-      appendOnce(link, item);
-      return;
-    }
-    try {
-      const url = new URL(href, window.location.href);
-      const path = url.pathname.replace(/^.*\/geolog-docs\//, "").replace(/^\//, "").replace(/\/$/, "");
-      if (path === "cases") {
-        appendOnce(link, {
-          status: data.aggregate.cases,
-          spec_status: data.aggregate.case_specs,
-        });
-      }
-    } catch {
-      // Ignore malformed navigation links.
-    }
-  });
-
-  document.querySelectorAll(".md-sidebar--primary .md-nav__title").forEach((title) => {
-    if (title.textContent.trim().startsWith("Интерфейсы")) {
-      appendOnce(title, {
-        status: data.aggregate.interfaces,
-        spec_status: data.aggregate.interface_specs,
-      });
-    }
-  });
 };
 
 let statusObserver = null;
