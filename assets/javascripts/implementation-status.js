@@ -73,8 +73,6 @@ const renderImplementationStatus = () => {
     appendOnce(link, caseByHref(link.getAttribute("href")) || interfaceByHref(link.getAttribute("href")));
   });
 
-  // Case details in the document body. Support both the raw anchor layout and the
-  // cleaned layout where pages-cleanup.js moves CASE-ID into a .technical-id line.
   document.querySelectorAll('a[id*="-case-"]').forEach((anchor) => {
     const id = anchor.id.toUpperCase();
     const heading = anchor.nextElementSibling;
@@ -126,10 +124,36 @@ const renderImplementationStatus = () => {
   });
 };
 
-if (typeof document$ !== "undefined" && document$ && typeof document$.subscribe === "function") {
-  document$.subscribe(renderImplementationStatus);
-} else if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", renderImplementationStatus);
-} else {
+let statusObserver = null;
+let statusRenderQueued = false;
+
+const queueStatusRender = () => {
+  if (statusRenderQueued) return;
+  statusRenderQueued = true;
+  queueMicrotask(() => {
+    statusRenderQueued = false;
+    renderImplementationStatus();
+  });
+};
+
+const observeStatusTargets = () => {
+  if (statusObserver) statusObserver.disconnect();
+  const target = document.querySelector(".md-content") || document.body;
+  if (!target) return;
+  statusObserver = new MutationObserver(queueStatusRender);
+  statusObserver.observe(target, { childList: true, subtree: true });
+};
+
+const refreshImplementationStatus = () => {
   renderImplementationStatus();
+  observeStatusTargets();
+  queueStatusRender();
+};
+
+if (typeof document$ !== "undefined" && document$ && typeof document$.subscribe === "function") {
+  document$.subscribe(refreshImplementationStatus);
+} else if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", refreshImplementationStatus);
+} else {
+  refreshImplementationStatus();
 }
