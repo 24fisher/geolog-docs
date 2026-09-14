@@ -1,0 +1,1525 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Правила, бизнес-кейсы и интерфейсы системы Geolog">
+      
+      
+      
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rules/09-finance/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Финансы - Документация системы Geolog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/pages-cleanup.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация системы Geolog" class="md-header__button md-logo" aria-label="Документация системы Geolog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация системы Geolog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Финансы
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация системы Geolog" class="md-nav__button md-logo" aria-label="Документация системы Geolog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Документация системы Geolog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Правила системы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бизнес-кейсы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Интерфейсы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Интерфейсы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О разделе
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-cabinet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Личный кабинет «Мой клуб»
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-contributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Взносы участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отработки участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-appeals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обращения участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-voting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Голосования участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/documents-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документы и решения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/club-finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Финансы клуба
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/asset-register/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реестр имущества клуба
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/member-initiative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Инициатива участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/duty-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель дежурного
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/brigadier-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель бригадиров
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/board-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель правления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/finance-bulk-entry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель бухгалтера
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Общие правила
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Общие правила">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-001. Сезонный членский взнос
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-002. Расчёт состояния расчётов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-003" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-003. Перенос задолженности и переплаты
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-004" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-004. Влияние задолженности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-005" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-005. Корректировки бухгалтером
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Платежи
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Платежи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-006" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-006. Регистрация прихода
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-007" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-007. Массовый бухгалтерский ввод финансовых операций
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-028" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-028. Регистрация фактического клубного расхода
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Компенсация отработок
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Компенсация отработок">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-008" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-008. Шаг и предел компенсации
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-009" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-009. Компенсация закрывает норму
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-010. Работа после компенсации
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Финансовые вопросы и полномочия
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Финансовые вопросы и полномочия">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-011. Финансовый вопрос
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-012" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-012. Предел самостоятельных решений правления
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-013" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-013. Резерв средств
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-014" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-014. Решение о выделении средств
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-024. Запрет обхода финансового лимита дроблением
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-025. Несоответствие фактического расхода решению
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-027" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-027. Последствия отклонения финансового проекта клубом
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-034" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-034. Тип предполагаемой траты
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-035" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-035. Допустимые способы финансирования по типу траты
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-036" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-036. Фиксация и оспаривание типа траты
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-037" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-037. Постоянная эксплуатационная потребность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-038" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-038. Исполнение постоянной эксплуатационной статьи
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-039" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-039. Прямая оплата клубной потребности участниками
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Личные расходы и возмещения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Личные расходы и возмещения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-015" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-015. Заявка на возмещение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-016" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-016. Рассмотрение возмещения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-017. Мелкая личная покупка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-020. Бухгалтерский лимит личной покупки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-021. Покупка в пределах бухгалтерского лимита
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-022" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-022. Покупка выше бухгалтерского лимита
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-023. Покупка выше лимита без согласования
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Баланс и прозрачность
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Баланс и прозрачность">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-018. Финансовый баланс
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-019" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-019. Финансовая история участника
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fin-req-026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIN-REQ-026. Реестр финансовых решений
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Финансы<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="_2">Общие правила<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<hr />
+<p><a id="fin-req-001"></a></p>
+<h4 id="fin-req-001">FIN-REQ-001. Сезонный членский взнос<a class="headerlink" href="#fin-req-001" title="Permanent link">&para;</a></h4>
+<p>Размер членского взноса задаётся для сезона. Взнос может быть оплачен одним платежом или частями.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-002"></a></p>
+<h4 id="fin-req-002">FIN-REQ-002. Расчёт состояния расчётов<a class="headerlink" href="#fin-req-002" title="Permanent link">&para;</a></h4>
+<p>Система рассчитывает по участнику начисленную сумму, оплаченную сумму, задолженность и переплату.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-003"></a></p>
+<h4 id="fin-req-003">FIN-REQ-003. Перенос задолженности и переплаты<a class="headerlink" href="#fin-req-003" title="Permanent link">&para;</a></h4>
+<p>Задолженность и переплата переносятся между сезонами. Поздняя оплата разрешена.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-004"></a></p>
+<h4 id="fin-req-004">FIN-REQ-004. Влияние задолженности<a class="headerlink" href="#fin-req-004" title="Permanent link">&para;</a></h4>
+<p>Наличие задолженности блокирует только те операции и виды доступа, для которых отсутствие задолженности прямо установлено соответствующим клубным правилом. Сам факт долга не создаёт произвольного общего запрета на работу с системой.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-005"></a></p>
+<h4 id="fin-req-005">FIN-REQ-005. Корректировки бухгалтером<a class="headerlink" href="#fin-req-005" title="Permanent link">&para;</a></h4>
+<p>Бухгалтер может выполнять финансовые корректировки. Исправление не уничтожает исходную запись. Сохраняются старое и новое значения, автор, дата и время, а также причина корректировки.</p>
+<h3 id="_3">Платежи<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-006"></a></p>
+<h4 id="fin-req-006">FIN-REQ-006. Регистрация прихода<a class="headerlink" href="#fin-req-006" title="Permanent link">&para;</a></h4>
+<p>Бухгалтер регистрирует поступление денежных средств участника. Для перевода требуется подтверждающий документ. Для наличного платежа подтверждающий документ не обязателен.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-007"></a></p>
+<h4 id="fin-req-007">FIN-REQ-007. Массовый бухгалтерский ввод финансовых операций<a class="headerlink" href="#fin-req-007" title="Permanent link">&para;</a></h4>
+<p>Бухгалтеру предоставляется единый табличный интерфейс массового ввода финансовых операций. В одной пачке могут регистрироваться членские взносы, денежные компенсации субботников и клубные расходы.</p>
+<p>Для строки прихода бухгалтер указывает тип операции, участника, сумму, способ оплаты, дату и комментарий. Для каждой строки с оплатой переводом бухгалтер сразу прикладывает отдельный подтверждающий документ к этой строке. Для строки с наличным платежом подтверждающий документ не обязателен.</p>
+<p>Для строки клубного расхода бухгалтер указывает тип операции, категорию расхода, сумму, дату, подтверждающий документ, комментарий и решение-основание, когда такое основание требуется действующими финансовыми правилами. Отдельное обязательное поле контрагента в MVP не используется.</p>
+<p>Перед сохранением система показывает количество строк, итоговые суммы, ошибки и проблемные строки. Бухгалтер исправляет ошибки при необходимости и нажимает кнопку «Сохранить». После сохранения фиксируются пачка ввода и отдельные финансовые операции по каждой строке. Строка перевода без приложенного подтверждающего документа не может быть сохранена как проведённая операция.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-028"></a></p>
+<h4 id="fin-req-028">FIN-REQ-028. Регистрация фактического клубного расхода<a class="headerlink" href="#fin-req-028" title="Permanent link">&para;</a></h4>
+<p>Бухгалтер регистрирует фактически совершённый клубный расход как финансовую операцию с указанием категории, суммы, даты, подтверждающего документа и комментария. Если действующие правила требуют решения-основания, расход связывается с ним.</p>
+<p>Регистрация бухгалтером факта расхода не является самостоятельным решением о расходовании средств и не заменяет требуемое решение правления или общеклубное решение.</p>
+<p>Если расход фактически совершён, отсутствие требуемого решения-основания не должно препятствовать фиксации факта движения денег. Такая операция сохраняется с явной отметкой об отсутствии основания и подлежит последующему рассмотрению. Если указанное основание не соответствует фактической цели или категории расхода, применяются правила фиксации несоответствия расхода решению.</p>
+<h3 id="_4">Компенсация отработок<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-008"></a></p>
+<h4 id="fin-req-008">FIN-REQ-008. Шаг и предел компенсации<a class="headerlink" href="#fin-req-008" title="Permanent link">&para;</a></h4>
+<p>Компенсация неотработанных дней учитывается с применённым для сезона шагом зачёта <code>WorkCreditStepDays</code> по <a href="../10-work/#work-req-010">WORK-REQ-010</a>; начальное значение — 0,5 дня. Компенсацию можно вносить частями. Компенсировать больше текущего незакрытого остатка сезонной нормы нельзя. Денежная компенсация закрывает обязательство по норме, но не считается фактически выполненной отработкой.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-009"></a></p>
+<h4 id="fin-req-009">FIN-REQ-009. Компенсация закрывает норму<a class="headerlink" href="#fin-req-009" title="Permanent link">&para;</a></h4>
+<p>Оплаченная компенсация закрывает соответствующую часть сезонной нормы отработок.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-010"></a></p>
+<h4 id="fin-req-010">FIN-REQ-010. Работа после компенсации<a class="headerlink" href="#fin-req-010" title="Permanent link">&para;</a></h4>
+<p>Если участник сначала компенсировал часть нормы деньгами, а затем выполнил работу, последующая подтверждённая работа учитывается как переработка. Переработка сохраняется в истории, но не переносится на следующий сезон.</p>
+<h3 id="_5">Финансовые вопросы и полномочия<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-011"></a></p>
+<h4 id="fin-req-011">FIN-REQ-011. Финансовый вопрос<a class="headerlink" href="#fin-req-011" title="Permanent link">&para;</a></h4>
+<p>Финансовым считается вопрос, решение по которому непосредственно создаёт, изменяет или прекращает денежное обязательство клуба либо определяет назначение клубных средств.</p>
+<p>К финансовым вопросам относятся в том числе выделение средств на проект или цель, утверждение расхода, создание финансового обязательства, возмещение, создание, изменение или отмена резерва и изменение назначения зарезервированных средств.</p>
+<p>Регистрация уже совершённого платежа и исправление бухгалтерской ошибки сами по себе не являются новым управленческим финансовым решением.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-012"></a></p>
+<h4 id="fin-req-012">FIN-REQ-012. Предел самостоятельных решений правления<a class="headerlink" href="#fin-req-012" title="Permanent link">&para;</a></h4>
+<p>Финансовый предел самостоятельных решений правления определяется действующей версией финансовой настройки по <a href="../09a-financial-settings/#fin-req-029">FIN-REQ-029</a>–<a href="../09a-financial-settings/#fin-req-033">FIN-REQ-033</a>. Начальное значение — 50 000 рублей включительно.</p>
+<p>Расход в пределах действующего лимита может быть утверждён правлением, если он относится к разрешённой хозяйственной категории, не затрагивает резерв, не противоречит действующим решениям клуба и не является частью искусственно раздробленного более крупного проекта.</p>
+<p>Расход из иной категории, не входящей в разрешённые хозяйственные категории правления, направляется на общеклубное голосование независимо от того, что сумма находится в пределах действующего лимита.</p>
+<p>Расход сверх действующего лимита требует общеклубного голосования.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-013"></a></p>
+<h4 id="fin-req-013">FIN-REQ-013. Резерв средств<a class="headerlink" href="#fin-req-013" title="Permanent link">&para;</a></h4>
+<p>Создание резерва любого размера, изменение его целевой суммы, назначения или правила наполнения, а также отмена резерва требуют стратегического общеклубного голосования.</p>
+<p>Средства действующего резерва не считаются свободными для иных целей. Использование резерва не по назначению допускается только на основании соответствующего нового стратегического решения.</p>
+<p>Пополнение резерва по уже утверждённому правилу является исполнением действующего решения и нового голосования не требует. Для резерва сохраняются целевая и текущая суммы, состояние наполнения и решение-основание. При достижении целевой суммы состояние автоматически меняется на «Наполнен»; до этого резерв имеет состояние «Не наполнен».</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-014"></a></p>
+<h4 id="fin-req-014">FIN-REQ-014. Решение о выделении средств<a class="headerlink" href="#fin-req-014" title="Permanent link">&para;</a></h4>
+<p>Разрешение расхода средств клуба оформляется самостоятельным решением о выделении средств с указанием цели, предельной суммы и основания. Фактические расходы должны быть связаны с соответствующим решением, если такое решение требуется правилами.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-024"></a></p>
+<h4 id="fin-req-024">FIN-REQ-024. Запрет обхода финансового лимита дроблением<a class="headerlink" href="#fin-req-024" title="Permanent link">&para;</a></h4>
+<p>Единый хозяйственный или проектный вопрос нельзя искусственно разделять на несколько решений или расходов для обхода финансового предела полномочий. Связанные решения и расходы должны сохранять связь, позволяющую рассматривать их как единый вопрос при контроле и аудите.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-025"></a></p>
+<h4 id="fin-req-025">FIN-REQ-025. Несоответствие фактического расхода решению<a class="headerlink" href="#fin-req-025" title="Permanent link">&para;</a></h4>
+<p>Если фактический расход не соответствует цели или категории принятого решения, исходное решение не изменяется задним числом и не легализует расход на другую цель. Несоответствие фиксируется отдельно и может стать основанием обращения участника. Проверка несоответствия и её итог сохраняются в истории.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-027"></a></p>
+<h4 id="fin-req-027">FIN-REQ-027. Последствия отклонения финансового проекта клубом<a class="headerlink" href="#fin-req-027" title="Permanent link">&para;</a></h4>
+<p>Если общеклубное голосование отклонило финансовый проект, решение о выделении средств не создаётся. В течение текущего сезона правление не может реализовать тот же или существенно эквивалентный проект собственными решениями, в том числе путём дробления расходов. Существенно изменённое предложение может быть вынесено на новое общеклубное голосование.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-034"></a></p>
+<h4 id="fin-req-034">FIN-REQ-034. Тип предполагаемой траты<a class="headerlink" href="#fin-req-034" title="Permanent link">&para;</a></h4>
+<p>Для финансовой инициативы или иного предложения, которое предполагает расходование средств клуба либо выбор источника финансирования, обязательно указывается тип предполагаемой траты из фиксированного классификатора:</p>
+<ul>
+<li>постоянная эксплуатационная потребность;</li>
+<li>разовая необходимая эксплуатационная трата;</li>
+<li>развитие или улучшение инфраструктуры;</li>
+<li>мероприятие или дополнительная активность;</li>
+<li>стратегический проект.</li>
+</ul>
+<p>В пользовательском интерфейсе тип выбирается из закрытого списка. Произвольное значение «Иное» не используется. Если предложение не может быть однозначно отнесено ни к одному типу, оно не публикуется как финансовое до уточнения классификации или нормативного расширения классификатора.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-035"></a></p>
+<h4 id="fin-req-035">FIN-REQ-035. Допустимые способы финансирования по типу траты<a class="headerlink" href="#fin-req-035" title="Permanent link">&para;</a></h4>
+<p>Допустимые способы финансирования определяются типом предполагаемой траты:</p>
+<ul>
+<li>постоянная эксплуатационная потребность финансируется из средств клуба в рамках утверждённой эксплуатационной статьи; добровольное финансирование не может использоваться вместо финансирования клуба;</li>
+<li>разовая необходимая эксплуатационная трата финансируется из средств клуба; личная оплата участником может учитываться только по правилам личного расхода и возмещения и не считается заменой клубного финансирования добровольным сбором;</li>
+<li>развитие или улучшение инфраструктуры может финансироваться из средств клуба, добровольных целевых взносов либо смешанно;</li>
+<li>мероприятие или дополнительная активность может финансироваться из средств клуба, добровольных целевых взносов либо смешанно;</li>
+<li>стратегический проект может финансироваться из средств клуба, добровольных целевых взносов либо смешанно только в рамках решения необходимой стратегической компетенции.</li>
+</ul>
+<p>Система не предлагает способ финансирования, запрещённый для выбранного типа траты.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-036"></a></p>
+<h4 id="fin-req-036">FIN-REQ-036. Фиксация и оспаривание типа траты<a class="headerlink" href="#fin-req-036" title="Permanent link">&para;</a></h4>
+<p>Автор финансовой инициативы или предложения выбирает тип предполагаемой траты до публикации. После публикации исходный тип сохраняется в истории и не может быть незаметно заменён правлением или другим участником процесса.</p>
+<p>Правление вправе в заключении мотивированно оспорить предложенную классификацию и предложить другой тип, но не вправе единолично изменить её таким образом, чтобы прекратить дальнейшую процедуру либо открыть недопустимый способ финансирования.</p>
+<p>Если от классификации зависит допустимый источник финансирования и стороны не согласны с типом, окончательный тип фиксируется как часть решения органа, компетентного принять решение по самой финансовой инициативе.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-037"></a></p>
+<h4 id="fin-req-037">FIN-REQ-037. Постоянная эксплуатационная потребность<a class="headerlink" href="#fin-req-037" title="Permanent link">&para;</a></h4>
+<p>Постоянной эксплуатационной потребностью является повторяющаяся потребность, признанная общеклубным решением необходимой для нормальной эксплуатации инфраструктуры или функционирования клуба.</p>
+<p>После такого признания потребность сохраняет этот статус в последующих сезонах до отдельного общеклубного решения об отмене или изменении статуса. Она должна включаться в операционное финансовое планирование каждого сезона отдельной статьёй. На очередной сезон могут изменяться плановая сумма, ожидаемая частота и иные параметры исполнения, но сама статья не может быть просто исключена без решения об отмене её постоянного статуса.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-038"></a></p>
+<h4 id="fin-req-038">FIN-REQ-038. Исполнение постоянной эксплуатационной статьи<a class="headerlink" href="#fin-req-038" title="Permanent link">&para;</a></h4>
+<p>После утверждения сезонной суммы по постоянной эксплуатационной потребности отдельные фактические расходы в пределах статьи являются исполнением ранее принятого решения и не требуют нового общеклубного голосования только по факту каждого повторения услуги или работы.</p>
+<p>Правление вправе организовывать исполнение статьи в пределах утверждённых условий, выбирать конкретного исполнителя и фактический момент выполнения, если решение не устанавливает иное. Правление не вправе заменять утверждённое клубное финансирование предложением участникам оплатить такую потребность добровольно.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-039"></a></p>
+<h4 id="fin-req-039">FIN-REQ-039. Прямая оплата клубной потребности участниками<a class="headerlink" href="#fin-req-039" title="Permanent link">&para;</a></h4>
+<p>Если участники фактически оплатили клубную потребность напрямую собственными средствами, система должна позволять зафиксировать такой факт отдельно от расходов денежных средств клуба с указанием назначения, суммы, даты, участников-плательщиков при их известности и связи с соответствующей потребностью или инициативой.</p>
+<p>Такая фиксация не создаёт автоматически задолженность клуба перед участниками. Право на возмещение возникает только из предварительного согласования, принятого решения о возмещении или другого надлежащего основания. Факт прямого финансирования участниками сохраняется для прозрачности и последующего финансового планирования.</p>
+<h3 id="_6">Личные расходы и возмещения<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-015"></a></p>
+<h4 id="fin-req-015">FIN-REQ-015. Заявка на возмещение<a class="headerlink" href="#fin-req-015" title="Permanent link">&para;</a></h4>
+<p>Участник может подать заявку на возмещение личных расходов на нужды клуба. Заявка содержит сумму, категорию, описание, дату, подтверждающий документ и основание при его наличии.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-016"></a></p>
+<h4 id="fin-req-016">FIN-REQ-016. Рассмотрение возмещения<a class="headerlink" href="#fin-req-016" title="Permanent link">&para;</a></h4>
+<p>Бухгалтер проверяет заявку и проводит выплату в пределах принятого решения или установленной компетенции. При отказе причина обязательна.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-017"></a></p>
+<h4 id="fin-req-017">FIN-REQ-017. Мелкая личная покупка<a class="headerlink" href="#fin-req-017" title="Permanent link">&para;</a></h4>
+<p>Для мелкой покупки обычного участника хозяйственную необходимость подтверждает бригадир в пределах установленной для этого процесса компетенции. Финансовое проведение и возмещение остаются функцией бухгалтерии.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-020"></a></p>
+<h4 id="fin-req-020">FIN-REQ-020. Бухгалтерский лимит личной покупки<a class="headerlink" href="#fin-req-020" title="Permanent link">&para;</a></h4>
+<p>Личная покупка для нужд клуба без предварительного согласования бухгалтером допускается в пределах действующей версии бухгалтерского лимита по <a href="../09a-financial-settings/#fin-req-029">FIN-REQ-029</a>–<a href="../09a-financial-settings/#fin-req-033">FIN-REQ-033</a>. Начальное значение — 5 000 рублей включительно. Текущее значение лимита отображается в личном кабинете, а история его версий сохраняется.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-021"></a></p>
+<h4 id="fin-req-021">FIN-REQ-021. Покупка в пределах бухгалтерского лимита<a class="headerlink" href="#fin-req-021" title="Permanent link">&para;</a></h4>
+<p>Обычный участник при покупке в пределах бухгалтерского лимита после покупки подаёт отчёт и чек. Хозяйственную необходимость подтверждает бригадир, после чего бухгалтер выполняет финансовую проверку и возмещение.</p>
+<p>Если покупку в пределах бухгалтерского лимита совершил бригадир для работ своей бригады, дополнительное подтверждение другим бригадиром не требуется; отчёт и чек направляются бухгалтеру.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-022"></a></p>
+<h4 id="fin-req-022">FIN-REQ-022. Покупка выше бухгалтерского лимита<a class="headerlink" href="#fin-req-022" title="Permanent link">&para;</a></h4>
+<p>Для личной покупки выше бухгалтерского лимита участник до совершения покупки получает предварительное согласование бухгалтером. После покупки применяется обычная процедура отчёта, проверки и возмещения.</p>
+<p>Предварительное согласование бухгалтером является бухгалтерской процедурой и не заменяет решение о выделении клубных средств, когда такое решение требуется другими финансовыми правилами.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-023"></a></p>
+<h4 id="fin-req-023">FIN-REQ-023. Покупка выше лимита без согласования<a class="headerlink" href="#fin-req-023" title="Permanent link">&para;</a></h4>
+<p>Если покупка выше бухгалтерского лимита совершена без предварительного согласования, система принимает отчёт, явно отмечает нарушение порядка и передаёт его бухгалтеру на рассмотрение. Факт превышения без согласования и итог рассмотрения сохраняются в истории.</p>
+<h3 id="_7">Баланс и прозрачность<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-018"></a></p>
+<h4 id="fin-req-018">FIN-REQ-018. Финансовый баланс<a class="headerlink" href="#fin-req-018" title="Permanent link">&para;</a></h4>
+<p>Система рассчитывает фактический баланс клуба на основании поступлений и подтверждённых расходов и отдельно показывает зарезервированные средства и свободный остаток.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-019"></a></p>
+<h4 id="fin-req-019">FIN-REQ-019. Финансовая история участника<a class="headerlink" href="#fin-req-019" title="Permanent link">&para;</a></h4>
+<p>В карточке участника по сезонам доступны его начисления, платежи, компенсации, задолженность и переплата в пределах установленных прав доступа.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="fin-req-026"></a></p>
+<h4 id="fin-req-026">FIN-REQ-026. Реестр финансовых решений<a class="headerlink" href="#fin-req-026" title="Permanent link">&para;</a></h4>
+<p>Члену клуба должен быть доступен финансовый реестр в пределах установленных прав доступа. Для финансового решения отображаются само решение, орган принятия, категория, выделенная сумма, фактические расходы, остаток, ответственный и связанные подтверждающие документы. Из карточки решения должны быть доступны переходы к его основанию, связанному голосованию и связанным обращениям.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/pages-cleanup.js"></script>
+      
+        <script src="../../assets/javascripts/implementation-status-data.js"></script>
+      
+        <script src="../../assets/javascripts/implementation-status.js"></script>
+      
+    
+  </body>
+</html>

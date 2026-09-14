@@ -1,0 +1,1309 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Правила, бизнес-кейсы и интерфейсы системы Geolog">
+      
+      
+      
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rules/08-voting/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Электронные голосования - Документация системы Geolog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/pages-cleanup.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация системы Geolog" class="md-header__button md-logo" aria-label="Документация системы Geolog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация системы Geolog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Электронные голосования
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация системы Geolog" class="md-nav__button md-logo" aria-label="Документация системы Geolog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Документация системы Geolog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Правила системы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бизнес-кейсы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Интерфейсы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Интерфейсы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О разделе
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-cabinet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Личный кабинет «Мой клуб»
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-contributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Взносы участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отработки участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-appeals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обращения участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-voting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Голосования участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/documents-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документы и решения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/club-finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Финансы клуба
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/asset-register/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реестр имущества клуба
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/member-initiative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Инициатива участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/duty-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель дежурного
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/brigadier-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель бригадиров
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/board-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель правления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/finance-bulk-entry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель бухгалтера
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-001. Электронное голосование как управляемая функция
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-002. Типы голосований
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-003" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-003. Создание голосования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-004" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-004. Неизменность начатого голосования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-005" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-005. Право голоса
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-006" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-006. Один голос
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-007" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-007. Фиксация факта участия
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-008" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-008. Тайна выбора
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-009" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-009. Открытое голосование
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-010. Результаты до окончания
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-011. Завершение голосования
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-012" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-012. Досрочное прекращение
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-013" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-013. Результат как основание решения
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-014" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-014. История голосований
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-015" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-015. Уведомления
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vote-req-016" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-016. Журналирование административных действий
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Общеклубное голосование
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Общеклубное голосование">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-017. Снимок состава голосующих
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-018. Кворум общеклубного голосования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-019" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-019. Определение результата при наличии кворума
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-020. Отсутствие кворума
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-021. Повторное голосование после отсутствия кворума
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Голосование правления
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Голосование правления">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-022" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-022. Снимок состава правления
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-023. Варианты голоса правления
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-024. Самоотвод
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-025. Принятие решения правлением
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-026. Персональные голоса правления
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vote-req-027" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VOTE-REQ-027. Создание и запуск голосования правления
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Электронные голосования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<hr />
+<p><a id="vote-req-001"></a></p>
+<h4 id="vote-req-001">VOTE-REQ-001. Электронное голосование как управляемая функция<a class="headerlink" href="#vote-req-001" title="Permanent link">&para;</a></h4>
+<p>Система должна поддерживать электронные голосования. Возможность проведения электронных голосований должна включаться и отключаться уполномоченной ролью как единая настройка системы.</p>
+<p>При отключённых электронных голосованиях электронные процедуры голосования в системе не запускаются. Правление продолжает принимать решения по действующему внеэлектронному порядку. Принятое вне системы решение при необходимости регистрируется в системе с указанием основания. Обращения и инициативы продолжают существовать и могут быть обработаны по действующему внеэлектронному порядку.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-002"></a></p>
+<h4 id="vote-req-002">VOTE-REQ-002. Типы голосований<a class="headerlink" href="#vote-req-002" title="Permanent link">&para;</a></h4>
+<p>Должны различаться голосования правления и общеклубные голосования. Правила допуска к голосованию определяются типом голосования и действующими бизнес-правилами.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-003"></a></p>
+<h4 id="vote-req-003">VOTE-REQ-003. Создание голосования<a class="headerlink" href="#vote-req-003" title="Permanent link">&para;</a></h4>
+<p>При создании голосования фиксируются инициатор, формулировка вопроса, варианты ответа, круг голосующих, дата и время начала, дата и время окончания и правила определения результата.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-004"></a></p>
+<h4 id="vote-req-004">VOTE-REQ-004. Неизменность начатого голосования<a class="headerlink" href="#vote-req-004" title="Permanent link">&para;</a></h4>
+<p>После начала голосования нельзя незаметно изменять вопрос, варианты ответа, круг голосующих или правила определения результата. Если требуется исправление существенных параметров, исходное голосование прекращается с указанием причины и создаётся новое.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-005"></a></p>
+<h4 id="vote-req-005">VOTE-REQ-005. Право голоса<a class="headerlink" href="#vote-req-005" title="Permanent link">&para;</a></h4>
+<p>Система определяет право конкретного участника голосовать на основании его статуса, ролей и типа голосования на момент голосования.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-006"></a></p>
+<h4 id="vote-req-006">VOTE-REQ-006. Один голос<a class="headerlink" href="#vote-req-006" title="Permanent link">&para;</a></h4>
+<p>Один участник, имеющий право голоса, может подать не более одного действующего голоса в рамках одного голосования, если правила конкретного типа голосования явно не предусматривают иного.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-007"></a></p>
+<h4 id="vote-req-007">VOTE-REQ-007. Фиксация факта участия<a class="headerlink" href="#vote-req-007" title="Permanent link">&para;</a></h4>
+<p>Система должна достоверно фиксировать факт участия пользователя в голосовании и исключать повторное голосование.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-008"></a></p>
+<h4 id="vote-req-008">VOTE-REQ-008. Тайна выбора<a class="headerlink" href="#vote-req-008" title="Permanent link">&para;</a></h4>
+<p>Если голосование объявлено тайным, интерфейсы системы и обычный административный доступ не должны раскрывать, какой вариант выбрал конкретный голосовавший. При этом система должна сохранять возможность доказать корректность подсчёта и отсутствие повторного голосования техническими средствами.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-009"></a></p>
+<h4 id="vote-req-009">VOTE-REQ-009. Открытое голосование<a class="headerlink" href="#vote-req-009" title="Permanent link">&para;</a></h4>
+<p>Для открытого голосования результат конкретного участника может отображаться в соответствии с правилами видимости данного голосования.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-010"></a></p>
+<h4 id="vote-req-010">VOTE-REQ-010. Результаты до окончания<a class="headerlink" href="#vote-req-010" title="Permanent link">&para;</a></h4>
+<p>Правило видимости промежуточных результатов задаётся при создании голосования. По умолчанию итоговые результаты публикуются после завершения голосования.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-011"></a></p>
+<h4 id="vote-req-011">VOTE-REQ-011. Завершение голосования<a class="headerlink" href="#vote-req-011" title="Permanent link">&para;</a></h4>
+<p>По достижении времени окончания система прекращает приём голосов и фиксирует итоговый результат.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-012"></a></p>
+<h4 id="vote-req-012">VOTE-REQ-012. Досрочное прекращение<a class="headerlink" href="#vote-req-012" title="Permanent link">&para;</a></h4>
+<p>Уполномоченная роль может досрочно прекратить голосование только с обязательным указанием причины. Такое голосование сохраняется в истории и не удаляется.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-013"></a></p>
+<h4 id="vote-req-013">VOTE-REQ-013. Результат как основание решения<a class="headerlink" href="#vote-req-013" title="Permanent link">&para;</a></h4>
+<p>Результат голосования может являться основанием решения правления или общеклубного решения. Связь результата с созданным решением должна сохраняться.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-014"></a></p>
+<h4 id="vote-req-014">VOTE-REQ-014. История голосований<a class="headerlink" href="#vote-req-014" title="Permanent link">&para;</a></h4>
+<p>Завершённые и прекращённые голосования сохраняются в истории вместе с исходной формулировкой, параметрами, итогами и причиной прекращения, если она была.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-015"></a></p>
+<h4 id="vote-req-015">VOTE-REQ-015. Уведомления<a class="headerlink" href="#vote-req-015" title="Permanent link">&para;</a></h4>
+<p>Участники, имеющие право голоса, должны получать предусмотренные системой уведомления о начале голосования и, при необходимости, о приближении срока окончания. После завершения должен быть доступен итог в соответствии с уровнем видимости.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-016"></a></p>
+<h4 id="vote-req-016">VOTE-REQ-016. Журналирование административных действий<a class="headerlink" href="#vote-req-016" title="Permanent link">&para;</a></h4>
+<p>Создание, запуск, досрочное прекращение, изменение глобальной настройки электронных голосований и публикация результата должны фиксироваться в журнале действий.</p>
+<h3 id="_2">Общеклубное голосование<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-017"></a></p>
+<h4 id="vote-req-017">VOTE-REQ-017. Снимок состава голосующих<a class="headerlink" href="#vote-req-017" title="Permanent link">&para;</a></h4>
+<p>При запуске общеклубного голосования фиксируется снимок членов клуба с правом голоса. Этот снимок используется для определения кворума данного голосования и не изменяется задним числом при последующем изменении состава клуба.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-018"></a></p>
+<h4 id="vote-req-018">VOTE-REQ-018. Кворум общеклубного голосования<a class="headerlink" href="#vote-req-018" title="Permanent link">&para;</a></h4>
+<p>Кворум общеклубного голосования составляет более половины членов клуба с правом голоса из снимка состава. Необходимое количество участников рассчитывается как минимальное целое число, превышающее половину снимка. При 103 имеющих право голоса кворум составляет 52 участника.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-019"></a></p>
+<h4 id="vote-req-019">VOTE-REQ-019. Определение результата при наличии кворума<a class="headerlink" href="#vote-req-019" title="Permanent link">&para;</a></h4>
+<p>Если кворум достигнут, предложение считается принятым, когда голосов «За» больше, чем голосов «Против», если для конкретного типа решения отдельным действующим правилом не установлен иной порядок. Голоса «Воздержался» учитываются в числе принявших участие для кворума, но не добавляются к голосам «За» или «Против».</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-020"></a></p>
+<h4 id="vote-req-020">VOTE-REQ-020. Отсутствие кворума<a class="headerlink" href="#vote-req-020" title="Permanent link">&para;</a></h4>
+<p>Если кворум не достигнут, решение не считается принятым независимо от соотношения голосов среди проголосовавших.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-021"></a></p>
+<h4 id="vote-req-021">VOTE-REQ-021. Повторное голосование после отсутствия кворума<a class="headerlink" href="#vote-req-021" title="Permanent link">&para;</a></h4>
+<p>После первого общеклубного голосования, не состоявшегося из-за отсутствия кворума, повторная попытка проводится после задержки, определённой системной настройкой <code>GeneralVoteRetryDelayDays</code>; начальное значение — 7 календарных дней. Повторное голосование проводится по той же формулировке с новым снимком состава имеющих право голоса. Если кворум повторно не достигнут, процедура завершается без решения.</p>
+<p>Количество повторных попыток остаётся структурным правилом процедуры и не является настройкой: допускается одна повторная попытка.</p>
+<h3 id="_3">Голосование правления<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-022"></a></p>
+<h4 id="vote-req-022">VOTE-REQ-022. Снимок состава правления<a class="headerlink" href="#vote-req-022" title="Permanent link">&para;</a></h4>
+<p>При запуске голосования правления фиксируется состав членов правления, имеющих право участвовать в конкретном голосовании.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-023"></a></p>
+<h4 id="vote-req-023">VOTE-REQ-023. Варианты голоса правления<a class="headerlink" href="#vote-req-023" title="Permanent link">&para;</a></h4>
+<p>В голосовании правления используются варианты «За», «Против» и «Воздержался».</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-024"></a></p>
+<h4 id="vote-req-024">VOTE-REQ-024. Самоотвод<a class="headerlink" href="#vote-req-024" title="Permanent link">&para;</a></h4>
+<p>Самоотвод члена правления исключает его из состава, используемого для определения результата конкретного голосования. Факт самоотвода сохраняется.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-025"></a></p>
+<h4 id="vote-req-025">VOTE-REQ-025. Принятие решения правлением<a class="headerlink" href="#vote-req-025" title="Permanent link">&para;</a></h4>
+<p>Решение правления считается принятым, если голосов «За» больше половины состава членов правления, имеющих право участвовать в конкретном голосовании с учётом самоотводов.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-026"></a></p>
+<h4 id="vote-req-026">VOTE-REQ-026. Персональные голоса правления<a class="headerlink" href="#vote-req-026" title="Permanent link">&para;</a></h4>
+<p>Персональные голоса членов правления в голосовании правления сохраняются. При успешном голосовании результат является основанием для автоматического формирования решения правления.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="vote-req-027"></a></p>
+<h4 id="vote-req-027">VOTE-REQ-027. Создание и запуск голосования правления<a class="headerlink" href="#vote-req-027" title="Permanent link">&para;</a></h4>
+<p>Любой действующий член правления может создать и запустить голосование правления по вопросу, относящемуся к компетенции правления, если электронные голосования включены. Председатель правления не имеет исключительного права на создание или запуск такого голосования.</p>
+<p>После запуска голосование становится доступно всем действующим членам правления, имеющим право участвовать в конкретном голосовании. Право участия и состав голосующих фиксируются по правилам <a href="./#vote-req-005">VOTE-REQ-005</a> и <a href="./#vote-req-022">VOTE-REQ-022</a>.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/pages-cleanup.js"></script>
+      
+        <script src="../../assets/javascripts/implementation-status-data.js"></script>
+      
+        <script src="../../assets/javascripts/implementation-status.js"></script>
+      
+    
+  </body>
+</html>

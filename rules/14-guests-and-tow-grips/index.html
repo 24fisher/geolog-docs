@@ -1,0 +1,1222 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Правила, бизнес-кейсы и интерфейсы системы Geolog">
+      
+      
+      
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rules/14-guests-and-tow-grips/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Гости и бугели - Документация системы Geolog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/pages-cleanup.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация системы Geolog" class="md-header__button md-logo" aria-label="Документация системы Geolog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация системы Geolog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Гости и бугели
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация системы Geolog" class="md-nav__button md-logo" aria-label="Документация системы Geolog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Документация системы Geolog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Правила системы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бизнес-кейсы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Интерфейсы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Интерфейсы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О разделе
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-cabinet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Личный кабинет «Мой клуб»
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-contributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Взносы участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отработки участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-appeals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обращения участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-voting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Голосования участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/documents-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документы и решения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/club-finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Финансы клуба
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/asset-register/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реестр имущества клуба
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/member-initiative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Инициатива участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/duty-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель дежурного
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/brigadier-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель бригадиров
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/board-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель правления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/finance-bulk-entry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель бухгалтера
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Гости
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Гости">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-001. Право приглашать гостей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-002. Лимит гостей на дату
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-003" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-003. Одно состоявшееся посещение гостя в сезоне
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-004" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-004. Создание приглашения без подтверждения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-005" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-005. Потребность в гостевых бугелях
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-006" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-006. Предупреждение о большом количестве гостей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-007" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-007. Информация для дежурного
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-008" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-008. Фактическая выдача и возврат гостевого бугеля
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-009" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-009. Ответственность за невозвращённый гостевой бугель
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-010. Замена невозвращённого бугеля через месяц
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-011. Самостоятельное принятие полномочий дежурного
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-012" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-012. Экстренная последующая регистрация бумажной операции
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-013" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-013. Инструктаж гостя по технике безопасности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-014" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-014. Журнал инструктажей гостей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest-req-015" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GUEST-REQ-015. Жизненный цикл гостевого приглашения
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Заказы на бугели
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Заказы на бугели">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tow-req-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOW-REQ-001. Самостоятельный заказ бугеля
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tow-req-002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOW-REQ-002. Данные заказа
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tow-req-003" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOW-REQ-003. Общее полномочие изготовителей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tow-req-004" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOW-REQ-004. Общая очередь изготовления
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tow-req-005" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOW-REQ-005. Состояние заказа в личном кабинете
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Гости и бугели<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="_2">Гости<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<hr />
+<p><a id="guest-req-001"></a></p>
+<h4 id="guest-req-001">GUEST-REQ-001. Право приглашать гостей<a class="headerlink" href="#guest-req-001" title="Permanent link">&para;</a></h4>
+<p>Приглашать гостей может только действующий член клуба. Кандидат не может создавать гостевые приглашения.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-002"></a></p>
+<h4 id="guest-req-002">GUEST-REQ-002. Лимит гостей на дату<a class="headerlink" href="#guest-req-002" title="Permanent link">&para;</a></h4>
+<p>Один действующий член клуба может пригласить не более двух гостей на одну дату. Исключений из этого лимита в системе нет.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-003"></a></p>
+<h4 id="guest-req-003">GUEST-REQ-003. Одно состоявшееся посещение гостя в сезоне<a class="headerlink" href="#guest-req-003" title="Permanent link">&para;</a></h4>
+<p>Один и тот же гость может фактически посетить клуб как гость не более одного раза за сезон независимо от того, какой член клуба его приглашает. Исключений из этого ограничения в системе нет.</p>
+<p>Для этой проверки гость идентифицируется по ФИО. При сравнении ФИО система игнорирует регистр и лишние пробелы. При создании приглашения система блокирует новое приглашение, если для того же нормализованного ФИО в текущем сезоне уже есть состоявшееся посещение или другое активное приглашение. Отменённое приглашение и приглашение со статусом «Не состоялось» не расходуют право гостя на одно посещение в сезоне.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-004"></a></p>
+<h4 id="guest-req-004">GUEST-REQ-004. Создание приглашения без подтверждения<a class="headerlink" href="#guest-req-004" title="Permanent link">&para;</a></h4>
+<p>Гостевое приглашение не требует предварительного подтверждения дежурным, правлением или иным пользователем. Приглашающий указывает дату посещения и ФИО каждого гостя.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-005"></a></p>
+<h4 id="guest-req-005">GUEST-REQ-005. Потребность в гостевых бугелях<a class="headerlink" href="#guest-req-005" title="Permanent link">&para;</a></h4>
+<p>При создании приглашения приглашающий указывает, нужны ли гостям гостевые бугели и сколько бугелей требуется.</p>
+<p>Гостевые бугели распределяются по очередности создания приглашений. Более раннее приглашение имеет приоритет перед более поздним в пределах доступного количества гостевых бугелей на выбранную дату.</p>
+<p>Если с учётом ранее созданных приглашений гостевых бугелей может не хватить, система не запрещает создать приглашение, но явно предупреждает приглашающего о возможном дефиците.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-006"></a></p>
+<h4 id="guest-req-006">GUEST-REQ-006. Предупреждение о большом количестве гостей<a class="headerlink" href="#guest-req-006" title="Permanent link">&para;</a></h4>
+<p>При создании приглашения система показывает предупреждение, если на выбранную дату уже ожидается большое количество гостей. Такое предупреждение носит информационный характер и само по себе не запрещает приглашение.</p>
+<p>Порог, начиная с которого количество гостей считается большим, является настраиваемым параметром клуба и не должен быть зашит константой в прикладную логику.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-007"></a></p>
+<h4 id="guest-req-007">GUEST-REQ-007. Информация для дежурного<a class="headerlink" href="#guest-req-007" title="Permanent link">&para;</a></h4>
+<p>Дежурному в личном кабинете или рабочей панели доступен список ожидаемых на дату гостей: ФИО гостей, пригласивший член клуба и количество запрошенных гостевых бугелей.</p>
+<p>Панель также показывает доступное количество гостевых бугелей, общее количество запрошенных бугелей и приглашения, для которых доступного количества может не хватить с учётом очередности.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-008"></a></p>
+<h4 id="guest-req-008">GUEST-REQ-008. Фактическая выдача и возврат гостевого бугеля<a class="headerlink" href="#guest-req-008" title="Permanent link">&para;</a></h4>
+<p>Дежурный фиксирует фактическую выдачу гостевого бугеля в журнале. Запись связывается с гостем и приглашением и хранит количество выданных бугелей, дату и время и пользователя, зарегистрировавшего выдачу.</p>
+<p>При возврате дежурный фиксирует фактический возврат. История выдачи и возврата сохраняется.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-009"></a></p>
+<h4 id="guest-req-009">GUEST-REQ-009. Ответственность за невозвращённый гостевой бугель<a class="headerlink" href="#guest-req-009" title="Permanent link">&para;</a></h4>
+<p>Если выданный гостю бугель не возвращён, обязательство по его возврату возникает у действующего члена клуба, который пригласил гостя. Обязательство отображается в блоке «Требует действий» пригласившего.</p>
+<p>Первоначально требуемое действие — вернуть выданный гостевой бугель.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-010"></a></p>
+<h4 id="guest-req-010">GUEST-REQ-010. Замена невозвращённого бугеля через месяц<a class="headerlink" href="#guest-req-010" title="Permanent link">&para;</a></h4>
+<p>Если гостевой бугель не возвращён в течение одного месяца с момента зафиксированного невозврата, обязательство меняется: пригласивший должен за свой счёт заказать изготовление нового бугеля у клуба.</p>
+<p>Это не является автоматическим штрафом или денежной задолженностью. До истечения месяца сохраняется обязанность вернуть исходный бугель.</p>
+<p>Заказ, созданный для исполнения этого обязательства, связывается с ним. Сам факт создания или изготовления заказа не закрывает обязательство. Оно закрывается только после фактической передачи изготовленного нового бугеля клубу.</p>
+<p>Для замены допустим любой доступный вариант бугеля, в том числе бугель с символикой клуба.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-011"></a></p>
+<h4 id="guest-req-011">GUEST-REQ-011. Самостоятельное принятие полномочий дежурного<a class="headerlink" href="#guest-req-011" title="Permanent link">&para;</a></h4>
+<p>Любой действующий член клуба, имеющий действующий допуск к катанию, может самостоятельно без предварительного подтверждения принять на себя временные полномочия дежурного и открыть общий рабочий интерфейс дежурных.</p>
+<p>Одновременно полномочия дежурного могут иметь несколько участников. Подмена не требует передачи владения сменой или подтверждения другим пользователем: участник с действующим допуском сам принимает временные полномочия и после завершения дежурства сам прекращает их.</p>
+<p>Самостоятельное принятие полномочий не создаёт постоянную роль «Дежурный». Система сохраняет время начала и завершения такого временного полномочия и конкретного пользователя, выполнившего каждое действие в рабочем интерфейсе.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-012"></a></p>
+<h4 id="guest-req-012">GUEST-REQ-012. Экстренная последующая регистрация бумажной операции<a class="headerlink" href="#guest-req-012" title="Permanent link">&para;</a></h4>
+<p>Если во время дежурства электронный интерфейс невозможно использовать, например из-за разряженного телефона или иной технической недоступности, дежурный может временно зафиксировать на бумаге факт проведения инструктажа гостя по технике безопасности, фактическую выдачу или возврат гостевого бугеля и затем внести эту операцию в систему.</p>
+<p>При последующей регистрации система должна отличать время фактического события от времени внесения записи и сохранять пользователя, который внёс данные. Запись помечается как внесённая постфактум по экстренной бумажной фиксации и не должна выглядеть как операция, зарегистрированная в системе в момент фактического инструктажа, выдачи или возврата.</p>
+<p>Если такая постфактум внесённая запись содержит фактическую активность гостя с датой и временем, относящимися к дате его приглашения, она учитывается как подтверждение фактического посещения даже тогда, когда к моменту ввода приглашение уже было автоматически переведено в состояние «Не состоялось».</p>
+<p>Такой режим является резервным способом восстановить фактический журнал после технического сбоя и не отменяет обычную работу через общий интерфейс дежурных.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-013"></a></p>
+<h4 id="guest-req-013">GUEST-REQ-013. Инструктаж гостя по технике безопасности<a class="headerlink" href="#guest-req-013" title="Permanent link">&para;</a></h4>
+<p>Каждый гость до начала катания проходит инструктаж по технике безопасности независимо от того, требуется ли ему гостевой бугель. Дежурный проводит инструктаж и фиксирует его факт в системе.</p>
+<p>Запись об инструктаже хранит ФИО гостя, дату и время инструктажа, пригласившего члена клуба и пользователя, который фактически провёл и зарегистрировал инструктаж.</p>
+<p>Если отметки о проведённом инструктаже нет, гость не считается прошедшим обязательный инструктаж. Если гостю требуется гостевой бугель, система дополнительно не позволяет зарегистрировать его выдачу до фиксации проведённого инструктажа.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-014"></a></p>
+<h4 id="guest-req-014">GUEST-REQ-014. Журнал инструктажей гостей<a class="headerlink" href="#guest-req-014" title="Permanent link">&para;</a></h4>
+<p>Система ведёт журнал проведённых инструктажей всех гостей независимо от выдачи гостевого бугеля и сохраняет историю записей.</p>
+<p>Обязательная электронная подпись гостя в MVP не требуется. Если действующий порядок клуба требует параллельной записи или подписи в бумажном журнале техники безопасности, система фиксирует факт проведения инструктажа и не заменяет собой обязательную бумажную подпись.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="guest-req-015"></a></p>
+<h4 id="guest-req-015">GUEST-REQ-015. Жизненный цикл гостевого приглашения<a class="headerlink" href="#guest-req-015" title="Permanent link">&para;</a></h4>
+<p>До даты посещения пригласивший может отменить активное приглашение. Отмена не удаляет запись: система сохраняет приглашение, состояние «Отменено», автора и время отмены. Отменённое приглашение перестаёт участвовать в расчёте ожидаемых гостей и распределении гостевых бугелей.</p>
+<p>Дата активного приглашения не редактируется. Для переноса посещения пригласивший отменяет исходное приглашение и создаёт новое на требуемую дату по обычным правилам. История исходного приглашения сохраняется.</p>
+<p>После окончания даты посещения активное приглашение автоматически получает состояние «Не состоялось», если по гостю не зарегистрировано фактической активности, подтверждающей посещение, включая проведённый инструктаж или операцию с гостевым бугелем. Если такая активность зарегистрирована, посещение считается состоявшимся.</p>
+<p>Если после автоматического перехода в «Не состоялось» по правилам <a href="./#guest-req-012">GUEST-REQ-012</a> позднее вносится допустимая фактическая активность гостя, время которой относится к дате этого приглашения, система автоматически исправляет результат приглашения на состоявшееся посещение. История автоматического перехода в «Не состоялось» сохраняется, как и автор и время постфактум внесённой записи.</p>
+<p>После такого исправления посещение учитывается как фактически состоявшееся и расходует сезонное право гостя по <a href="./#guest-req-003">GUEST-REQ-003</a>.</p>
+<p>Отменённое приглашение и приглашение, которое остаётся в состоянии «Не состоялось», не считаются фактическим посещением и не расходуют сезонное право гостя, установленное <a href="./#guest-req-003">GUEST-REQ-003</a>.</p>
+<h3 id="_3">Заказы на бугели<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="tow-req-001"></a></p>
+<h4 id="tow-req-001">TOW-REQ-001. Самостоятельный заказ бугеля<a class="headerlink" href="#tow-req-001" title="Permanent link">&para;</a></h4>
+<p>Действующий член клуба может из личного кабинета создать заказ на изготовление бугеля у клуба по собственной инициативе, независимо от наличия обязательства по гостевому бугелю.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="tow-req-002"></a></p>
+<h4 id="tow-req-002">TOW-REQ-002. Данные заказа<a class="headerlink" href="#tow-req-002" title="Permanent link">&para;</a></h4>
+<p>В заказе указываются как минимум количество и вариант изготовления. Система поддерживает обычный бугель и бугель с символикой клуба.</p>
+<p>Если заказ создаётся для замены невозвращённого гостевого бугеля, он дополнительно связывается с соответствующим обязательством.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="tow-req-003"></a></p>
+<h4 id="tow-req-003">TOW-REQ-003. Общее полномочие изготовителей<a class="headerlink" href="#tow-req-003" title="Permanent link">&para;</a></h4>
+<p>В системе существует бизнес-полномочие на изготовление бугелей. Оно может быть предоставлено одному или нескольким пользователям.</p>
+<p>Заказ не назначается конкретному изготовителю. Все пользователи с этим полномочием работают с общей очередью заказов. Система сохраняет автора каждого фактического изменения состояния для истории и аудита.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="tow-req-004"></a></p>
+<h4 id="tow-req-004">TOW-REQ-004. Общая очередь изготовления<a class="headerlink" href="#tow-req-004" title="Permanent link">&para;</a></h4>
+<p>Пользователям с полномочием изготовления доступен рабочий раздел «Заказы на бугели» с общей очередью. Очередь должна позволять различать как минимум новые заказы, заказы в работе, изготовленные и переданные/закрытые заказы.</p>
+<p>В очереди видны заказчик, количество, вариант, дата заказа и связь с обязательством по гостевому бугелю при её наличии.</p>
+<p>На существующей рабочей панели пользователя с полномочием изготовления может отображаться краткий виджет с количеством новых и находящихся в работе заказов; отдельная роль и отдельный полноценный дашборд изготовителя не требуются.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="tow-req-005"></a></p>
+<h4 id="tow-req-005">TOW-REQ-005. Состояние заказа в личном кабинете<a class="headerlink" href="#tow-req-005" title="Permanent link">&para;</a></h4>
+<p>Участник видит свои активные заказы на бугели и их состояние в личном кабинете. Для заказа должны различаться как минимум состояния «Создан», «В работе», «Изготовлен» и «Передан».</p>
+<p>Если заказ связан с обязательством по невозвращённому гостевому бугелю, эта связь явно показывается участнику. Состояние «Изготовлен» само по себе не закрывает такое обязательство; закрытие происходит только после фактической передачи нового бугеля клубу.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/pages-cleanup.js"></script>
+      
+        <script src="../../assets/javascripts/implementation-status-data.js"></script>
+      
+        <script src="../../assets/javascripts/implementation-status.js"></script>
+      
+    
+  </body>
+</html>

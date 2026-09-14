@@ -1,0 +1,1697 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Правила, бизнес-кейсы и интерфейсы системы Geolog">
+      
+      
+      
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rules/10-work/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Субботники и учёт отработок - Документация системы Geolog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/pages-cleanup.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация системы Geolog" class="md-header__button md-logo" aria-label="Документация системы Geolog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация системы Geolog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Субботники и учёт отработок
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация системы Geolog" class="md-nav__button md-logo" aria-label="Документация системы Geolog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Документация системы Geolog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Правила системы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бизнес-кейсы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Интерфейсы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Интерфейсы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    О разделе
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-cabinet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Личный кабинет «Мой клуб»
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-contributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Взносы участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отработки участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-appeals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обращения участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/participant-voting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Голосования участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/documents-decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документы и решения
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/club-finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Финансы клуба
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/asset-register/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реестр имущества клуба
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/member-initiative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Инициатива участника
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/duty-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель дежурного
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/brigadier-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель бригадиров
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/board-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель правления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/finance-bulk-entry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Панель бухгалтера
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Субботники
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Субботники">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#work-req-001" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-001. Субботник как событие работ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-002" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-002. Групповой субботник
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-003" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-003. Индивидуальный отчёт
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-004" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-004. Подача отчёта задним числом
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-005" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-005. Проверка отчёта
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-006" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-006. Исправление отчёта
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Зоны, места и бригадиры
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Зоны, места и бригадиры">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#work-req-007" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-007. Назначение бригадира
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-008" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-008. Границы полномочий бригадира
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-009" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-009. Собственная работа бригадира
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Табель и сезонная норма
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Табель и сезонная норма">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#work-req-010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-010. Минимальная единица учёта
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-011. Основная норма
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-012" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-012. Верхнее ограничение фактической работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-013" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-013. Итог сезонного табеля
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-014" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-014. Недоработка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-015" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-015. Переработка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-016" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-016. Разделение факта работы и табеля
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        История и контроль
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="История и контроль">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#work-req-017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-017. История зачёта
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-018. Индивидуальные исключения
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-019" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-019. Регистрация группового субботника
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-020. Групповой зачёт иной деятельности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-021. Зачёт телефонных контактов информационной кампании
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-022" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-022. Перевод зачётных телефонных контактов в дни отработки
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Закрепление участников за бригадирами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Закрепление участников за бригадирами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#work-req-023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-023. Организационное закрепление за бригадиром
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-024. Управление составом бригад
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-025. Состав бригады для бригадира
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-026. Закрепление не ограничивает фактическую работу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-027" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-027. Зачёт работы другим бригадиром
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Планирование и координация работ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Планирование и координация работ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#work-req-042" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-042. Сезонный план работ по территории
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-029" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-029. Рабочий день и ответственный
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-030" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-030. План присутствия бригадира
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-031" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-031. План приезда участника
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-032" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-032. Взаимная видимость планов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-033" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-033. Планирование не является фактом работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-034" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-034. Сверка фактических участников после рабочего дня
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-035" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-035. Результат рабочего дня
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-036" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-036. Общая координационная картина для бригадиров
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-037" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-037. Проблемы на территории
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-038" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-038. Доверенная запись другого участника на работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-039" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-039. План приезда, созданный доверенным участником
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-040" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-040. Состояние рабочего дня
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-041" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-041. Решение о проведении и отмене рабочего дня
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-043" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-043. Заметка о местонахождении мелкого инструмента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-044" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-044. Кто может обновить местонахождение инструмента
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-req-045" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORK-REQ-045. Показ последнего известного места инструмента перед работами
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Субботники и учёт отработок<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="_2">Субботники<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<hr />
+<p><a id="work-req-001"></a></p>
+<h4 id="work-req-001">WORK-REQ-001. Субботник как событие работ<a class="headerlink" href="#work-req-001" title="Permanent link">&para;</a></h4>
+<p>Субботник является фактическим событием выполненных работ. Карточка субботника не смешивается с финансовыми компенсациями и итоговым сезонным табелем.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-002"></a></p>
+<h4 id="work-req-002">WORK-REQ-002. Групповой субботник<a class="headerlink" href="#work-req-002" title="Permanent link">&para;</a></h4>
+<p>Групповой субботник хранит дату, зону и место или объект, описание работ, список участников, фотографии при наличии, заявленный и индивидуально зачтённый объём работы каждого участника.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-003"></a></p>
+<h4 id="work-req-003">WORK-REQ-003. Индивидуальный отчёт<a class="headerlink" href="#work-req-003" title="Permanent link">&para;</a></h4>
+<p>Участник может подать отчёт о самостоятельно выполненной работе. Отчёт содержит фактическую дату, зону, место или объект, вид или описание работы и заявленный объём.</p>
+<p>Фото допускаются, но не являются обязательным условием подачи отчёта.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-004"></a></p>
+<h4 id="work-req-004">WORK-REQ-004. Подача отчёта задним числом<a class="headerlink" href="#work-req-004" title="Permanent link">&para;</a></h4>
+<p>Индивидуальный отчёт может быть подан после фактической даты выполнения работы, пока соответствующий период отработок не закрыт.</p>
+<p>После закрытия периода новые отработки задним числом за закрытый период не принимаются.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-005"></a></p>
+<h4 id="work-req-005">WORK-REQ-005. Проверка отчёта<a class="headerlink" href="#work-req-005" title="Permanent link">&para;</a></h4>
+<p>Бригадир в пределах назначенной зоны или места подтверждает или отклоняет отчёт и определяет фактически зачтённый объём работы. При отклонении причина обязательна.</p>
+<p>Заявленный участником объём и зачтённый бригадиром объём являются разными значениями и сохраняются в истории.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-006"></a></p>
+<h4 id="work-req-006">WORK-REQ-006. Исправление отчёта<a class="headerlink" href="#work-req-006" title="Permanent link">&para;</a></h4>
+<p>Исправление и повторная отправка отчёта не уничтожают предыдущую версию. История изменений, проверок, зачётов и причин отклонения сохраняется.</p>
+<h3 id="_3">Зоны, места и бригадиры<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-007"></a></p>
+<h4 id="work-req-007">WORK-REQ-007. Назначение бригадира<a class="headerlink" href="#work-req-007" title="Permanent link">&para;</a></h4>
+<p>Бригадир назначается на зону либо на конкретное место или объект внутри зоны. В одной зоне может быть несколько бригадиров.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-008"></a></p>
+<h4 id="work-req-008">WORK-REQ-008. Границы полномочий бригадира<a class="headerlink" href="#work-req-008" title="Permanent link">&para;</a></h4>
+<p>Бригадир зоны может проверять работы внутри назначенной зоны. Бригадир конкретного места или объекта может проверять работы только в пределах своего назначения.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-009"></a></p>
+<h4 id="work-req-009">WORK-REQ-009. Собственная работа бригадира<a class="headerlink" href="#work-req-009" title="Permanent link">&para;</a></h4>
+<p>Бригадир может подтверждать собственную работу в пределах своего назначения. Факт такого подтверждения должен быть явно виден в журнале действий.</p>
+<h3 id="_4">Табель и сезонная норма<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-010"></a></p>
+<h4 id="work-req-010">WORK-REQ-010. Минимальная единица учёта<a class="headerlink" href="#work-req-010" title="Permanent link">&para;</a></h4>
+<p>Минимальная единица зачёта отработки является сезонным параметром <code>WorkCreditStepDays</code>. Начальное значение — 0,5 дня. Применённое значение фиксируется для сезона и используется для проверки операций зачёта этого сезона.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-011"></a></p>
+<h4 id="work-req-011">WORK-REQ-011. Основная норма<a class="headerlink" href="#work-req-011" title="Permanent link">&para;</a></h4>
+<p>Основная сезонная норма обязательных отработок определяется сезонными параметрами. Начальные значения:
+- <code>MaleRequiredWorkDays</code> — 3 дня;
+- <code>FemaleRequiredWorkDays</code> — 2 дня.</p>
+<p>Применённые нормативы фиксируются для конкретного сезона и не пересчитываются задним числом при изменении значений для следующих сезонов. Индивидуальные льготы и возрастные освобождения изменяют обязанность в соответствии с отдельными правилами льгот.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-012"></a></p>
+<h4 id="work-req-012">WORK-REQ-012. Верхнее ограничение фактической работы<a class="headerlink" href="#work-req-012" title="Permanent link">&para;</a></h4>
+<p>Верхнего ограничения на объём фактически выполненной и подтверждённой работы нет.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-013"></a></p>
+<h4 id="work-req-013">WORK-REQ-013. Итог сезонного табеля<a class="headerlink" href="#work-req-013" title="Permanent link">&para;</a></h4>
+<p>По каждому участнику и сезону система рассчитывает и хранит как минимум:
+- индивидуальную норму;
+- подтверждённую отработку;
+- компенсированный объём;
+- недоработку;
+- переработку;
+- применённую льготу или освобождение.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-014"></a></p>
+<h4 id="work-req-014">WORK-REQ-014. Недоработка<a class="headerlink" href="#work-req-014" title="Permanent link">&para;</a></h4>
+<p>Невыполненная часть сезонной нормы учитывается как недоработка. При наступлении предусмотренного правилами события недоработка переводится в денежную задолженность по действующей стоимости компенсации.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-015"></a></p>
+<h4 id="work-req-015">WORK-REQ-015. Переработка<a class="headerlink" href="#work-req-015" title="Permanent link">&para;</a></h4>
+<p>Работа сверх незакрытой части нормы учитывается как переработка. Переработка сохраняется в статистике и истории, не оплачивается клубом и не переносится в счёт нормы следующего сезона.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-016"></a></p>
+<h4 id="work-req-016">WORK-REQ-016. Разделение факта работы и табеля<a class="headerlink" href="#work-req-016" title="Permanent link">&para;</a></h4>
+<p>Подсистема субботников хранит фактические события и результаты проверки работ. Сезонный табель формируется на основании зачтённых операций и отвечает за выполнение нормы. Эти представления не должны подменять друг друга.</p>
+<h3 id="_5">История и контроль<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-017"></a></p>
+<h4 id="work-req-017">WORK-REQ-017. История зачёта<a class="headerlink" href="#work-req-017" title="Permanent link">&para;</a></h4>
+<p>Для каждой операции зачёта сохраняются участник, фактическая дата работы, сезон учёта, заявленный объём, зачтённый объём, проверивший бригадир, дата проверки и история исправлений.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-018"></a></p>
+<h4 id="work-req-018">WORK-REQ-018. Индивидуальные исключения<a class="headerlink" href="#work-req-018" title="Permanent link">&para;</a></h4>
+<p>Работа или деятельность, для которой действующее правило не предусматривает автоматический зачёт, не должна автоматически попадать в табель. Такой зачёт возможен только на основании соответствующего индивидуального решения. Решение становится формальным основанием корректировки табеля.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-019"></a></p>
+<h4 id="work-req-019">WORK-REQ-019. Регистрация группового субботника<a class="headerlink" href="#work-req-019" title="Permanent link">&para;</a></h4>
+<p>Бригадир может зарегистрировать проведённый групповой субботник только в пределах назначенной ему зоны и указать индивидуально зачтённый объём работы каждому участнику субботника.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-020"></a></p>
+<h4 id="work-req-020">WORK-REQ-020. Групповой зачёт иной деятельности<a class="headerlink" href="#work-req-020" title="Permanent link">&para;</a></h4>
+<p>Правление может отдельным решением установить зачёт иной деятельности в счёт обязательных отработок для определённой группы участников. Такое решение должно быть принято до начала деятельности или кампании, к которой применяется зачёт, и заранее определять вид деятельности, критерии включения участников и правило расчёта зачёта. Участники должны иметь возможность узнать условия зачёта до выполнения деятельности.</p>
+<p>После завершения деятельности система применяет заранее утверждённое правило только к участникам, для которых подтверждён факт выполнения соответствующей деятельности. Отдельное индивидуальное исключение для каждого такого участника не требуется.</p>
+<p>Если на момент выполнения деятельности заранее утверждённого группового правила зачёта не существовало, <a href="./#work-req-020">WORK-REQ-020</a> не может использоваться для ретроактивного группового зачёта; применяется порядок индивидуальных исключений по <a href="./#work-req-018">WORK-REQ-018</a> и связанным требованиям управления.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-021"></a></p>
+<h4 id="work-req-021">WORK-REQ-021. Зачёт телефонных контактов информационной кампании<a class="headerlink" href="#work-req-021" title="Permanent link">&para;</a></h4>
+<p>Телефонные контакты, выполненные исполнителем в резервном телефонном этапе информационной кампании по <a href="../11a-information-campaigns/#info-req-008">INFO-REQ-008</a>–<a href="../11a-information-campaigns/#info-req-010">INFO-REQ-010</a>, автоматически учитываются как предусмотренная клубная деятельность без отдельного решения по <a href="./#work-req-020">WORK-REQ-020</a>.</p>
+<p>Зачётным считается не более одного завершённого телефонного контакта одного исполнителя с одним получателем в рамках одной кампании. Итоговые результаты «Информация доведена», «Не дозвонился» и «Отказался от разговора» дают один зачётный контакт. «Не начато» и промежуточный результат «Перезвонить» зачётного контакта не создают. Повторные попытки связаться с тем же получателем не увеличивают количество зачётных контактов.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-022"></a></p>
+<h4 id="work-req-022">WORK-REQ-022. Перевод зачётных телефонных контактов в дни отработки<a class="headerlink" href="#work-req-022" title="Permanent link">&para;</a></h4>
+<p>Количество зачётных телефонных контактов исполнителя переводится в дни отработки по сезонному параметру <code>InformationCallsPerWorkDay</code>: указанное параметром количество зачётных контактов соответствует одному дню отработки.</p>
+<p>Зачёт создаётся с соблюдением минимальной единицы <code>WorkCreditStepDays</code>. Зачётные контакты, которых пока недостаточно для следующего полного шага <code>WorkCreditStepDays</code>, не теряются и накапливаются в пределах того же сезона для последующего расчёта. Применённое значение <code>InformationCallsPerWorkDay</code> фиксируется для сезона и не изменяет уже рассчитанные зачёты задним числом.</p>
+<h3 id="_6">Закрепление участников за бригадирами<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-023"></a></p>
+<h4 id="work-req-023">WORK-REQ-023. Организационное закрепление за бригадиром<a class="headerlink" href="#work-req-023" title="Permanent link">&para;</a></h4>
+<p>Участник клуба должен быть организационно закреплён за одним бригадиром. Закрепление используется для формирования постоянного состава бригады и организационного взаимодействия, но не определяет, с кем участник обязан фактически выполнять работы на конкретном субботнике.</p>
+<p>Бригадир в собственной записи считается закреплённым за собой.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-024"></a></p>
+<h4 id="work-req-024">WORK-REQ-024. Управление составом бригад<a class="headerlink" href="#work-req-024" title="Permanent link">&para;</a></h4>
+<p>Член правления может назначить участнику бригадира, изменить закрепление или снять его. История изменений закрепления должна сохраняться.</p>
+<p>Участник в личном кабинете видит ФИО своего текущего бригадира. В общем административном представлении участника должно быть видно текущее закрепление за бригадиром.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-025"></a></p>
+<h4 id="work-req-025">WORK-REQ-025. Состав бригады для бригадира<a class="headerlink" href="#work-req-025" title="Permanent link">&para;</a></h4>
+<p>Бригадир видит список закреплённых за ним участников и их контактные телефоны, необходимые для организации работ. Само это полномочие не предоставляет ему доступ ко всему сезонному табелю, финансовым данным или иным данным участников за пределами необходимых сведений о своей бригаде.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-026"></a></p>
+<h4 id="work-req-026">WORK-REQ-026. Закрепление не ограничивает фактическую работу<a class="headerlink" href="#work-req-026" title="Permanent link">&para;</a></h4>
+<p>Закрепление участника за конкретным бригадиром не ограничивает выбор фактической работы. На субботнике участник может:
+- работать вместе со своим закреплённым бригадиром;
+- работать с другим бригадиром;
+- выполнять самостоятельную работу с последующей подачей индивидуального отчёта по общим правилам.</p>
+<p>Работа с другим бригадиром не требует предварительного изменения постоянного закрепления участника.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-027"></a></p>
+<h4 id="work-req-027">WORK-REQ-027. Зачёт работы другим бригадиром<a class="headerlink" href="#work-req-027" title="Permanent link">&para;</a></h4>
+<p>Если участник фактически работал на субботнике с другим бригадиром, этот бригадир может включить участника в проведённый им групповой субботник и указать ему индивидуальный зачёт независимо от постоянного закрепления участника.</p>
+<p>При этом сохраняются территориальные границы полномочий самого бригадира по <a href="./#work-req-007">WORK-REQ-007</a>–<a href="./#work-req-008">WORK-REQ-008</a>: постоянное закрепление участника не расширяет и не сужает полномочия бригадира на конкретную зону, место или объект.</p>
+<h3 id="_7">Планирование и координация работ<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-042"></a></p>
+<h4 id="work-req-042">WORK-REQ-042. Сезонный план работ по территории<a class="headerlink" href="#work-req-042" title="Permanent link">&para;</a></h4>
+<p>Для сезона ведётся актуальный план клубных работ по зонам, склонам, местам и объектам. План позволяет видеть, какие работы требуется выполнить на конкретной территории, и отделён от факта их выполнения и от сезонного табеля участников.</p>
+<p>Для позиции плана сохраняются как минимум территория, описание работы и текущее состояние. Выполненные работы не удаляются из истории сезона.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-029"></a></p>
+<h4 id="work-req-029">WORK-REQ-029. Рабочий день и ответственный<a class="headerlink" href="#work-req-029" title="Permanent link">&para;</a></h4>
+<p>Для конкретной даты и территории может быть опубликован план рабочего дня. В нём указываются дата, территория, ориентировочное время начала, планируемые работы и ответственный за работы в этот день.</p>
+<p>Ответственный за конкретный рабочий день является организационным назначением на дату и не подменяет постоянное закрепление участников за бригадирами и территориальные полномочия бригадиров на подтверждение работ.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-030"></a></p>
+<h4 id="work-req-030">WORK-REQ-030. План присутствия бригадира<a class="headerlink" href="#work-req-030" title="Permanent link">&para;</a></h4>
+<p>Бригадир может заранее обозначить дату, территорию и ориентировочное время, когда планирует присутствовать на работах. Участникам доступна информация о том, какие бригадиры и ответственные планируют быть на территории в выбранный день.</p>
+<p>Изменение или отмена плана присутствия не изменяет уже зафиксированные факты выполненных работ.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-031"></a></p>
+<h4 id="work-req-031">WORK-REQ-031. План приезда участника<a class="headerlink" href="#work-req-031" title="Permanent link">&para;</a></h4>
+<p>Участник может простым действием сообщить о намерении приехать на работы в конкретную дату и на конкретную территорию. Участник может отменить или изменить такой план.</p>
+<p>План приезда не требует выбора постоянного или фактического бригадира. При наличии опубликованной конкретной работы участник может дополнительно указать намерение присоединиться к ней, но отсутствие такого выбора не препятствует сообщению о приезде.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-032"></a></p>
+<h4 id="work-req-032">WORK-REQ-032. Взаимная видимость планов<a class="headerlink" href="#work-req-032" title="Permanent link">&para;</a></h4>
+<p>Участник перед поездкой видит опубликованные планы работ, ответственных и бригадиров, планирующих присутствовать на выбранной территории и дате.</p>
+<p>Бригадиры и ответственные за рабочий день видят актуальный список участников, сообщивших о намерении приехать на соответствующую дату и территорию. Для организации работ должна быть различима принадлежность участника к постоянной бригаде, при этом сам план приезда не меняет постоянное закрепление.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-033"></a></p>
+<h4 id="work-req-033">WORK-REQ-033. Планирование не является фактом работы<a class="headerlink" href="#work-req-033" title="Permanent link">&para;</a></h4>
+<p>План рабочего дня, план присутствия бригадира, план приезда участника и предварительный выбор работы являются только организационной информацией. Они не подтверждают фактическое присутствие, выполнение работы, объём работы или право на зачёт.</p>
+<p>Фактическая работа и зачёт оформляются по правилам группового субботника или индивидуального отчёта независимо от предварительного плана.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-034"></a></p>
+<h4 id="work-req-034">WORK-REQ-034. Сверка фактических участников после рабочего дня<a class="headerlink" href="#work-req-034" title="Permanent link">&para;</a></h4>
+<p>После рабочего дня бригадир при регистрации группового субботника может использовать список предварительно планировавших приехать как основу для сверки, но обязан фиксировать фактически работавших участников. Предварительно записавшийся может отсутствовать, а фактически работавший может не иметь предварительной записи.</p>
+<p>После публикации результата участникам доступны дата, территория, описание выполненных работ и их индивидуальный зачёт. Участник, фактически работавший, но отсутствующий в опубликованном списке, либо обнаруживший ошибку в своём зачёте, может сообщить об ошибке для проверки бригадиром. Такое сообщение само по себе не создаёт зачёт; исправление выполняется с сохранением истории.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-035"></a></p>
+<h4 id="work-req-035">WORK-REQ-035. Результат рабочего дня<a class="headerlink" href="#work-req-035" title="Permanent link">&para;</a></h4>
+<p>Для проведённого группового субботника сохраняется общий результат работ: описание фактически выполненного, связанные позиции сезонного плана при наличии и фотографии или видео при наличии. Результат доступен участникам в пределах правил доступа и не заменяет индивидуальные операции зачёта.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-036"></a></p>
+<h4 id="work-req-036">WORK-REQ-036. Общая координационная картина для бригадиров<a class="headerlink" href="#work-req-036" title="Permanent link">&para;</a></h4>
+<p>Бригадирам доступно общее рабочее представление для координации клубных работ: сезонный план работ, ближайшие рабочие дни, ответственные и планирующие присутствовать бригадиры, планы приезда участников, постоянное распределение участников по бригадам и актуальные проблемы на территориях в пределах разрешённого доступа.</p>
+<p>Право видеть общую координационную картину не предоставляет автоматически право изменять постоянное закрепление участников, подтверждать работу вне территориальных полномочий или изменять чужие данные.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-037"></a></p>
+<h4 id="work-req-037">WORK-REQ-037. Проблемы на территории<a class="headerlink" href="#work-req-037" title="Permanent link">&para;</a></h4>
+<p>В рабочем представлении может быть зарегистрирована актуальная проблема на зоне, склоне, месте или объекте, требующая внимания при планировании работ. Для проблемы сохраняются территория, описание, состояние и история изменений. Проблема может быть связана с позицией сезонного плана работ, но не является фактом выполненной работы.</p>
+<p>Индивидуальный реестр существенного имущества регулируется отдельными требованиями <code>ASSET-REQ-*</code>. Для мелкого инструмента в MVP ведётся только информационная заметка о последнем известном месте хранения по <a href="./#work-req-043">WORK-REQ-043</a>–<a href="./#work-req-045">WORK-REQ-045</a>; поштучный учёт, выдача и складской остаток мелкого инструмента не ведутся.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-038"></a></p>
+<h4 id="work-req-038">WORK-REQ-038. Доверенная запись другого участника на работы<a class="headerlink" href="#work-req-038" title="Permanent link">&para;</a></h4>
+<p>Участник может заранее предоставить другому действующему участнику клуба отдельное разрешение создавать и отменять от его имени предварительный план приезда на клубные работы. Разрешение действует только для планирования присутствия на работах и не предоставляет никаких иных полномочий от имени участника.</p>
+<p>Разрешение создаётся только после подтверждения участником, за которого предполагается выполнять запись. Оно является направленным: разрешение одному участнику отмечать другого не создаёт обратного разрешения. Участник может иметь несколько таких доверенных связей и может в любой момент отозвать каждую из них.</p>
+<p>Разрешение не даёт права подавать или подтверждать отчёты о выполненной работе, изменять зачёт, распоряжаться финансовыми данными или операциями, голосовать, подавать обращения или выполнять иные действия от имени участника.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-039"></a></p>
+<h4 id="work-req-039">WORK-REQ-039. План приезда, созданный доверенным участником<a class="headerlink" href="#work-req-039" title="Permanent link">&para;</a></h4>
+<p>При наличии действующего разрешения по <a href="./#work-req-038">WORK-REQ-038</a> участник может при планировании работ добавить другого участника клуба и создать для него отдельный план приезда на конкретные дату и территорию.</p>
+<p>План сохраняется как план самого добавленного участника, а система дополнительно сохраняет автора, создавшего или изменившего запись. Второй участник учитывается бригадирами и ответственными как отдельный ожидаемый человек, а не как безымянный «+1».</p>
+<p>Если у добавляемого участника уже существует актуальный план на ту же дату и территорию, дублирующая запись не создаётся. Добавленный участник получает уведомление о создании плана и может самостоятельно изменить или отменить его. Автор доверенной записи может отменить созданный им план, пока добавленный участник сам не изменил этот план; после самостоятельного изменения дальнейшее управление планом принадлежит самому участнику.</p>
+<p>Доверенная запись не означает совместный приезд, совместную работу или принадлежность к одной бригаде. Она не подтверждает фактическое присутствие или работу и не создаёт право на зачёт.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-040"></a></p>
+<h4 id="work-req-040">WORK-REQ-040. Состояние рабочего дня<a class="headerlink" href="#work-req-040" title="Permanent link">&para;</a></h4>
+<p>Опубликованный рабочий день имеет явное текущее состояние. Для MVP поддерживаются как минимум состояния: <code>Запланирован</code>, <code>Подтверждён</code>, <code>Идёт</code>, <code>Завершён</code>, <code>Отменён</code>.</p>
+<p>Ответственный за рабочий день либо бригадир, имеющий полномочия на соответствующую территорию, может изменять состояние в рамках фактического хода работ. Для отмены обязательна причина. История изменений состояния, автор и время изменения сохраняются.</p>
+<p>Состояние рабочего дня относится к организационному планированию и факту проведения дня в целом. Оно не создаёт индивидуальный зачёт и не заменяет регистрацию фактически выполненных работ.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-041"></a></p>
+<h4 id="work-req-041">WORK-REQ-041. Решение о проведении и отмене рабочего дня<a class="headerlink" href="#work-req-041" title="Permanent link">&para;</a></h4>
+<p>Перед началом работ ответственный видит актуальное количество и список участников, сообщивших о намерении приехать, и может подтвердить проведение рабочего дня либо отменить его с указанием причины.</p>
+<p>Погодные условия, отсутствие предварительно записавшихся участников или иные обстоятельства сами по себе не должны автоматически отменять рабочий день. Решение о подтверждении или отмене принимает ответственный или уполномоченный бригадир с учётом фактической ситуации и характера запланированных работ.</p>
+<p>При отмене рабочего дня предварительные планы приезда не превращаются в фактическое участие и сохраняются в истории как относящиеся к отменённому дню. При существенном изменении времени, территории, состава планируемых работ, ответственного либо при отмене участники, сообщившие о намерении приехать, получают уведомление.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-043"></a></p>
+<h4 id="work-req-043">WORK-REQ-043. Заметка о местонахождении мелкого инструмента<a class="headerlink" href="#work-req-043" title="Permanent link">&para;</a></h4>
+<p>Для территории, зоны, склона, места или объекта участник клуба может сохранить свободную текстовую заметку о последнем известном местонахождении мелкого инструмента и инвентаря, например: «Под домом: коса, 6 лопат, 4 давилки травы».</p>
+<p>Заметка является информационной подсказкой, а не складским учётом. Система не разбирает текст в обязательные поштучные остатки и не требует создавать карточки имущества для перечисленных предметов.</p>
+<p>Для заметки сохраняются территория или место, текст, фактическая дата информации, автор и время внесения.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-044"></a></p>
+<h4 id="work-req-044">WORK-REQ-044. Кто может обновить местонахождение инструмента<a class="headerlink" href="#work-req-044" title="Permanent link">&para;</a></h4>
+<p>Заметку может создать или обновить любой действующий участник клуба, располагающий актуальной фактической информацией о местонахождении инструмента. Полномочие не ограничивается бригадирами и не требует регистрации группового субботника или получения зачёта за работу.</p>
+<p>При подаче индивидуального отчёта и при завершении группового рабочего дня система предлагает необязательное поле для такой заметки. Участник также может обновить её отдельно, если обнаружил, перенёс или оставил инструмент в другом месте.</p>
+<p>Новая запись становится последней актуальной подсказкой для соответствующей территории или места. Предыдущие записи не удаляются и остаются в истории с датой и автором.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="work-req-045"></a></p>
+<h4 id="work-req-045">WORK-REQ-045. Показ последнего известного места инструмента перед работами<a class="headerlink" href="#work-req-045" title="Permanent link">&para;</a></h4>
+<p>При просмотре ближайшего рабочего дня и при создании или просмотре плана приезда участнику показывается последняя актуальная заметка о местонахождении мелкого инструмента для выбранной территории или места, если такая заметка существует.</p>
+<p>Вместе с текстом обязательно показывается фактическая дата информации, чтобы участник мог оценить её актуальность. Заметка также доступна из рабочего представления территории.</p>
+<p>Отсутствие заметки не препятствует записи на работы. Наличие заметки не подтверждает фактическое наличие перечисленного инструмента на момент приезда и не создаёт ответственность автора за последующие перемещения или утрату.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/pages-cleanup.js"></script>
+      
+        <script src="../../assets/javascripts/implementation-status-data.js"></script>
+      
+        <script src="../../assets/javascripts/implementation-status.js"></script>
+      
+    
+  </body>
+</html>
