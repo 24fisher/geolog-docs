@@ -401,28 +401,28 @@
 <p><a id="app-req-008"></a></p>
 <h4 id="app-req-008">APP-REQ-008. Инициатива участника<a class="headerlink" href="#app-req-008" title="Permanent link">&para;</a></h4>
 <p>Система должна позволять фиксировать инициативы членов клуба и кандидатов, если инициатива требует рассмотрения правлением или дальнейшего клубного решения.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
 <hr />
 <p><a id="app-req-013"></a></p>
 <h4 id="app-req-013">APP-REQ-013. Снимок состава для поддержки инициативы<a class="headerlink" href="#app-req-013" title="Permanent link">&para;</a></h4>
 <p>При публикации инициативы система фиксирует снимок активных членов клуба, от которого рассчитывается необходимое количество поддержавших. Последующие изменения состава клуба не изменяют порог уже опубликованной инициативы. Для инициативы также фиксируется применённое значение порога поддержки.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
 <hr />
 <p><a id="app-req-014"></a></p>
 <h4 id="app-req-014">APP-REQ-014. Порог поддержки инициативы<a class="headerlink" href="#app-req-014" title="Permanent link">&para;</a></h4>
 <p>Для продолжения процедуры инициатива должна получить поддержку не ниже системной настройки <code>InitiativeSupportThresholdPercent</code>; начальное значение — 20% активных членов клуба из зафиксированного снимка состава. Необходимое целое количество поддержавших рассчитывается вверх до ближайшего целого участника. Изменение настройки не пересчитывает порог уже опубликованной инициативы.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
 <hr />
 <p><a id="app-req-015"></a></p>
 <h4 id="app-req-015">APP-REQ-015. Срок сбора поддержки<a class="headerlink" href="#app-req-015" title="Permanent link">&para;</a></h4>
 <p>Срок сбора необходимой поддержки определяется системной настройкой <code>InitiativeSupportPeriodDays</code>; начальное значение — 30 календарных дней. Если порог не достигнут в применимый срок, инициатива закрывается со статусом «Не набрала необходимой поддержки». История инициативы и количество поддержавших сохраняются, а правление не обязано готовить заключение. Изменение настройки не меняет срок уже опубликованной инициативы.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
 <hr />
 <p><a id="app-req-016"></a></p>
 <h4 id="app-req-016">APP-REQ-016. Заключение правления по поддержанной инициативе<a class="headerlink" href="#app-req-016" title="Permanent link">&para;</a></h4>
 <p>После достижения инициативой порога поддержки правление должно подготовить заключение в течение срока, определённого системной настройкой <code>BoardInitiativeConclusionPeriodDays</code>; начальное значение — 7 календарных дней. Для конкретной инициативы фиксируется применимый срок.</p>
 <p>Заключение может содержать позицию правления и обоснование, но отрицательное заключение само по себе не блокирует дальнейшую процедуру и голосование.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
 <hr />
 
 
