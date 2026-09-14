@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/vote-case-004/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/vote-case-005/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Vote case 004 - Документация системы Geolog</title>
+        <title>Vote case 005 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vote-case-004" class="md-skip">
+        <a href="#vote-case-005" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vote case 004
+              Vote case 005
             
           </span>
         </div>
@@ -799,24 +799,29 @@
 
 
 
-<p><a id="vote-case-004"></a></p>
-<h1 id="vote-case-004">VOTE-CASE-004. Существенная ошибка в уже начатом голосовании<a class="headerlink" href="#vote-case-004" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rules/08-voting/#vote-req-003">VOTE-REQ-003</a>, <a href="../../rules/08-voting/#vote-req-004">VOTE-REQ-004</a>, <a href="../../rules/08-voting/#vote-req-012">VOTE-REQ-012</a>, <a href="../../rules/08-voting/#vote-req-014">VOTE-REQ-014</a>, <a href="../../rules/08-voting/#vote-req-016">VOTE-REQ-016</a></p>
+<p><a id="vote-case-005"></a></p>
+<h1 id="vote-case-005">VOTE-CASE-005. Два самовыдвиженца подтверждаются на две вакансии правления<a class="headerlink" href="#vote-case-005" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rules/06-governance/#gov-req-022">GOV-REQ-022</a>, <a href="../../rules/08-voting/#vote-req-028">VOTE-REQ-028</a>, <a href="../../rules/08-voting/#vote-req-029">VOTE-REQ-029</a>, <a href="../../rules/08-voting/#vote-req-030">VOTE-REQ-030</a>, <a href="../../rules/08-voting/#vote-req-031">VOTE-REQ-031</a>, <a href="../../rules/08-voting/#vote-req-032">VOTE-REQ-032</a>, <a href="../../rules/08-voting/#vote-req-034">VOTE-REQ-034</a></p>
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>голосование уже началось;</li>
-<li>обнаружена существенная ошибка в вопросе, вариантах ответа, круге голосующих или правилах определения результата.</li>
+<li>в правлении две подлежащие замещению вакансии;</li>
+<li>два допустимых члена клуба самостоятельно выдвинулись;</li>
+<li>электронные голосования включены.</li>
 </ul>
 <h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Уполномоченное лицо не редактирует существенные параметры уже начатого голосования на месте.</li>
-<li>Исходное голосование досрочно прекращается с обязательным указанием причины.</li>
-<li>Система сохраняет его исходные параметры, уже произошедшие действия и причину прекращения в истории.</li>
-<li>Для исправленной процедуры создаётся новое голосование с корректными параметрами.</li>
-<li>Создание и прекращение фиксируются в журнале действий.</li>
+<li>Для двух вакансий открывается процедура донабора.</li>
+<li>Два члена клуба самовыдвигаются, тем самым подтверждая согласие получить полномочия.</li>
+<li>До начала голосования система фиксирует список кандидатов.</li>
+<li>В едином тайном бюллетене каждый голосующий независимо выбирает «За», «Против» или «Воздержался» по каждому кандидату.</li>
+<li>Общий кворум процедуры достигнут.</li>
+<li>У каждого кандидата голосов «За» больше, чем «Против».</li>
+<li>Оба кандидата считаются подтверждёнными клубом и занимают две вакансии.</li>
+<li>Для каждого система фиксирует начало полномочий и связь с результатом донабора.</li>
+<li>Полномочия ранее действовавших членов правления не изменяются.</li>
 </ol>
 <h4 id="_3">Результат<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>Исправление существенной ошибки не переписывает историю уже начатой процедуры.</p>
+<p>Клуб отдельно наделяет полномочиями каждого самовыдвиженца; кандидаты не конкурируют друг с другом, когда вакансий достаточно.</p>
 <hr />
 <hr />
 

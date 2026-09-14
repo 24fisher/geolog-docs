@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/vote-case-004/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/vote-case-006/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Vote case 004 - Документация системы Geolog</title>
+        <title>Vote case 006 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vote-case-004" class="md-skip">
+        <a href="#vote-case-006" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vote case 004
+              Vote case 006
             
           </span>
         </div>
@@ -799,24 +799,25 @@
 
 
 
-<p><a id="vote-case-004"></a></p>
-<h1 id="vote-case-004">VOTE-CASE-004. Существенная ошибка в уже начатом голосовании<a class="headerlink" href="#vote-case-004" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rules/08-voting/#vote-req-003">VOTE-REQ-003</a>, <a href="../../rules/08-voting/#vote-req-004">VOTE-REQ-004</a>, <a href="../../rules/08-voting/#vote-req-012">VOTE-REQ-012</a>, <a href="../../rules/08-voting/#vote-req-014">VOTE-REQ-014</a>, <a href="../../rules/08-voting/#vote-req-016">VOTE-REQ-016</a></p>
+<p><a id="vote-case-006"></a></p>
+<h1 id="vote-case-006">VOTE-CASE-006. Один из самовыдвиженцев не получает поддержки клуба<a class="headerlink" href="#vote-case-006" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rules/08-voting/#vote-req-030">VOTE-REQ-030</a>, <a href="../../rules/08-voting/#vote-req-031">VOTE-REQ-031</a>, <a href="../../rules/08-voting/#vote-req-032">VOTE-REQ-032</a>, <a href="../../rules/08-voting/#vote-req-034">VOTE-REQ-034</a></p>
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>голосование уже началось;</li>
-<li>обнаружена существенная ошибка в вопросе, вариантах ответа, круге голосующих или правилах определения результата.</li>
+<li>открыты две вакансии;</li>
+<li>участвуют два самовыдвиженца;</li>
+<li>общий кворум достигнут.</li>
 </ul>
 <h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Уполномоченное лицо не редактирует существенные параметры уже начатого голосования на месте.</li>
-<li>Исходное голосование досрочно прекращается с обязательным указанием причины.</li>
-<li>Система сохраняет его исходные параметры, уже произошедшие действия и причину прекращения в истории.</li>
-<li>Для исправленной процедуры создаётся новое голосование с корректными параметрами.</li>
-<li>Создание и прекращение фиксируются в журнале действий.</li>
+<li>По первому кандидату голосов «За» больше, чем «Против».</li>
+<li>По второму кандидату голосов «За» не больше, чем «Против».</li>
+<li>Первый кандидат получает полномочия члена правления.</li>
+<li>Второй кандидат не получает полномочий.</li>
+<li>Одна вакансия остаётся незаполненной и может быть предметом последующего донабора.</li>
 </ol>
 <h4 id="_3">Результат<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>Исправление существенной ошибки не переписывает историю уже начатой процедуры.</p>
+<p>Наличие кандидата не приводит к автоматическому назначению: каждый самовыдвиженец должен отдельно получить подтверждение клуба.</p>
 <hr />
 <hr />
 

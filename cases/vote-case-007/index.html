@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/vote-case-004/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/vote-case-007/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Vote case 004 - Документация системы Geolog</title>
+        <title>Vote case 007 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vote-case-004" class="md-skip">
+        <a href="#vote-case-007" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vote case 004
+              Vote case 007
             
           </span>
         </div>
@@ -775,6 +775,34 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
+        Альтернативные сценарии
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Альтернативные сценарии">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Равенство на границе вакансии
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         Результат
       
     </span>
@@ -799,26 +827,25 @@
 
 
 
-<p><a id="vote-case-004"></a></p>
-<h1 id="vote-case-004">VOTE-CASE-004. Существенная ошибка в уже начатом голосовании<a class="headerlink" href="#vote-case-004" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rules/08-voting/#vote-req-003">VOTE-REQ-003</a>, <a href="../../rules/08-voting/#vote-req-004">VOTE-REQ-004</a>, <a href="../../rules/08-voting/#vote-req-012">VOTE-REQ-012</a>, <a href="../../rules/08-voting/#vote-req-014">VOTE-REQ-014</a>, <a href="../../rules/08-voting/#vote-req-016">VOTE-REQ-016</a></p>
+<p><a id="vote-case-007"></a></p>
+<h1 id="vote-case-007">VOTE-CASE-007. Подтверждённых кандидатов больше, чем вакансий<a class="headerlink" href="#vote-case-007" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rules/08-voting/#vote-req-028">VOTE-REQ-028</a>, <a href="../../rules/08-voting/#vote-req-032">VOTE-REQ-032</a>, <a href="../../rules/08-voting/#vote-req-033">VOTE-REQ-033</a>, <a href="../../rules/08-voting/#vote-req-034">VOTE-REQ-034</a></p>
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>голосование уже началось;</li>
-<li>обнаружена существенная ошибка в вопросе, вариантах ответа, круге голосующих или правилах определения результата.</li>
+<li>открыта одна вакансия;</li>
+<li>два или более кандидата прошли персональное подтверждение клуба.</li>
 </ul>
 <h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Уполномоченное лицо не редактирует существенные параметры уже начатого голосования на месте.</li>
-<li>Исходное голосование досрочно прекращается с обязательным указанием причины.</li>
-<li>Система сохраняет его исходные параметры, уже произошедшие действия и причину прекращения в истории.</li>
-<li>Для исправленной процедуры создаётся новое голосование с корректными параметрами.</li>
-<li>Создание и прекращение фиксируются в журнале действий.</li>
+<li>Система сравнивает число голосов «За» только между кандидатами, уже прошедшими персональное подтверждение.</li>
+<li>Вакансию получает кандидат с наибольшим числом голосов «За».</li>
+<li>Система фиксирует начало его полномочий и связь с процедурой донабора.</li>
 </ol>
-<h4 id="_3">Результат<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>Исправление существенной ошибки не переписывает историю уже начатой процедуры.</p>
-<hr />
-<hr />
+<h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h5 id="a1">A1. Равенство на границе вакансии<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
+<p>Если кандидаты имеют одинаковое число голосов «За» и это не позволяет определить получателя последнего места, проводится отдельное тайное общеклубное голосование между этими кандидатами. Уже однозначно распределённые места не пересматриваются.</p>
+<h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>Редкий конкурс кандидатов обрабатывается как исключение поверх основной модели подтверждения полномочий.</p>
 
 
 
