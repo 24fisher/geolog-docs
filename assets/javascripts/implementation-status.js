@@ -82,13 +82,23 @@ const renderImplementationStatus = () => {
     const item = caseItem || interfaceItem;
     if (!item) return;
 
-    // Category pages are generated with a plain-text status after the case link.
-    // Replace that publication fallback with the same CSS badges used elsewhere.
     const listItem = link.closest("li");
-    const fallback = listItem?.querySelector(":scope > strong");
-    if (caseItem && fallback && !listItem.querySelector(":scope > .status-pair")) {
-      fallback.replaceWith(makeStatusPair(caseItem));
-      return;
+    if (caseItem && listItem) {
+      // Case category pages already contain a generated status pair as a sibling of the link.
+      // Keep that single source of presentation and remove a stale JS-injected copy if SPA
+      // navigation left one inside the link from an older version.
+      const generatedPair = listItem.querySelector(":scope > .status-pair");
+      if (generatedPair) {
+        link.querySelectorAll(":scope > .status-pair, :scope > .spec-status, :scope > .implementation-status").forEach((badge) => badge.remove());
+        return;
+      }
+
+      // Compatibility with pages generated before status pairs were emitted as HTML.
+      const fallback = listItem.querySelector(":scope > strong");
+      if (fallback) {
+        fallback.replaceWith(makeStatusPair(caseItem));
+        return;
+      }
     }
 
     appendOnce(link, item);
