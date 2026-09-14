@@ -113,6 +113,10 @@
          <lastmod>2026-09-14</lastmod>
     </url>
     <url>
+         <loc>https://24fisher.github.io/geolog-docs/case-groups/work-day-result-cases/</loc>
+         <lastmod>2026-09-14</lastmod>
+    </url>
+    <url>
          <loc>https://24fisher.github.io/geolog-docs/case-groups/work-independent-cases/</loc>
          <lastmod>2026-09-14</lastmod>
     </url>
@@ -653,6 +657,14 @@
          <lastmod>2026-09-14</lastmod>
     </url>
     <url>
+         <loc>https://24fisher.github.io/geolog-docs/cases/work-case-024/</loc>
+         <lastmod>2026-09-14</lastmod>
+    </url>
+    <url>
+         <loc>https://24fisher.github.io/geolog-docs/cases/work-case-025/</loc>
+         <lastmod>2026-09-14</lastmod>
+    </url>
+    <url>
          <loc>https://24fisher.github.io/geolog-docs/rule-sections/00-scope/01/</loc>
          <lastmod>2026-09-14</lastmod>
     </url>
@@ -1045,27 +1057,19 @@
          <lastmod>2026-09-14</lastmod>
     </url>
     <url>
-         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10-work/05/</loc>
+         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10e-work-planning/01/</loc>
          <lastmod>2026-09-14</lastmod>
     </url>
     <url>
-         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10-work/06-01/</loc>
+         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10e-work-planning/02/</loc>
          <lastmod>2026-09-14</lastmod>
     </url>
     <url>
-         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10-work/06-02/</loc>
+         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10e-work-planning/03/</loc>
          <lastmod>2026-09-14</lastmod>
     </url>
     <url>
-         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10-work/06-03/</loc>
-         <lastmod>2026-09-14</lastmod>
-    </url>
-    <url>
-         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10-work/06-04/</loc>
-         <lastmod>2026-09-14</lastmod>
-    </url>
-    <url>
-         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10-work/06/</loc>
+         <loc>https://24fisher.github.io/geolog-docs/rule-sections/10e-work-planning/04/</loc>
          <lastmod>2026-09-14</lastmod>
     </url>
     <url>
@@ -1334,6 +1338,18 @@
     </url>
     <url>
          <loc>https://24fisher.github.io/geolog-docs/rules/10c-independent-work-and-media/</loc>
+         <lastmod>2026-09-14</lastmod>
+    </url>
+    <url>
+         <loc>https://24fisher.github.io/geolog-docs/rules/10d-work-curatorship/</loc>
+         <lastmod>2026-09-14</lastmod>
+    </url>
+    <url>
+         <loc>https://24fisher.github.io/geolog-docs/rules/10e-work-planning/</loc>
+         <lastmod>2026-09-14</lastmod>
+    </url>
+    <url>
+         <loc>https://24fisher.github.io/geolog-docs/rules/10f-work-day-results/</loc>
          <lastmod>2026-09-14</lastmod>
     </url>
     <url>
