@@ -66,6 +66,7 @@ const renderImplementationStatus = () => {
   const interfaceByHref = (href) => {
     try {
       const url = new URL(href, window.location.href);
+      if (url.hash) return null;
       const path = url.pathname.replace(/^.*\/geolog-docs\//, "").replace(/^\//, "");
       return Object.values(data.interfaces).find((item) => path === item.href || path === item.href.replace(/\/$/, "")) || null;
     } catch {
@@ -74,6 +75,7 @@ const renderImplementationStatus = () => {
   };
 
   document.querySelectorAll(".md-sidebar--primary .status-pair, .md-sidebar--primary .spec-status, .md-sidebar--primary .implementation-status").forEach((badge) => badge.remove());
+  document.querySelectorAll(".md-sidebar--secondary .status-pair, .md-sidebar--secondary .spec-status, .md-sidebar--secondary .implementation-status").forEach((badge) => badge.remove());
 
   const isCaseGroupPage = window.location.pathname.includes("/case-groups/");
 
@@ -90,17 +92,22 @@ const renderImplementationStatus = () => {
     });
   }
 
-  document.querySelectorAll(".md-content a[href], .md-sidebar--secondary a[href]").forEach((link) => {
+  document.querySelectorAll(".md-content a[href]").forEach((link) => {
     const caseItem = caseByHref(link.getAttribute("href"));
     const interfaceItem = interfaceByHref(link.getAttribute("href"));
     const item = caseItem || interfaceItem;
     if (!item) return;
 
-    if (caseItem && isCaseGroupPage && link.closest(".md-content")) {
+    if (caseItem && isCaseGroupPage) {
       return;
     }
 
     appendOnce(link, item);
+  });
+
+  document.querySelectorAll(".md-sidebar--secondary a[href]").forEach((link) => {
+    const caseItem = caseByHref(link.getAttribute("href"));
+    if (caseItem) appendOnce(link, caseItem);
   });
 
   document.querySelectorAll('a[id*="-case-"]').forEach((anchor) => {
