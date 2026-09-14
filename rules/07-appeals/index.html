@@ -929,82 +929,10 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Процедура инициативы
+        Разделы
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Процедура инициативы">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#app-req-013" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APP-REQ-013. Снимок состава для поддержки инициативы
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#app-req-014" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APP-REQ-014. Порог поддержки инициативы
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#app-req-015" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APP-REQ-015. Срок сбора поддержки
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#app-req-016" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APP-REQ-016. Заключение правления по поддержанной инициативе
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#app-req-017" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APP-REQ-017. Просрочка заключения правления
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#app-req-018" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        APP-REQ-018. Определение компетенции инициативы
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1112,39 +1040,10 @@
 <h4 id="app-req-022">APP-REQ-022. Представление открытых обращений правлению<a class="headerlink" href="#app-req-022" title="Permanent link">&para;</a></h4>
 <p>Правление должно видеть все незавершённые обращения независимо от наличия назначенного ответственного. Для каждого обращения должны быть доступны как минимум автор, дата создания, тема, краткое содержание, текущее состояние, ответственный при наличии и связь с голосованием правления при её наличии.</p>
 <p>В списке открытых обращений приоритетно должны выделяться новые обращения без ответственного и обращения, для которых требуется следующее действие правления.</p>
-<h3 id="_2">Процедура инициативы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="app-req-013"></a></p>
-<h4 id="app-req-013">APP-REQ-013. Снимок состава для поддержки инициативы<a class="headerlink" href="#app-req-013" title="Permanent link">&para;</a></h4>
-<p>При публикации инициативы система фиксирует снимок активных членов клуба, от которого рассчитывается необходимое количество поддержавших. Последующие изменения состава клуба не изменяют порог уже опубликованной инициативы. Для инициативы также фиксируется применённое значение порога поддержки.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="app-req-014"></a></p>
-<h4 id="app-req-014">APP-REQ-014. Порог поддержки инициативы<a class="headerlink" href="#app-req-014" title="Permanent link">&para;</a></h4>
-<p>Для продолжения процедуры инициатива должна получить поддержку не ниже системной настройки <code>InitiativeSupportThresholdPercent</code>; начальное значение — 20% активных членов клуба из зафиксированного снимка состава. Необходимое целое количество поддержавших рассчитывается вверх до ближайшего целого участника. Изменение настройки не пересчитывает порог уже опубликованной инициативы.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="app-req-015"></a></p>
-<h4 id="app-req-015">APP-REQ-015. Срок сбора поддержки<a class="headerlink" href="#app-req-015" title="Permanent link">&para;</a></h4>
-<p>Срок сбора необходимой поддержки определяется системной настройкой <code>InitiativeSupportPeriodDays</code>; начальное значение — 30 календарных дней. Если порог не достигнут в применимый срок, инициатива закрывается со статусом «Не набрала необходимой поддержки». История инициативы и количество поддержавших сохраняются, а правление не обязано готовить заключение. Изменение настройки не меняет срок уже опубликованной инициативы.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="app-req-016"></a></p>
-<h4 id="app-req-016">APP-REQ-016. Заключение правления по поддержанной инициативе<a class="headerlink" href="#app-req-016" title="Permanent link">&para;</a></h4>
-<p>После достижения инициативой порога поддержки правление должно подготовить заключение в течение срока, определённого системной настройкой <code>BoardInitiativeConclusionPeriodDays</code>; начальное значение — 7 календарных дней. Для конкретной инициативы фиксируется применимый срок.</p>
-<p>Заключение может содержать позицию правления и обоснование, но отрицательное заключение само по себе не блокирует дальнейшую процедуру и голосование.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="app-req-017"></a></p>
-<h4 id="app-req-017">APP-REQ-017. Просрочка заключения правления<a class="headerlink" href="#app-req-017" title="Permanent link">&para;</a></h4>
-<p>Если правление не подготовило заключение в основной срок <code>BoardInitiativeConclusionPeriodDays</code>, начинается дополнительный срок, определённый системной настройкой <code>BoardInitiativeConclusionGraceDays</code>; начальное значение — 3 календарных дня. Если заключение не предоставлено и в дополнительный срок, инициатива продолжает процедуру без него, а факт просрочки отображается участникам. Позднее заключение сохраняется как предоставленное с нарушением срока и не отменяет уже начавшееся голосование.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="app-req-018"></a></p>
-<h4 id="app-req-018">APP-REQ-018. Определение компетенции инициативы<a class="headerlink" href="#app-req-018" title="Permanent link">&para;</a></h4>
-<p>После прохождения требуемого этапа поддержки правление определяет компетенцию вопроса. Если вопрос относится к компетенции правления, он направляется в процедуру решения или голосования правления. Если вопрос требует общеклубного решения, он направляется на общеклубное голосование. Связи между инициативой, заключением, голосованием и итоговым решением сохраняются.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<h2 id="_2">Разделы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../rule-sections/07-appeals/01/">Процедура инициативы</a></li>
+</ul>
 
 
 
