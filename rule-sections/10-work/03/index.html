@@ -750,76 +750,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#work-req-010" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        WORK-REQ-010. Минимальная единица учёта
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-req-011" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WORK-REQ-011. Основная норма
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-req-012" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WORK-REQ-012. Верхнее ограничение фактической работы
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-req-013" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WORK-REQ-013. Итог сезонного табеля
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-req-014" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WORK-REQ-014. Недоработка
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-req-015" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WORK-REQ-015. Переработка
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-req-016" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WORK-REQ-016. Разделение факта работы и табеля
+        Подразделы
       
     </span>
   </a>
@@ -844,50 +778,11 @@
 
 
 <h1 id="_1">Табель и сезонная норма<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="work-req-010"></a></p>
-<h4 id="work-req-010">WORK-REQ-010. Минимальная единица учёта<a class="headerlink" href="#work-req-010" title="Permanent link">&para;</a></h4>
-<p>Минимальная единица зачёта отработки является сезонным параметром <code>WorkCreditStepDays</code>. Начальное значение — 0,5 дня. Применённое значение фиксируется для сезона и используется для проверки операций зачёта этого сезона.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="work-req-011"></a></p>
-<h4 id="work-req-011">WORK-REQ-011. Основная норма<a class="headerlink" href="#work-req-011" title="Permanent link">&para;</a></h4>
-<p>Основная сезонная норма обязательных отработок определяется сезонными параметрами. Начальные значения:
-- <code>MaleRequiredWorkDays</code> — 3 дня;
-- <code>FemaleRequiredWorkDays</code> — 2 дня.</p>
-<p>Применённые нормативы фиксируются для конкретного сезона и не пересчитываются задним числом при изменении значений для следующих сезонов. Индивидуальные льготы и возрастные освобождения изменяют обязанность в соответствии с отдельными правилами льгот.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="work-req-012"></a></p>
-<h4 id="work-req-012">WORK-REQ-012. Верхнее ограничение фактической работы<a class="headerlink" href="#work-req-012" title="Permanent link">&para;</a></h4>
-<p>Верхнего ограничения на объём фактически выполненной и подтверждённой работы нет.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="work-req-013"></a></p>
-<h4 id="work-req-013">WORK-REQ-013. Итог сезонного табеля<a class="headerlink" href="#work-req-013" title="Permanent link">&para;</a></h4>
-<p>По каждому участнику и сезону система рассчитывает и хранит как минимум:
-- индивидуальную норму;
-- подтверждённую отработку;
-- компенсированный объём;
-- недоработку;
-- переработку;
-- применённую льготу или освобождение.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="work-req-014"></a></p>
-<h4 id="work-req-014">WORK-REQ-014. Недоработка<a class="headerlink" href="#work-req-014" title="Permanent link">&para;</a></h4>
-<p>Невыполненная часть сезонной нормы учитывается как недоработка. При наступлении предусмотренного правилами события недоработка переводится в денежную задолженность по действующей стоимости компенсации.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="work-req-015"></a></p>
-<h4 id="work-req-015">WORK-REQ-015. Переработка<a class="headerlink" href="#work-req-015" title="Permanent link">&para;</a></h4>
-<p>Работа сверх незакрытой части нормы учитывается как переработка. Переработка сохраняется в статистике и истории, не оплачивается клубом и не переносится в счёт нормы следующего сезона.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="work-req-016"></a></p>
-<h4 id="work-req-016">WORK-REQ-016. Разделение факта работы и табеля<a class="headerlink" href="#work-req-016" title="Permanent link">&para;</a></h4>
-<p>Подсистема субботников хранит фактические события и результаты проверки работ. Сезонный табель формируется на основании зачтённых операций и отвечает за выполнение нормы. Эти представления не должны подменять друг друга.</p>
+<h2 id="_2">Подразделы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../03-01/">Минимальная единица учёта</a></li>
+<li><a href="../03-02/">Переработка</a></li>
+</ul>
 
 
 

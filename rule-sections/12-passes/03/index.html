@@ -750,87 +750,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pass-req-008" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PASS-REQ-008. Постоянный детский бумажный пропуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-009" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-009. Связь детского пропуска с ребёнком
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-010" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-010. Выдача детского пропуска
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-011" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-011. Отображение детского пропуска родителю
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-012" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-012. Прекращение детского режима по возрасту перехода в кандидаты
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-024" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-024. Заявка на детский пропуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-025" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-025. Очередь изготовления детских пропусков
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-026" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-026. Уведомление об изготовлении детского пропуска
+        Подразделы
       
     </span>
   </a>
@@ -855,49 +778,11 @@
 
 
 <h1 id="_1">Детские бумажные пропуска<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-008"></a></p>
-<h4 id="pass-req-008">PASS-REQ-008. Постоянный детский бумажный пропуск<a class="headerlink" href="#pass-req-008" title="Permanent link">&para;</a></h4>
-<p>Детский бумажный пропуск является постоянным и не перевыпускается автоматически каждый сезон.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-009"></a></p>
-<h4 id="pass-req-009">PASS-REQ-009. Связь детского пропуска с ребёнком<a class="headerlink" href="#pass-req-009" title="Permanent link">&para;</a></h4>
-<p>Детский пропуск принадлежит записи ребёнка в реестре детей. Система хранит его номер, состояние и историю выдачи.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-010"></a></p>
-<h4 id="pass-req-010">PASS-REQ-010. Выдача детского пропуска<a class="headerlink" href="#pass-req-010" title="Permanent link">&para;</a></h4>
-<p>Детские пропуска включаются в интерфейс учёта изготовления и выдачи. Факт выдачи сохраняется с датой и лицом, выполнившим выдачу.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-011"></a></p>
-<h4 id="pass-req-011">PASS-REQ-011. Отображение детского пропуска родителю<a class="headerlink" href="#pass-req-011" title="Permanent link">&para;</a></h4>
-<p>В личном кабинете родителя отображаются связанные дети и состояние их бумажных пропусков.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-012"></a></p>
-<h4 id="pass-req-012">PASS-REQ-012. Прекращение детского режима по возрасту перехода в кандидаты<a class="headerlink" href="#pass-req-012" title="Permanent link">&para;</a></h4>
-<p>Возраст перехода определяется системной настройкой <code>CandidateTransitionAgeYears</code>; начальное значение — 18 лет.</p>
-<p>Если ребёнок достигает этого возраста в течение уже начавшегося сезона, постоянный детский пропуск продолжает действовать по детским правилам до конца текущего сезона. С начала следующего сезона, когда возрастной переход вступает в силу по <a href="../../02-participants/03/#child-req-011">CHILD-REQ-011</a>, детский пропуск больше не используется как основание допуска этого участника.</p>
-<p>Дальнейший пропуск оформляется по правилам кандидата/взрослого участника.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-024"></a></p>
-<h4 id="pass-req-024">PASS-REQ-024. Заявка на детский пропуск<a class="headerlink" href="#pass-req-024" title="Permanent link">&para;</a></h4>
-<p>Родитель может из личного кабинета подать заявку на изготовление бумажного пропуска для связанного с ним ребёнка. Заявка должна однозначно указывать ребёнка и родителя; ответственному доступны ФИО ребёнка и актуальные контактные данные родителя.</p>
-<p>Если ребёнок ещё не создан и не связан с родителем в реестре, заявка на пропуск не должна создавать параллельную неучтённую запись ребёнка: сначала используется установленный процесс добавления и подтверждения ребёнка.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-025"></a></p>
-<h4 id="pass-req-025">PASS-REQ-025. Очередь изготовления детских пропусков<a class="headerlink" href="#pass-req-025" title="Permanent link">&para;</a></h4>
-<p>Новая заявка на детский пропуск попадает в очередь ответственного за бумажные пропуска и создаёт ему уведомление. Ответственный видит состояние изготовления каждого детского пропуска и может отметить его как изготовленный.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-026"></a></p>
-<h4 id="pass-req-026">PASS-REQ-026. Уведомление об изготовлении детского пропуска<a class="headerlink" href="#pass-req-026" title="Permanent link">&para;</a></h4>
-<p>При переводе детского пропуска в состояние «изготовлен» родитель получает уведомление. Состояние изготовленного детского пропуска отображается в личном кабинете родителя и сохраняется в истории пропуска ребёнка.</p>
+<h2 id="_2">Подразделы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../03-01/">Постоянный детский бумажный пропуск</a></li>
+<li><a href="../03-02/">Заявка на детский пропуск</a></li>
+</ul>
 
 
 

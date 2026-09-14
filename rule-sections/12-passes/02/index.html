@@ -750,109 +750,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pass-req-003" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PASS-REQ-003. Сезонный именной бумажный пропуск
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-004" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-004. Состояние бумажного пропуска
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-005" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-005. Факт выдачи
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-006" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-006. Интерфейс массовой выдачи
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-007" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-007. Отображение в личном кабинете
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-020" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-020. Очередь изготовления бумажных пропусков
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-021" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-021. Экспорт списка на изготовление
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-022" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-022. Отметка об изготовлении
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-023" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-023. Заявка на перевыпуск взрослого пропуска
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pass-req-027" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PASS-REQ-027. Начало выдачи и использования сезонного бумажного пропуска
+        Подразделы
       
     </span>
   </a>
@@ -877,60 +778,11 @@
 
 
 <h1 id="_1">Бумажные пропуска взрослых<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-003"></a></p>
-<h4 id="pass-req-003">PASS-REQ-003. Сезонный именной бумажный пропуск<a class="headerlink" href="#pass-req-003" title="Permanent link">&para;</a></h4>
-<p>Для взрослого участника система учитывает именной бумажный пропуск конкретного сезона.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-004"></a></p>
-<h4 id="pass-req-004">PASS-REQ-004. Состояние бумажного пропуска<a class="headerlink" href="#pass-req-004" title="Permanent link">&para;</a></h4>
-<p>Система должна различать как минимум состояния, позволяющие понять, ожидает ли пропуск изготовления, изготовлен ли он, готов ли к выдаче и выдан ли участнику. Состояние изготовления является отдельным бизнес-фактом и не подменяется фактом выдачи.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-005"></a></p>
-<h4 id="pass-req-005">PASS-REQ-005. Факт выдачи<a class="headerlink" href="#pass-req-005" title="Permanent link">&para;</a></h4>
-<p>При выдаче бумажного пропуска сохраняются участник, сезон, дата и время выдачи и лицо, отметившее выдачу. Исправление ошибочной отметки не уничтожает исходную историю и отражается в журнале действий.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-006"></a></p>
-<h4 id="pass-req-006">PASS-REQ-006. Интерфейс массовой выдачи<a class="headerlink" href="#pass-req-006" title="Permanent link">&para;</a></h4>
-<p>Для периода массовой выдачи именных бумажных пропусков предоставляется интерфейс со списком участников, поиском и фильтрацией по состоянию выдачи. Месяц массовой выдачи является сезонным параметром <code>PaperPassMassIssueMonth</code>; начальное значение — январь. Уполномоченный дежурный может непосредственно с телефона отмечать фактическую выдачу пропуска.</p>
-<p>Обычная выдача сезонного бумажного пропуска не должна регистрироваться раньше даты, установленной <a href="./#pass-req-027">PASS-REQ-027</a>.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-007"></a></p>
-<h4 id="pass-req-007">PASS-REQ-007. Отображение в личном кабинете<a class="headerlink" href="#pass-req-007" title="Permanent link">&para;</a></h4>
-<p>В личном кабинете участник видит состояние своего бумажного пропуска текущего сезона, включая состояние изготовления и факт выдачи. При наличии данных отображается дата выдачи и номер пропуска.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-020"></a></p>
-<h4 id="pass-req-020">PASS-REQ-020. Очередь изготовления бумажных пропусков<a class="headerlink" href="#pass-req-020" title="Permanent link">&para;</a></h4>
-<p>Уполномоченный ответственный за бумажные пропуска должен видеть актуальную очередь изготовления взрослых сезонных пропусков. Очередь должна позволять находить и отбирать участников по состоянию изготовления и иным данным, необходимым для передачи списка на печать.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-021"></a></p>
-<h4 id="pass-req-021">PASS-REQ-021. Экспорт списка на изготовление<a class="headerlink" href="#pass-req-021" title="Permanent link">&para;</a></h4>
-<p>Из очереди изготовления должен формироваться табличный экспорт, пригодный для передачи человеку, который печатает и ламинирует пропуска. Формат должен открываться обычным табличным редактором, например XLSX или эквивалентным форматом, и содержать данные, необходимые для изготовления выбранных пропусков.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-022"></a></p>
-<h4 id="pass-req-022">PASS-REQ-022. Отметка об изготовлении<a class="headerlink" href="#pass-req-022" title="Permanent link">&para;</a></h4>
-<p>Уполномоченный ответственный может отметить конкретный бумажный пропуск как изготовленный. Операция сохраняет дату, время и автора изменения. Переход в состояние «изготовлен» становится виден участнику в личном кабинете и создаёт ему уведомление. Повторное исправление состояния не уничтожает историю предыдущих отметок.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-023"></a></p>
-<h4 id="pass-req-023">PASS-REQ-023. Заявка на перевыпуск взрослого пропуска<a class="headerlink" href="#pass-req-023" title="Permanent link">&para;</a></h4>
-<p>Участник может из личного кабинета подать заявку на перевыпуск своего действующего бумажного пропуска с указанием причины. Принятая заявка возвращает соответствующий пропуск в очередь изготовления и снимает актуальность прежней отметки «изготовлен/готов к выдаче» без уничтожения истории предыдущего изготовления и выдачи.</p>
-<p>Ответственный за бумажные пропуска получает уведомление о новой заявке на перевыпуск и имеет возможность открыть её для отдельного рассмотрения.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="pass-req-027"></a></p>
-<h4 id="pass-req-027">PASS-REQ-027. Начало выдачи и использования сезонного бумажного пропуска<a class="headerlink" href="#pass-req-027" title="Permanent link">&para;</a></h4>
-<p>Сезонный бумажный пропуск взрослого участника может быть выдан и использоваться как бумажный пропуск текущего сезона начиная с 1 января, приходящегося на уже начавшийся сезон.</p>
-<p>Например, для сезона <code>2026-2027</code>, который автоматически начался после завершения субботников осенью 2026 года, обычная выдача и использование сезонного бумажного пропуска начинаются с 1 января 2027 года.</p>
-<p>Изготовление пропуска и подготовка очереди могут выполняться заранее; ограничение относится к фактической выдаче участнику и использованию пропуска как действующего сезонного бумажного пропуска.</p>
+<h2 id="_2">Подразделы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../02-01/">Сезонный именной бумажный пропуск</a></li>
+<li><a href="../02-02/">Очередь изготовления бумажных пропусков</a></li>
+</ul>
 
 
 
