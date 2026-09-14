@@ -44,7 +44,6 @@ const renderImplementationStatus = () => {
   const appendOnce = (element, item) => {
     if (!element || !item) return;
     if (element.querySelector(":scope > .status-pair")) return;
-
     element.querySelectorAll(":scope > .spec-status, :scope > .implementation-status").forEach((badge) => badge.remove());
     element.append(" ", makeStatusPair(item));
   };
@@ -54,8 +53,9 @@ const renderImplementationStatus = () => {
       const url = new URL(href, window.location.href);
       let id = url.hash.replace(/^#/, "").toUpperCase();
       if (!id) {
-        const file = url.pathname.split("/").filter(Boolean).pop() || "";
-        id = file.replace(/\.md$/i, "").replace(/\/$/, "").toUpperCase();
+        const parts = url.pathname.split("/").filter(Boolean);
+        const file = parts.pop() || "";
+        id = file.replace(/\.md$/i, "").toUpperCase();
       }
       return data.cases[id] || null;
     } catch {
@@ -73,8 +73,22 @@ const renderImplementationStatus = () => {
     }
   };
 
-  // Statuses belong to page content and the page TOC, not to the primary/mobile navigation.
   document.querySelectorAll(".md-sidebar--primary .status-pair, .md-sidebar--primary .spec-status, .md-sidebar--primary .implementation-status").forEach((badge) => badge.remove());
+
+  const isCaseGroupPage = window.location.pathname.includes("/case-groups/");
+
+  if (isCaseGroupPage) {
+    document.querySelectorAll(".md-content li").forEach((listItem) => {
+      const pairs = Array.from(listItem.querySelectorAll(".status-pair"));
+      if (!pairs.length) return;
+
+      const generatedPairs = pairs.filter((pair) => !pair.closest("a"));
+      const keep = generatedPairs[0] || pairs[0];
+      pairs.forEach((pair) => {
+        if (pair !== keep) pair.remove();
+      });
+    });
+  }
 
   document.querySelectorAll(".md-content a[href], .md-sidebar--secondary a[href]").forEach((link) => {
     const caseItem = caseByHref(link.getAttribute("href"));
@@ -82,23 +96,8 @@ const renderImplementationStatus = () => {
     const item = caseItem || interfaceItem;
     if (!item) return;
 
-    const listItem = link.closest("li");
-    if (caseItem && listItem) {
-      // Case category pages already contain a generated status pair as a sibling of the link.
-      // Keep that single source of presentation and remove a stale JS-injected copy if SPA
-      // navigation left one inside the link from an older version.
-      const generatedPair = listItem.querySelector(":scope > .status-pair");
-      if (generatedPair) {
-        link.querySelectorAll(":scope > .status-pair, :scope > .spec-status, :scope > .implementation-status").forEach((badge) => badge.remove());
-        return;
-      }
-
-      // Compatibility with pages generated before status pairs were emitted as HTML.
-      const fallback = listItem.querySelector(":scope > strong");
-      if (fallback) {
-        fallback.replaceWith(makeStatusPair(caseItem));
-        return;
-      }
+    if (caseItem && isCaseGroupPage && link.closest(".md-content")) {
+      return;
     }
 
     appendOnce(link, item);
