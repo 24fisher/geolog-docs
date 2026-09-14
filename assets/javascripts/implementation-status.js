@@ -52,7 +52,11 @@ const renderImplementationStatus = () => {
   const caseByHref = (href) => {
     try {
       const url = new URL(href, window.location.href);
-      const id = url.hash.replace(/^#/, "").toUpperCase();
+      let id = url.hash.replace(/^#/, "").toUpperCase();
+      if (!id) {
+        const file = url.pathname.split("/").filter(Boolean).pop() || "";
+        id = file.replace(/\.md$/i, "").replace(/\/$/, "").toUpperCase();
+      }
       return data.cases[id] || null;
     } catch {
       return null;
@@ -70,11 +74,24 @@ const renderImplementationStatus = () => {
   };
 
   // Statuses belong to page content and the page TOC, not to the primary/mobile navigation.
-  // Remove any badges left there by an older script version so SPA navigation cannot preserve them.
   document.querySelectorAll(".md-sidebar--primary .status-pair, .md-sidebar--primary .spec-status, .md-sidebar--primary .implementation-status").forEach((badge) => badge.remove());
 
   document.querySelectorAll(".md-content a[href], .md-sidebar--secondary a[href]").forEach((link) => {
-    appendOnce(link, caseByHref(link.getAttribute("href")) || interfaceByHref(link.getAttribute("href")));
+    const caseItem = caseByHref(link.getAttribute("href"));
+    const interfaceItem = interfaceByHref(link.getAttribute("href"));
+    const item = caseItem || interfaceItem;
+    if (!item) return;
+
+    // Category pages are generated with a plain-text status after the case link.
+    // Replace that publication fallback with the same CSS badges used elsewhere.
+    const listItem = link.closest("li");
+    const fallback = listItem?.querySelector(":scope > strong");
+    if (caseItem && fallback && !listItem.querySelector(":scope > .status-pair")) {
+      fallback.replaceWith(makeStatusPair(caseItem));
+      return;
+    }
+
+    appendOnce(link, item);
   });
 
   document.querySelectorAll('a[id*="-case-"]').forEach((anchor) => {
