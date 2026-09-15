@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/90-after-mvp/01-01/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/12-telegram-bot/01/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Управление клубом и электронные решения - Документация системы Geolog</title>
+        <title>Роль бота в MVP - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#mvp" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Управление клубом и электронные решения
+              Роль бота в MVP
             
           </span>
         </div>
@@ -353,54 +353,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#post-req-010" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        POST-REQ-010. Управление клубом и электронные решения
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-req-011" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        POST-REQ-011. Обращения и инициативы
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-req-012" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        POST-REQ-012. Электронные голосования
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-req-016" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        POST-REQ-016. Финансовое управление и согласование проектов
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-req-013" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        POST-REQ-013. Информационные кампании
+        Подразделы
       
     </span>
   </a>
@@ -424,36 +380,12 @@
 
 
 
-<h1 id="_1">Управление клубом и электронные решения<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><a id="post-req-010"></a></p>
-<h4 id="post-req-010">POST-REQ-010. Управление клубом и электронные решения<a class="headerlink" href="#post-req-010" title="Permanent link">&para;</a></h4>
-<p>Полный системный процесс работы правления, создания и исполнения управленческих решений переносится после MVP.</p>
-<p>Если финансовой операции MVP требуется решение-основание, используется минимальная регистрация уже принятого вне системы решения по <a href="../../00-scope/03/#scope-req-008">SCOPE-REQ-008</a>. Это не требует реализации полного управленческого процесса.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
-<hr />
-<p><a id="post-req-011"></a></p>
-<h4 id="post-req-011">POST-REQ-011. Обращения и инициативы<a class="headerlink" href="#post-req-011" title="Permanent link">&para;</a></h4>
-<p>Обращения к правлению и инициативы участников, включая их внутренний жизненный цикл, поддержку, заключения и перевод к голосованию, переносятся после MVP.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
-<hr />
-<p><a id="post-req-012"></a></p>
-<h4 id="post-req-012">POST-REQ-012. Электронные голосования<a class="headerlink" href="#post-req-012" title="Permanent link">&para;</a></h4>
-<p>Электронные голосования правления, общеклубные голосования и электронная процедура донабора в правление переносятся после MVP. Решения, необходимые финансовым процессам MVP, принимаются вне системы и регистрируются только как решения-основания в предусмотренном объёме.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
-<hr />
-<p><a id="post-req-016"></a></p>
-<h4 id="post-req-016">POST-REQ-016. Финансовое управление и согласование проектов<a class="headerlink" href="#post-req-016" title="Permanent link">&para;</a></h4>
-<p>Электронный жизненный цикл финансовых инициатив, предложений и проектов, их публикация, классификация в рамках процедуры принятия решения, заключения правления, согласование источника финансирования, электронное утверждение выделения средств и обработка результата голосования не входят в MVP.</p>
-<p>В MVP сохраняются сами финансовые правила, необходимые для проверки и учёта фактических операций: применимые лимиты и категории, запрет обхода лимитов дроблением, учёт резервов и целевого назначения средств, связь расхода с решением-основанием и фиксация несоответствия фактического расхода основанию. Когда по правилам требуется решение правления или клуба, оно принимается вне Geolog и в MVP только регистрируется как основание по <a href="../../00-scope/03/#scope-req-008">SCOPE-REQ-008</a>.</p>
-<p>Наличие в финансовых требованиях описания компетенции, классификации или результата решения не означает, что MVP должен реализовать интерфейс или workflow принятия такого решения.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
-<hr />
-<p><a id="post-req-013"></a></p>
-<h4 id="post-req-013">POST-REQ-013. Информационные кампании<a class="headerlink" href="#post-req-013" title="Permanent link">&para;</a></h4>
-<p>Полный жизненный цикл информационных кампаний, подтверждение ознакомления, телефонный этап, контроль охвата и аналитика кампаний переносятся после MVP.</p>
-<p>Обычные уведомления, непосредственно необходимые участникам, бригадирам и бухгалтеру для выполнения процессов MVP, остаются в MVP.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
-<hr />
+<h1 id="mvp">Роль бота в MVP<a class="headerlink" href="#mvp" title="Permanent link">&para;</a></h1>
+<h2 id="_1">Подразделы<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../01-01/">Дополнительный интерфейс</a></li>
+<li><a href="../01-02/">Состояния отчётов и обязательств</a></li>
+</ul>
 
 
 

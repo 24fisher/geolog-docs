@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/90-after-mvp/01-01/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/12-telegram-bot/01-01/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Управление клубом и электронные решения - Документация системы Geolog</title>
+        <title>Дополнительный интерфейс - Документация системы Geolog</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Управление клубом и электронные решения
+              Дополнительный интерфейс
             
           </span>
         </div>
@@ -353,10 +353,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#post-req-010" class="md-nav__link">
+  <a href="#bot-req-001" class="md-nav__link">
     <span class="md-ellipsis">
       
-        POST-REQ-010. Управление клубом и электронные решения
+        BOT-REQ-001. Дополнительный интерфейс
       
     </span>
   </a>
@@ -364,10 +364,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-req-011" class="md-nav__link">
+  <a href="#bot-req-002" class="md-nav__link">
     <span class="md-ellipsis">
       
-        POST-REQ-011. Обращения и инициативы
+        BOT-REQ-002. Привязка к участнику
       
     </span>
   </a>
@@ -375,10 +375,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-req-012" class="md-nav__link">
+  <a href="#bot-req-003" class="md-nav__link">
     <span class="md-ellipsis">
       
-        POST-REQ-012. Электронные голосования
+        BOT-REQ-003. Уведомления
       
     </span>
   </a>
@@ -386,10 +386,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-req-016" class="md-nav__link">
+  <a href="#bot-req-004" class="md-nav__link">
     <span class="md-ellipsis">
       
-        POST-REQ-016. Финансовое управление и согласование проектов
+        BOT-REQ-004. Быстрые действия
       
     </span>
   </a>
@@ -397,10 +397,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-req-013" class="md-nav__link">
+  <a href="#bot-req-005" class="md-nav__link">
     <span class="md-ellipsis">
       
-        POST-REQ-013. Информационные кампании
+        BOT-REQ-005. Отчёт о выполненной работе
       
     </span>
   </a>
@@ -424,35 +424,34 @@
 
 
 
-<h1 id="_1">Управление клубом и электронные решения<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><a id="post-req-010"></a></p>
-<h4 id="post-req-010">POST-REQ-010. Управление клубом и электронные решения<a class="headerlink" href="#post-req-010" title="Permanent link">&para;</a></h4>
-<p>Полный системный процесс работы правления, создания и исполнения управленческих решений переносится после MVP.</p>
-<p>Если финансовой операции MVP требуется решение-основание, используется минимальная регистрация уже принятого вне системы решения по <a href="../../00-scope/03/#scope-req-008">SCOPE-REQ-008</a>. Это не требует реализации полного управленческого процесса.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<h1 id="_1">Дополнительный интерфейс<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><a id="bot-req-001"></a></p>
+<h4 id="bot-req-001">BOT-REQ-001. Дополнительный интерфейс<a class="headerlink" href="#bot-req-001" title="Permanent link">&para;</a></h4>
+<p>Telegram-бот является дополнительным быстрым интерфейсом Geolog. Основным полноценным интерфейсом остаётся PWA. Бот не должен дублировать административную панель и сложные формы веб-приложения.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="post-req-011"></a></p>
-<h4 id="post-req-011">POST-REQ-011. Обращения и инициативы<a class="headerlink" href="#post-req-011" title="Permanent link">&para;</a></h4>
-<p>Обращения к правлению и инициативы участников, включая их внутренний жизненный цикл, поддержку, заключения и перевод к голосованию, переносятся после MVP.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<p><a id="bot-req-002"></a></p>
+<h4 id="bot-req-002">BOT-REQ-002. Привязка к участнику<a class="headerlink" href="#bot-req-002" title="Permanent link">&para;</a></h4>
+<p>Бот работает с персональными данными и действиями участника только после привязки Telegram к уже авторизованной учётной записи по правилам <a href="../../04-registration/02/#reg-req-006">REG-REQ-006</a>. Само сообщение боту не является достаточным доказательством личности.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="post-req-012"></a></p>
-<h4 id="post-req-012">POST-REQ-012. Электронные голосования<a class="headerlink" href="#post-req-012" title="Permanent link">&para;</a></h4>
-<p>Электронные голосования правления, общеклубные голосования и электронная процедура донабора в правление переносятся после MVP. Решения, необходимые финансовым процессам MVP, принимаются вне системы и регистрируются только как решения-основания в предусмотренном объёме.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<p><a id="bot-req-003"></a></p>
+<h4 id="bot-req-003">BOT-REQ-003. Уведомления<a class="headerlink" href="#bot-req-003" title="Permanent link">&para;</a></h4>
+<p>После привязки Telegram может использоваться как дополнительный канал уведомлений по <code>NOTIF-REQ-*</code>. Уведомление должно содержать краткую понятную суть события и, когда требуется дальнейшее действие, кнопку или ссылку непосредственно на соответствующий экран PWA вместо предложения самостоятельно искать его в меню.</p>
+<p>Отсутствие или недоступность Telegram не блокирует процесс, если нормативными требованиями предусмотрен обязательный канал через личный кабинет.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="post-req-016"></a></p>
-<h4 id="post-req-016">POST-REQ-016. Финансовое управление и согласование проектов<a class="headerlink" href="#post-req-016" title="Permanent link">&para;</a></h4>
-<p>Электронный жизненный цикл финансовых инициатив, предложений и проектов, их публикация, классификация в рамках процедуры принятия решения, заключения правления, согласование источника финансирования, электронное утверждение выделения средств и обработка результата голосования не входят в MVP.</p>
-<p>В MVP сохраняются сами финансовые правила, необходимые для проверки и учёта фактических операций: применимые лимиты и категории, запрет обхода лимитов дроблением, учёт резервов и целевого назначения средств, связь расхода с решением-основанием и фиксация несоответствия фактического расхода основанию. Когда по правилам требуется решение правления или клуба, оно принимается вне Geolog и в MVP только регистрируется как основание по <a href="../../00-scope/03/#scope-req-008">SCOPE-REQ-008</a>.</p>
-<p>Наличие в финансовых требованиях описания компетенции, классификации или результата решения не означает, что MVP должен реализовать интерфейс или workflow принятия такого решения.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<p><a id="bot-req-004"></a></p>
+<h4 id="bot-req-004">BOT-REQ-004. Быстрые действия<a class="headerlink" href="#bot-req-004" title="Permanent link">&para;</a></h4>
+<p>Через бот допускаются простые действия, которые существенно удобнее выполнить прямо из сообщения и не требуют сложной формы. Для субботников к таким действиям относятся как минимум просмотр ближайших доступных рабочих дней и собственных планов участия, создание или отмена собственного простого плана приезда и быстрый переход к отправке отчёта о выполненной работе.</p>
+<p>Если для действия требуется ввод нескольких связанных полей, работа с файлами, просмотр истории, административное решение или исправление спорных данных, бот открывает соответствующий экран PWA и не воспроизводит сложную форму внутри Telegram.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="post-req-013"></a></p>
-<h4 id="post-req-013">POST-REQ-013. Информационные кампании<a class="headerlink" href="#post-req-013" title="Permanent link">&para;</a></h4>
-<p>Полный жизненный цикл информационных кампаний, подтверждение ознакомления, телефонный этап, контроль охвата и аналитика кампаний переносятся после MVP.</p>
-<p>Обычные уведомления, непосредственно необходимые участникам, бригадирам и бухгалтеру для выполнения процессов MVP, остаются в MVP.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<p><a id="bot-req-005"></a></p>
+<h4 id="bot-req-005">BOT-REQ-005. Отчёт о выполненной работе<a class="headerlink" href="#bot-req-005" title="Permanent link">&para;</a></h4>
+<p>Бот должен позволять начать наиболее частый мобильный сценарий отчёта о выполненной работе. Пользователь может перейти из бота непосредственно к форме отчёта в PWA с уже известным контекстом, например выбранным рабочим днём или датой, если он был определён в боте.</p>
+<p>Если реализация конкретного отчёта в Telegram не даёт более простого пользовательского пути, чем мобильная PWA, нормативным является прямой переход в подготовленную форму PWA, а не обязательное дублирование формы в боте.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
 
 
