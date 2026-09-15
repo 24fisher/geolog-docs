@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/02-participants/02-01/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/02-participants/04/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Учёт детей на сервере - Документация системы Geolog</title>
+        <title>Переход в кандидаты по возрасту - Документация системы Geolog</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Учёт детей на сервере
+              Переход в кандидаты по возрасту
             
           </span>
         </div>
@@ -353,10 +353,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#child-req-001" class="md-nav__link">
+  <a href="#child-req-011" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CHILD-REQ-001. Учёт детей на сервере
+        CHILD-REQ-011. Автоматический переход в кандидаты со следующего сезона
       
     </span>
   </a>
@@ -364,10 +364,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#child-req-002" class="md-nav__link">
+  <a href="#child-req-012" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CHILD-REQ-002. Минимальные данные ребёнка
+        CHILD-REQ-012. Незавершённая регистрация кандидата
       
     </span>
   </a>
@@ -375,10 +375,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#child-req-003" class="md-nav__link">
+  <a href="#child-req-013" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CHILD-REQ-003. Ограничение участия ребёнка
+        CHILD-REQ-013. Уведомление родителей
       
     </span>
   </a>
@@ -386,10 +386,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#child-req-004" class="md-nav__link">
+  <a href="#child-req-014" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CHILD-REQ-004. Связь с родителями
+        CHILD-REQ-014. Создание личного кабинета
       
     </span>
   </a>
@@ -397,10 +397,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#child-req-005" class="md-nav__link">
+  <a href="#child-req-015" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CHILD-REQ-005. Основной родитель
+        CHILD-REQ-015. Родительские связи после перехода в кандидаты
       
     </span>
   </a>
@@ -424,33 +424,35 @@
 
 
 
-<h1 id="_1">Учёт детей на сервере<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><a id="child-req-001"></a></p>
-<h4 id="child-req-001">CHILD-REQ-001. Учёт детей на сервере<a class="headerlink" href="#child-req-001" title="Permanent link">&para;</a></h4>
-<p>Несовершеннолетние дети, для которых оформляются клубные пропуска, учитываются на сервере отдельными записями участников.</p>
+<h1 id="_1">Переход в кандидаты по возрасту<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="child-req-002"></a></p>
-<h4 id="child-req-002">CHILD-REQ-002. Минимальные данные ребёнка<a class="headerlink" href="#child-req-002" title="Permanent link">&para;</a></h4>
-<p>Для ребёнка хранятся данные, необходимые для идентификации, связи с родителями, контроля возраста и оформления постоянного детского бумажного пропуска. Дата рождения обязательна для автоматического определения достижения возраста перехода в кандидаты по настройке <code>CandidateTransitionAgeYears</code>.</p>
+<p><a id="child-req-011"></a></p>
+<h4 id="child-req-011">CHILD-REQ-011. Автоматический переход в кандидаты со следующего сезона<a class="headerlink" href="#child-req-011" title="Permanent link">&para;</a></h4>
+<p>Возраст перехода в кандидаты определяется системной настройкой <code>CandidateTransitionAgeYears</code>; начальное значение — 18 лет.</p>
+<p>Если участник достигает этого возраста в течение уже начавшегося сезона, детский статус сохраняется до конца текущего сезона. Автоматический переход в кандидаты выполняется при старте следующего сезона. Если пороговый возраст достигнут до старта очередного сезона, переход выполняется при старте этого ближайшего сезона.</p>
+<p>При переходе тот же участник автоматически получает статус кандидата. Новая запись физического лица не создаётся.</p>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="child-req-003"></a></p>
-<h4 id="child-req-003">CHILD-REQ-003. Ограничение участия ребёнка<a class="headerlink" href="#child-req-003" title="Permanent link">&para;</a></h4>
-<p>До начала сезона, с которого возрастной переход в кандидаты вступает в силу по <a href="../03/#child-req-011">CHILD-REQ-011</a>, ребёнок не имеет собственной учётной записи, не участвует во взносах, отработках, голосованиях и иных взрослых клубных процессах. Его присутствие в системе предназначено прежде всего для учёта детей и детских пропусков.</p>
-<p>Само достижение порогового возраста в течение уже начавшегося сезона не меняет эти правила посреди сезона.</p>
+<p><a id="child-req-012"></a></p>
+<h4 id="child-req-012">CHILD-REQ-012. Незавершённая регистрация кандидата<a class="headerlink" href="#child-req-012" title="Permanent link">&para;</a></h4>
+<p>Автоматическое получение статуса кандидата не означает завершённую регистрацию. Система создаёт состояние незавершённой регистрации и предоставляет возможность пройти полную процедуру регистрации кандидата.</p>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="child-req-004"></a></p>
-<h4 id="child-req-004">CHILD-REQ-004. Связь с родителями<a class="headerlink" href="#child-req-004" title="Permanent link">&para;</a></h4>
-<p>Ребёнок может быть связан с одним или двумя родителями. В нормативной документации используется термин <strong>«родитель»</strong>, а не «представитель».</p>
+<p><a id="child-req-013"></a></p>
+<h4 id="child-req-013">CHILD-REQ-013. Уведомление родителей<a class="headerlink" href="#child-req-013" title="Permanent link">&para;</a></h4>
+<p>При фактическом переходе ребёнка в кандидаты в начале соответствующего сезона связанные родители получают уведомление о переходе ребёнка в кандидаты и необходимости завершить его регистрацию по полной процедуре кандидата.</p>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="child-req-005"></a></p>
-<h4 id="child-req-005">CHILD-REQ-005. Основной родитель<a class="headerlink" href="#child-req-005" title="Permanent link">&para;</a></h4>
-<p>Если с ребёнком связаны два родителя, один из них может быть отмечен как основной для текущих операций и уведомлений. Наличие основного родителя не отменяет связь со вторым родителем.</p>
+<p><a id="child-req-014"></a></p>
+<h4 id="child-req-014">CHILD-REQ-014. Создание личного кабинета<a class="headerlink" href="#child-req-014" title="Permanent link">&para;</a></h4>
+<p>При фактическом переходе в кандидаты система подготавливает личный кабинет и механизм регистрации собственной учётной записи кандидата. После завершения регистрации управление собственной учётной записью осуществляется самим кандидатом.</p>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
+<p><a id="child-req-015"></a></p>
+<h4 id="child-req-015">CHILD-REQ-015. Родительские связи после перехода в кандидаты<a class="headerlink" href="#child-req-015" title="Permanent link">&para;</a></h4>
+<p>После фактического перехода в кандидаты исторические связи с родителями сохраняются, но сами по себе не дают родителям права управлять учётной записью кандидата.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 
 
 
