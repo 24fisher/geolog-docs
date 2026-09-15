@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/cand-case-005/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/cand-case-010/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Cand case 005 - Документация системы Geolog</title>
+        <title>Cand case 010 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cand-case-005" class="md-skip">
+        <a href="#cand-case-010" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cand case 005
+              Cand case 010
             
           </span>
         </div>
@@ -402,25 +402,24 @@
 
 
 
-<p><a id="cand-case-005"></a></p>
-<h1 id="cand-case-005">CAND-CASE-005. Второй поручитель отказался или не отвечает<a class="headerlink" href="#cand-case-005" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/02a-candidates/01-01/#cand-req-007">CAND-REQ-007</a>, <a href="../../rule-sections/02a-candidates/01-01/#cand-req-008">CAND-REQ-008</a></p>
+<p><a id="cand-case-010"></a></p>
+<h1 id="cand-case-010">CAND-CASE-010. Кандидат обнаруживает ошибку в ФИО при регистрации<a class="headerlink" href="#cand-case-010" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/02a-candidates/01-02/#cand-req-014">CAND-REQ-014</a></p>
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>инициатор создал предложение и выбрал второго поручителя;</li>
-<li>решение правления ещё не принято.</li>
+<li>кандидат принят;</li>
+<li>кандидат открыл действующую регистрационную ссылку.</li>
 </ul>
 <h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Если второй поручитель отказывается, система сохраняет отказ и уведомляет инициатора.</li>
-<li>Если второй поручитель не отвечает, автоматического отказа по истечении времени не происходит.</li>
-<li>Инициатор может отменить ожидающий запрос и выбрать другого действующего члена клуба.</li>
-<li>Старый запрос становится недействительным, новый поручитель получает запрос на подтверждение.</li>
-<li>История отказов и замен сохраняется.</li>
-<li>Пока два действующих поручительства не подтверждены, предложение не готово к рассмотрению правлением.</li>
+<li>Система показывает ранее внесённое ФИО для проверки без обычного редактирования.</li>
+<li>Кандидат обнаруживает ошибку и выбирает действие «Сообщить об ошибке».</li>
+<li>Ошибка передаётся на исправление уполномоченному пользователю.</li>
+<li>Уполномоченный пользователь исправляет данные с сохранением истории изменения.</li>
+<li>Кандидат завершает регистрацию с корректными данными.</li>
 </ol>
 <h4 id="_3">Результат<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>Отказ или отсутствие ответа второго поручителя не уничтожает предложение и не заставляет инициатора создавать его заново.</p>
+<p>Идентификационные данные не меняются кандидатом незаметно в процессе регистрации, но ошибка может быть исправлена без создания новой записи участника.</p>
 <hr />
 <hr />
 

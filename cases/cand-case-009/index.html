@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/cand-case-005/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/cand-case-009/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Cand case 005 - Документация системы Geolog</title>
+        <title>Cand case 009 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cand-case-005" class="md-skip">
+        <a href="#cand-case-009" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cand case 005
+              Cand case 009
             
           </span>
         </div>
@@ -402,25 +402,23 @@
 
 
 
-<p><a id="cand-case-005"></a></p>
-<h1 id="cand-case-005">CAND-CASE-005. Второй поручитель отказался или не отвечает<a class="headerlink" href="#cand-case-005" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/02a-candidates/01-01/#cand-req-007">CAND-REQ-007</a>, <a href="../../rule-sections/02a-candidates/01-01/#cand-req-008">CAND-REQ-008</a></p>
+<p><a id="cand-case-009"></a></p>
+<h1 id="cand-case-009">CAND-CASE-009. Найден возможный дубль участника<a class="headerlink" href="#cand-case-009" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/02a-candidates/01-01/#cand-req-010">CAND-REQ-010</a>, <a href="../../rule-sections/02-participants/01/#mem-req-001">MEM-REQ-001</a>, <a href="../../rule-sections/02-participants/01/#mem-req-003">MEM-REQ-003</a></p>
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>инициатор создал предложение и выбрал второго поручителя;</li>
-<li>решение правления ещё не принято.</li>
+<li>предложение готово к рассмотрению;</li>
+<li>автоматическая проверка нашла похожую существующую запись участника.</li>
 </ul>
 <h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Если второй поручитель отказывается, система сохраняет отказ и уведомляет инициатора.</li>
-<li>Если второй поручитель не отвечает, автоматического отказа по истечении времени не происходит.</li>
-<li>Инициатор может отменить ожидающий запрос и выбрать другого действующего члена клуба.</li>
-<li>Старый запрос становится недействительным, новый поручитель получает запрос на подтверждение.</li>
-<li>История отказов и замен сохраняется.</li>
-<li>Пока два действующих поручительства не подтверждены, предложение не готово к рассмотрению правлением.</li>
+<li>Член правления видит предупреждение о возможном дубле и открывает сравнение.</li>
+<li>Пока совпадение не разрешено, система не позволяет принять кандидата.</li>
+<li>Если это тот же человек, член правления связывает предложение с существующей записью; её история сохраняется.</li>
+<li>Если это другой человек, член правления явно отмечает это, после чего положительное решение может создать новую запись участника.</li>
 </ol>
 <h4 id="_3">Результат<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>Отказ или отсутствие ответа второго поручителя не уничтожает предложение и не заставляет инициатора создавать его заново.</p>
+<p>Система помогает избежать дублей, но не объединяет людей автоматически.</p>
 <hr />
 <hr />
 
