@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/reg-case-003/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/reg-case-004/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Reg case 003 - Документация системы Geolog</title>
+        <title>Reg case 004 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reg-case-003-telegram" class="md-skip">
+        <a href="#reg-case-004" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reg case 003
+              Reg case 004
             
           </span>
         </div>
@@ -367,17 +367,6 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Предусловия
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Основной сценарий
       
     </span>
@@ -386,7 +375,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         Альтернативные сценарии
@@ -401,18 +390,7 @@
   <a href="#a1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A1. Пользователь пишет боту без предварительной авторизации и привязки
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A2. Код недействителен или уже использован
+        A1. Не заполнено имя или фамилия
       
     </span>
   </a>
@@ -425,7 +403,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Результат
@@ -452,35 +430,27 @@
 
 
 
-<p><a id="reg-case-003"></a></p>
-<h1 id="reg-case-003-telegram">REG-CASE-003. Привязка Telegram к существующей учётной записи<a class="headerlink" href="#reg-case-003-telegram" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/04-registration/02/#reg-req-006">REG-REQ-006</a>, <a href="../../rule-sections/04-registration/01/#reg-req-001">REG-REQ-001</a></p>
+<p><a id="reg-case-004"></a></p>
+<h1 id="reg-case-004">REG-CASE-004. Создание взрослого участника и выдача регистрационной ссылки<a class="headerlink" href="#reg-case-004" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/04-registration/01/#reg-req-003">REG-REQ-003</a>, <a href="../../rule-sections/04-registration/03/#reg-req-013">REG-REQ-013</a></p>
 <h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>авторизованный участник;</li>
-<li>Telegram-бот.</li>
+<li>уполномоченное лицо;</li>
+<li>новый взрослый участник.</li>
 </ul>
-<h4 id="_2">Предусловия<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<ul>
-<li>участник уже авторизован в личном кабинете.</li>
-</ul>
-<h4 id="_3">Основной сценарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Участник инициирует привязку Telegram из личного кабинета.</li>
-<li>Система формирует одноразовый код или ссылку привязки.</li>
-<li>Участник использует код или ссылку в Telegram.</li>
-<li>Система связывает Telegram с той учётной записью, из которой была инициирована привязка.</li>
-<li>После успешного использования одноразовый код или ссылка больше не используются для повторной привязки.</li>
+<li>Уполномоченное лицо открывает создание взрослого участника.</li>
+<li>Отдельно указывает обязательные имя и фамилию; остальные предусмотренные данные заполняются по соответствующим правилам.</li>
+<li>Система создаёт запись участника без учётной записи.</li>
+<li>Для созданной записи выпускается персональная регистрационная ссылка.</li>
+<li>Получатель ссылки завершает регистрацию по <a href="../reg-case-001/#reg-case-001">REG-CASE-001</a>.</li>
 </ol>
-<h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<h5 id="a1">A1. Пользователь пишет боту без предварительной авторизации и привязки<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
-<p>Telegram сам по себе не считается доказательством личности и не создаёт новую запись участника.</p>
-<h5 id="a2">A2. Код недействителен или уже использован<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
-<p>Привязка не выполняется; существующие связи учётной записи не изменяются.</p>
-<h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>Telegram становится дополнительным каналом уже идентифицированного участника, а не самостоятельным способом создания личности в системе.</p>
-<hr />
-<hr />
+<h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h5 id="a1">A1. Не заполнено имя или фамилия<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
+<p>Запись участника и регистрационная ссылка не создаются; интерфейс указывает отсутствующее обязательное поле.</p>
+<h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>Регистрационная ссылка однозначно относится к заранее созданному участнику, у которого сохранены отдельные имя и фамилия.</p>
 
 
 

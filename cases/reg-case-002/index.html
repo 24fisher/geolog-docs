@@ -408,6 +408,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Новый пароль не прошёл проверку или подтверждение не совпало
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -443,7 +454,7 @@
 
 <p><a id="reg-case-002"></a></p>
 <h1 id="reg-case-002">REG-CASE-002. Восстановление доступа<a class="headerlink" href="#reg-case-002" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/04-registration/01/#reg-req-004">REG-REQ-004</a>, <a href="../../rule-sections/04-registration/01/#reg-req-005">REG-REQ-005</a>, <a href="../../rule-sections/14-audit/01/#aud-req-004">AUD-REQ-004</a></p>
+<p><strong>Требования:</strong> <a href="../../rule-sections/04-registration/01/#reg-req-004">REG-REQ-004</a>, <a href="../../rule-sections/04-registration/01/#reg-req-005">REG-REQ-005</a>, <a href="../../rule-sections/04-registration/03/#reg-req-015">REG-REQ-015</a>, <a href="../../rule-sections/14-audit/01/#aud-req-004">AUD-REQ-004</a></p>
 <h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>участник;</li>
@@ -453,13 +464,16 @@
 <ol>
 <li>Участник с подтверждённой электронной почтой инициирует восстановление пароля.</li>
 <li>Система проводит предусмотренную процедуру подтверждения через подтверждённый адрес.</li>
-<li>Участник устанавливает новый пароль и получает доступ к той же учётной записи.</li>
+<li>Участник дважды вводит новый пароль; значения совпадают и удовлетворяют <a href="../../rule-sections/04-registration/03/#reg-req-015">REG-REQ-015</a>.</li>
+<li>Новый пароль сохраняется, и участник получает доступ к той же учётной записи.</li>
 </ol>
 <h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <h5 id="a1">A1. Электронная почта не подтверждена<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
 <p>Самостоятельное восстановление по почте недоступно. Доступ восстанавливает член правления или системный администратор по установленной процедуре.</p>
 <h5 id="a2">A2. Доступ восстановлен уполномоченным лицом<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
 <p>Система фиксирует в журнале, кто и когда выполнил восстановление. История участника и сама учётная запись не заменяются новой записью.</p>
+<h5 id="a3">A3. Новый пароль не прошёл проверку или подтверждение не совпало<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
+<p>Пароль не изменяется. Пользователь получает понятное сообщение и может исправить ввод без повторного прохождения ссылки восстановления, пока она действительна.</p>
 <h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>Доступ восстановлен без создания нового участника и с обязательным аудитом административного восстановления.</p>
 <hr />

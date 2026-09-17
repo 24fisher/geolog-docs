@@ -430,6 +430,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#a4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Пароль и подтверждение не совпадают
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A5. Пароль не соответствует требованиям
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -465,7 +487,7 @@
 
 <p><a id="reg-case-001"></a></p>
 <h1 id="reg-case-001">REG-CASE-001. Первичная регистрация существующего участника<a class="headerlink" href="#reg-case-001" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/04-registration/01/#reg-req-001">REG-REQ-001</a>, <a href="../../rule-sections/04-registration/01/#reg-req-002">REG-REQ-002</a>, <a href="../../rule-sections/04-registration/01/#reg-req-003">REG-REQ-003</a>, <a href="../../rule-sections/04-registration/01/#reg-req-004">REG-REQ-004</a>, <a href="../../rule-sections/04-registration/02/#reg-req-007">REG-REQ-007</a></p>
+<p><strong>Требования:</strong> <a href="../../rule-sections/04-registration/01/#reg-req-001">REG-REQ-001</a>, <a href="../../rule-sections/04-registration/01/#reg-req-002">REG-REQ-002</a>, <a href="../../rule-sections/04-registration/01/#reg-req-003">REG-REQ-003</a>, <a href="../../rule-sections/04-registration/01/#reg-req-004">REG-REQ-004</a>, <a href="../../rule-sections/04-registration/02/#reg-req-007">REG-REQ-007</a>, <a href="../../rule-sections/04-registration/03/#reg-req-013">REG-REQ-013</a>, <a href="../../rule-sections/04-registration/03/#reg-req-015">REG-REQ-015</a></p>
 <h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>участник;</li>
@@ -474,16 +496,18 @@
 <h4 id="_2">Предусловия<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ul>
 <li>участник уже существует в базе данных;</li>
+<li>у участника сохранены как минимум имя и фамилия;</li>
 <li>у участника ещё нет завершённой учётной записи.</li>
 </ul>
 <h4 id="_3">Основной сценарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Для существующего участника формируется персональная одноразовая регистрационная ссылка.</li>
 <li>Ссылка действует в пределах текущего значения <code>RegistrationLinkLifetimeDays</code>.</li>
-<li>Участник переходит по ссылке и создаёт доступ по логину и паролю.</li>
+<li>Участник переходит по ссылке и создаёт логин.</li>
+<li>Участник вводит пароль и его подтверждение. Оба значения должны совпадать, а пароль должен удовлетворять <a href="../../rule-sections/04-registration/03/#reg-req-015">REG-REQ-015</a>.</li>
 <li>Указывает и подтверждает электронную почту.</li>
 <li>Принимает актуальную версию согласия на обработку персональных данных.</li>
-<li>Система связывает созданную учётную запись с существующим участником, не создавая нового физического лица.</li>
+<li>Система связывает созданную учётную запись с существующим участником, не создавая нового физического лица и не заставляя повторно вводить известные имя и фамилию.</li>
 <li>После завершения регистрации участнику становится доступен закрытый личный кабинет в пределах его статуса и ролей.</li>
 </ol>
 <h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
@@ -493,6 +517,10 @@
 <p>Отозванная ссылка больше не принимается системой. Для продолжения регистрации используется перевыпущенная ссылка.</p>
 <h5 id="a3">A3. Повторное использование ссылки<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
 <p>После успешного завершения первичной регистрации одноразовая ссылка не создаёт дополнительную учётную запись.</p>
+<h5 id="a4">A4. Пароль и подтверждение не совпадают<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h5>
+<p>Регистрация не завершается. Интерфейс сообщает о несовпадении и сохраняет остальные введённые данные формы.</p>
+<h5 id="a5">A5. Пароль не соответствует требованиям<a class="headerlink" href="#a5" title="Permanent link">&para;</a></h5>
+<p>Регистрация не завершается. Пользователь получает понятное указание, какое требование к паролю не выполнено.</p>
 <h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>Существующий участник получает собственную учётную запись без дублирования записи участника.</p>
 <hr />
