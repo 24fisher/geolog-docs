@@ -23,7 +23,7 @@
     
     
       
-        <title>Назначение журнала действий - Документация системы Geolog</title>
+        <title>Резервное копирование - Документация системы Geolog</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Назначение журнала действий
+              Резервное копирование
             
           </span>
         </div>
@@ -353,10 +353,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aud-req-001" class="md-nav__link">
+  <a href="#backup-req-001-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AUD-REQ-001. Назначение журнала действий
+        BACKUP-REQ-001. Ручная резервная копия через веб-интерфейс
       
     </span>
   </a>
@@ -364,10 +364,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aud-req-002" class="md-nav__link">
+  <a href="#backup-req-002" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AUD-REQ-002. История объекта и общий журнал
+        BACKUP-REQ-002. Формат и передача резервной копии
       
     </span>
   </a>
@@ -375,10 +375,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aud-req-003" class="md-nav__link">
+  <a href="#backup-req-003" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AUD-REQ-003. Неизменность значимых записей
+        BACKUP-REQ-003. Доступ и журналирование
       
     </span>
   </a>
@@ -386,21 +386,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aud-req-004" class="md-nav__link">
+  <a href="#backup-req-004" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AUD-REQ-004. Участники и доступ
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aud-req-005" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        AUD-REQ-005. Финансовые операции
+        BACKUP-REQ-004. Восстановление
       
     </span>
   </a>
@@ -424,32 +413,31 @@
 
 
 
-<h1 id="_1">Назначение журнала действий<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><a id="aud-req-001"></a></p>
-<h4 id="aud-req-001">AUD-REQ-001. Назначение журнала действий<a class="headerlink" href="#aud-req-001" title="Permanent link">&para;</a></h4>
-<p>Журнал действий отвечает на вопрос «кто и когда», основание отвечает на вопрос «почему», исполнение отвечает на вопрос «что сделано».</p>
+<h1 id="_1">Резервное копирование<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="aud-req-002"></a></p>
-<h4 id="aud-req-002">AUD-REQ-002. История объекта и общий журнал<a class="headerlink" href="#aud-req-002" title="Permanent link">&para;</a></h4>
-<p>История конкретного бизнес-объекта и общий технический журнал являются разными представлениями одной проверяемой цепочки событий.</p>
+<p><a id="backup-req-001"></a></p>
+<h4 id="backup-req-001-">BACKUP-REQ-001. Ручная резервная копия через веб-интерфейс<a class="headerlink" href="#backup-req-001-" title="Permanent link">&para;</a></h4>
+<p>Системный администратор может вручную создать и скачать резервную копию актуальной базы данных Geolog через административный веб-интерфейс.</p>
+<p>Резервная копия предназначена для восстановления состояния системы и должна содержать данные PostgreSQL, необходимые для восстановления бизнес-данных и их истории, включая записи действующих и бывших участников.</p>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="aud-req-003"></a></p>
-<h4 id="aud-req-003">AUD-REQ-003. Неизменность значимых записей<a class="headerlink" href="#aud-req-003" title="Permanent link">&para;</a></h4>
-<p>Значимые записи журнала действий не редактируются и не удаляются пользователями. Исправление выполняется новым действием или корректирующей записью с причиной и связью с исходной записью.</p>
+<p><a id="backup-req-002"></a></p>
+<h4 id="backup-req-002">BACKUP-REQ-002. Формат и передача резервной копии<a class="headerlink" href="#backup-req-002" title="Permanent link">&para;</a></h4>
+<p>Резервная копия формируется сервером как полный дамп PostgreSQL в формате, пригодном для последующего восстановления, и передаётся пользователю как скачиваемый файл. Создание резервной копии не должно требовать ручного доступа к VPS или базе данных.</p>
+<p>Постоянное хранение созданной копии на VPS в рамках этой функции не требуется.</p>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="aud-req-004"></a></p>
-<h4 id="aud-req-004">AUD-REQ-004. Участники и доступ<a class="headerlink" href="#aud-req-004" title="Permanent link">&para;</a></h4>
-<p>Журналируются изменения участников, статусов, ролей, льгот и прав.</p>
+<p><a id="backup-req-003"></a></p>
+<h4 id="backup-req-003">BACKUP-REQ-003. Доступ и журналирование<a class="headerlink" href="#backup-req-003" title="Permanent link">&para;</a></h4>
+<p>Создание и скачивание полной резервной копии доступно только системному администратору. Факт создания резервной копии журналируется как минимум с указанием исполнителя, даты и времени.</p>
+<p>Интерфейс предупреждает, что резервная копия содержит персональные и иные закрытые данные клуба и должна храниться в защищённом месте.</p>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="aud-req-005"></a></p>
-<h4 id="aud-req-005">AUD-REQ-005. Финансовые операции<a class="headerlink" href="#aud-req-005" title="Permanent link">&para;</a></h4>
-<p>Журналируются платежи, компенсации, расходы, возмещения, бухгалтерские корректировки, создание и изменение решений о выделении средств, фактические расходы и закрытие таких решений.</p>
+<p><a id="backup-req-004"></a></p>
+<h4 id="backup-req-004">BACKUP-REQ-004. Восстановление<a class="headerlink" href="#backup-req-004" title="Permanent link">&para;</a></h4>
+<p>Восстановление базы данных из резервной копии через веб-интерфейс в MVP не выполняется. Резервная копия должна быть технически пригодна для восстановления штатными средствами PostgreSQL вне пользовательского веб-интерфейса.</p>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
 
 
 
