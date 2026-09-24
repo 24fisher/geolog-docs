@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/05a-business-settings/01/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/02-participants/01-02/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Классы настроек - Документация системы Geolog</title>
+        <title>Актуализация клубных данных участника - Документация системы Geolog</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Классы настроек
+              Актуализация клубных данных участника
             
           </span>
         </div>
@@ -353,10 +353,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#set-req-001" class="md-nav__link">
+  <a href="#mem-req-011" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SET-REQ-001. Классы настроек
+        MEM-REQ-011. Актуализация клубных данных участника
       
     </span>
   </a>
@@ -364,43 +364,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#set-req-002-" class="md-nav__link">
+  <a href="#mem-req-012" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SET-REQ-002. Запрет магических бизнес-констант
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-req-003" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SET-REQ-003. История изменения
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-req-004" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SET-REQ-004. Системные настройки по умолчанию
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-req-005" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SET-REQ-005. Сезонные параметры
+        MEM-REQ-012. Профиль работ как набор тегов
       
     </span>
   </a>
@@ -424,111 +391,21 @@
 
 
 
-<h1 id="_1">Классы настроек<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><a id="set-req-001"></a></p>
-<h4 id="set-req-001">SET-REQ-001. Классы настроек<a class="headerlink" href="#set-req-001" title="Permanent link">&para;</a></h4>
-<p>Изменяемые бизнес-параметры делятся как минимум на:
-- системные настройки по умолчанию — применяются ко всем новым объектам соответствующего типа, если для конкретного объекта не задано допустимое иное значение;
-- сезонные параметры — принадлежат конкретному сезону и не изменяют историю завершённых сезонов;
-- версионируемые финансовые настройки — применяются по правилам <a href="../../../rules/09a-financial-settings/#fin-req-029">FIN-REQ-029</a>–<a href="../../../rules/09a-financial-settings/#fin-req-033">FIN-REQ-033</a> и требуют соответствующего финансового основания.</p>
+<h1 id="_1">Актуализация клубных данных участника<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><a id="mem-req-011"></a></p>
+<h4 id="mem-req-011">MEM-REQ-011. Актуализация клубных данных участника<a class="headerlink" href="#mem-req-011" title="Permanent link">&para;</a></h4>
+<p>Действующий член правления может из карточки участника актуализировать обычные клубные анкетные данные, полученные в том числе при обзвоне или личном общении: ФИО, известную дату рождения, телефон, email, профиль работ и его комментарий, рабочую зону, закреплённого бригадира и назначаемые правлением роли, включая роль бригадира. Такое редактирование не заменяет отдельные процессы изменения клубного положения, льгот, финансового состояния, допуска или иных данных, для которых требования предусматривают решение или основание.</p>
+<p>Изменение журналируется с исполнителем, временем и изменёнными значениями. Телефон, email и профиль работ не считаются данными, которые может актуализировать только сам участник.</p>
+<p>Дата рождения хранится в предметной модели как дата, но во всех пользовательских представлениях отображается в формате <code>ДД.ММ.ГГГГ</code>, например <code>02.11.1986</code>.</p>
 <p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
-<p><a id="set-req-002"></a></p>
-<h4 id="set-req-002-">SET-REQ-002. Запрет магических бизнес-констант<a class="headerlink" href="#set-req-002-" title="Permanent link">&para;</a></h4>
-<p>Сроки, даты, проценты, пороги, нормативы, денежные лимиты и иные значения, которые могут быть изменены организационным решением или настройкой эксплуатации, не должны существовать только как константы прикладного кода. Начальные значения из требований являются значениями по умолчанию или начальными значениями настройки.</p>
-<p>Структурные правила процесса, например один действующий голос участника в одном голосовании, необходимость отдельного решения или максимальное число предусмотренных процедурой повторов, не обязаны становиться настройками только потому, что содержат числовое ограничение.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="set-req-003"></a></p>
-<h4 id="set-req-003">SET-REQ-003. История изменения<a class="headerlink" href="#set-req-003" title="Permanent link">&para;</a></h4>
-<p>Для изменения бизнес-настройки сохраняются как минимум прежнее значение, новое значение, дата и время изменения, автор изменения, дата начала действия и основание, если оно требуется правилами клуба. Изменение настройки не должно задним числом менять результат уже завершённого процесса, если отдельным требованием явно не установлено иное.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="set-req-004"></a></p>
-<h4 id="set-req-004">SET-REQ-004. Системные настройки по умолчанию<a class="headerlink" href="#set-req-004" title="Permanent link">&para;</a></h4>
-<p>Начальный реестр системных настроек по умолчанию для процессов MVP включает:</p>
-<table>
-<thead>
-<tr>
-<th>Ключ</th>
-<th style="text-align: right;">Начальное значение</th>
-<th>Связанные требования</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>RegistrationLinkLifetimeDays</code></td>
-<td style="text-align: right;">7 дней</td>
-<td><a href="../../04-registration/01/#reg-req-003">REG-REQ-003</a></td>
-</tr>
-<tr>
-<td><code>CandidateTransitionAgeYears</code></td>
-<td style="text-align: right;">18 лет</td>
-<td><a href="../../02-participants/01-01/#mem-req-002">MEM-REQ-002</a>, <a href="../../02-participants/03-01/#child-req-002">CHILD-REQ-002</a>, <a href="../../02-participants/03-01/#child-req-003">CHILD-REQ-003</a>, <a href="../../02-participants/04/#child-req-011">CHILD-REQ-011</a>, <a href="../../02-participants/04/#child-req-013">CHILD-REQ-013</a>, <a href="../../02-participants/04/#child-req-015">CHILD-REQ-015</a>, <a href="../../04-registration/02/#reg-req-009">REG-REQ-009</a>, <a href="../../04-registration/02/#reg-req-010">REG-REQ-010</a>, <a href="../../../rules/10b-work-credit-sharing/#work-req-049">WORK-REQ-049</a></td>
-</tr>
-<tr>
-<td><code>ChildWorkCreditMinAgeYears</code></td>
-<td style="text-align: right;">14 лет</td>
-<td><a href="../../../rules/10b-work-credit-sharing/#work-req-049">WORK-REQ-049</a></td>
-</tr>
-<tr>
-<td><code>SeasonCloseRollbackDays</code></td>
-<td style="text-align: right;">7 дней</td>
-<td><a href="../../05-seasons/02/#season-req-006">SEASON-REQ-006</a></td>
-</tr>
-</tbody>
-</table>
-<p>Настройки процессов, перенесённых после MVP, вводятся вместе с соответствующими процессами и не обязаны присутствовать в начальном реестре первой версии.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
-<p><a id="set-req-005"></a></p>
-<h4 id="set-req-005">SET-REQ-005. Сезонные параметры<a class="headerlink" href="#set-req-005" title="Permanent link">&para;</a></h4>
-<p>Начальный реестр сезонных параметров для процессов MVP включает:</p>
-<table>
-<thead>
-<tr>
-<th>Ключ</th>
-<th style="text-align: right;">Начальное значение</th>
-<th>Связанные требования</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>WorkPeriodStartDate</code></td>
-<td style="text-align: right;">определяется решением правления для сезона</td>
-<td><a href="../../05-seasons/01/#season-req-003">SEASON-REQ-003</a></td>
-</tr>
-<tr>
-<td><code>WorkPeriodEndDate</code></td>
-<td style="text-align: right;">определяется решением правления для сезона</td>
-<td><a href="../../05-seasons/01/#season-req-004">SEASON-REQ-004</a></td>
-</tr>
-<tr>
-<td><code>WinterAccessStartDate</code></td>
-<td style="text-align: right;">1 января, приходящееся на уже начавшийся сезон</td>
-<td><a href="../../09-finance/01/#fin-req-004">FIN-REQ-004</a>, <a href="../../12-passes/02-02/#pass-req-027">PASS-REQ-027</a>, <a href="../../../rules/10a-work-shortfall/#work-req-059">WORK-REQ-059</a></td>
-</tr>
-<tr>
-<td><code>WorkCreditStepDays</code></td>
-<td style="text-align: right;">0,5 дня</td>
-<td><a href="../../10-work/03-01/#work-req-010">WORK-REQ-010</a>, <a href="../../09-finance/03/#fin-req-008">FIN-REQ-008</a></td>
-</tr>
-<tr>
-<td><code>MaleRequiredWorkDays</code></td>
-<td style="text-align: right;">3 дня</td>
-<td><a href="../../10-work/03-01/#work-req-011">WORK-REQ-011</a></td>
-</tr>
-<tr>
-<td><code>FemaleRequiredWorkDays</code></td>
-<td style="text-align: right;">2 дня</td>
-<td><a href="../../10-work/03-01/#work-req-011">WORK-REQ-011</a></td>
-</tr>
-</tbody>
-</table>
-<p>Размер годового взноса, срок его оплаты и стоимость компенсации дня отработки задаются для сезона и должны иметь организационное основание.</p>
-<p>Сезонные параметры процессов, перенесённых после MVP, вводятся вместе с соответствующими процессами.</p>
-<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
-<hr />
+<p><a id="mem-req-012"></a></p>
+<h4 id="mem-req-012">MEM-REQ-012. Профиль работ как набор тегов<a class="headerlink" href="#mem-req-012" title="Permanent link">&para;</a></h4>
+<p>Профиль работ участника состоит из нуля или более строковых тегов и отдельного свободного комментария. Категории тегов в предметной модели отсутствуют. Один участник может иметь несколько тегов.</p>
+<p>Член правления может назначить участнику существующий тег, удалить назначенный тег и создать новый произвольный тег непосредственно при редактировании карточки. Созданный тег становится доступен для назначения другим участникам. Перед сохранением значение нормализуется как минимум удалением окружающих пробелов; система не создаёт отдельные варианты одного тега только из-за регистра или лишних пробелов.</p>
+<p>Реестр участников позволяет искать или фильтровать людей по тегам профиля работ. Комментарий используется для уточнений, которые нецелесообразно превращать в отдельные теги.</p>
+<p>Начальный набор доступных тегов: <strong>Ремонт подъёмника</strong>, <strong>Механика подъёмника</strong>, <strong>Электрика подъёмника</strong>, <strong>Шейпинг</strong>, <strong>Подготовка трасс</strong>, <strong>Укладка травы</strong>, <strong>Дренажи</strong>, <strong>Земляные работы</strong>, <strong>Бензопила</strong>, <strong>Бензокоса</strong>, <strong>Сварка</strong>, <strong>Электроинструмент</strong>, <strong>Плотницкие работы</strong>, <strong>Электрика</strong>, <strong>Сантехника</strong>, <strong>Строительство и ремонт</strong>, <strong>Автомобиль / прицеп</strong>, <strong>Квадроцикл / снегоход</strong>, <strong>Спецтехника</strong>, <strong>Изготовление бугелей</strong>, <strong>Печать пропусков</strong>, <strong>Ламинирование</strong>, <strong>Фотография</strong>, <strong>Видеосъёмка</strong>, <strong>Видеомонтаж</strong>, <strong>Векторная графика</strong>, <strong>Дизайн логотипов</strong>, <strong>Полиграфия / макеты</strong>, <strong>3D-моделирование</strong>, <strong>3D-печать</strong>, <strong>Проектирование медалей / наград</strong>, <strong>Программирование</strong>, <strong>Сайты / IT</strong>, <strong>Сети / оборудование</strong>, <strong>Организация соревнований</strong>, <strong>Судейство</strong>, <strong>Хронометраж</strong>, <strong>Организация мероприятий</strong>, <strong>Бухгалтерия</strong>, <strong>Закупки</strong>, <strong>Логистика</strong>, <strong>Работа с документами</strong>.</p>
+<p>Начальный набор не является закрытым перечислением и не ограничивает добавление правлением новых строковых тегов.</p>
 
 
 
