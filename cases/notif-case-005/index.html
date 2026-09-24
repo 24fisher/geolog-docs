@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/duty-case-001/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/notif-case-005/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Duty case 001 - Документация системы Geolog</title>
+        <title>Notif case 005 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#duty-case-001" class="md-skip">
+        <a href="#notif-case-005-push-" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Duty case 001
+              Notif case 005
             
           </span>
         </div>
@@ -378,6 +378,67 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
+        Альтернативные сценарии
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Альтернативные сценарии">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Пользователь запрещает системное разрешение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. Push не поддерживается
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Пользователь отключает push
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4-push-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Push-подписка стала недействительной
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         Результат
       
     </span>
@@ -402,26 +463,35 @@
 
 
 
-<p><a id="duty-case-001"></a></p>
-<h1 id="duty-case-001">DUTY-CASE-001. Несколько участников дежурят одновременно<a class="headerlink" href="#duty-case-001" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/15-duty/01/#duty-req-001">DUTY-REQ-001</a>, <a href="../../rule-sections/15-duty/03/#duty-req-015">DUTY-REQ-015</a>, <a href="../../rule-sections/14-guests-and-tow-grips/01-03/#guest-req-011">GUEST-REQ-011</a></p>
+<p><a id="notif-case-005"></a></p>
+<h1 id="notif-case-005-push-">NOTIF-CASE-005. Пользователь включает push-уведомления<a class="headerlink" href="#notif-case-005-push-" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/11-notifications/01/#notif-req-001">NOTIF-REQ-001</a>, <a href="../../rule-sections/11-notifications/02/#notif-req-013">NOTIF-REQ-013</a>, <a href="../../rule-sections/11-notifications/03/#notif-req-015">NOTIF-REQ-015</a>, <a href="../../rule-sections/11-notifications/03/#notif-req-017">NOTIF-REQ-017</a></p>
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>участники являются действующими членами клуба;</li>
-<li>у каждого есть действующий допуск к катанию.</li>
+<li>пользователь авторизован в PWA;</li>
+<li>текущий браузер поддерживает Web Push.</li>
 </ul>
 <h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Первый участник нажимает «Заступить на дежурство», затем одним нажатием выбирает крупную кнопку зоны «Дубки» или «Пионерка»; система начинает его интервал только после выбора зоны.</li>
-<li>Второй участник в тот же день таким же двухшаговым сценарием самостоятельно принимает временные полномочия дежурного и может выбрать ту же или другую зону без согласования с первым.</li>
-<li>Оба получают доступ к общему рабочему процессу дежурства.</li>
-<li>Система сохраняет фактические интервалы участия каждого дежурного, выбранную для каждого интервала зону и автора каждого совершённого действия.</li>
-<li>Один из дежурных может завершить своё участие, не прекращая дежурство остальных.</li>
+<li>Пользователь открывает собственный профиль и включает «Push-уведомления».</li>
+<li>Только после этого действия браузер запрашивает системное разрешение на уведомления.</li>
+<li>После разрешения PWA создаёт push-подписку текущего устройства и передаёт её серверу.</li>
+<li>Система показывает push включённым для текущего устройства.</li>
+<li>При создании нового персонального уведомления оно появляется во внутреннем центре и дополнительно доставляется через действующую push-подписку.</li>
+<li>Нажатие на push открывает соответствующее внутреннее уведомление или связанный экран PWA.</li>
+<li>Сам показ push не переводит внутреннее уведомление в состояние «прочитано».</li>
 </ol>
-<h4 id="_3">Результат<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>Дежурство не зависит от одного владельца смены и допускает параллельную работу и подмену.</p>
-<hr />
-<hr />
+<h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h5 id="a1">A1. Пользователь запрещает системное разрешение<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
+<p>Push не включается. Профиль показывает, что уведомления запрещены браузером/операционной системой; внутренний центр продолжает работать.</p>
+<h5 id="a2-push">A2. Push не поддерживается<a class="headerlink" href="#a2-push" title="Permanent link">&para;</a></h5>
+<p>Переключатель не изображает канал доступным; пользователь видит понятное состояние недоступности.</p>
+<h5 id="a3-push">A3. Пользователь отключает push<a class="headerlink" href="#a3-push" title="Permanent link">&para;</a></h5>
+<p>Система прекращает push-доставку на текущую подписку. Уже созданные внутренние уведомления сохраняются; email и Telegram не меняются.</p>
+<h5 id="a4-push-">A4. Push-подписка стала недействительной<a class="headerlink" href="#a4-push-" title="Permanent link">&para;</a></h5>
+<p>После достоверного ответа push-сервиса система удаляет или деактивирует подписку. Внутреннее уведомление и профильный бизнес-процесс остаются действительными.</p>
+<h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>Push является управляемой пользователем дополнительной доставкой единого внутреннего уведомления, а не отдельной системой сообщений.</p>
 
 
 
