@@ -412,7 +412,7 @@
   <a href="#a2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A2. Платёж превышает обязательство
+        A2. Платёж закрывает несколько начислений
       
     </span>
   </a>
@@ -423,7 +423,7 @@
   <a href="#a3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A3. Бухгалтер допустил ошибку
+        A3. Платёж превышает всю задолженность
       
     </span>
   </a>
@@ -434,7 +434,7 @@
   <a href="#a4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A4. Оплата переводом
+        A4. Бухгалтер допустил ошибку
       
     </span>
   </a>
@@ -445,7 +445,18 @@
   <a href="#a5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A5. Оплата наличными
+        A5. Оплата переводом
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A6. Оплата наличными
       
     </span>
   </a>
@@ -487,7 +498,7 @@
 
 <p><a id="fin-case-001"></a></p>
 <h1 id="fin-case-001">FIN-CASE-001. Оплата клубного взноса<a class="headerlink" href="#fin-case-001" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/09-finance/01/#fin-req-001">FIN-REQ-001</a>, <a href="../../rule-sections/09-finance/01/#fin-req-002">FIN-REQ-002</a>, <a href="../../rule-sections/09-finance/01/#fin-req-003">FIN-REQ-003</a>, <a href="../../rule-sections/09-finance/01/#fin-req-005">FIN-REQ-005</a>, <a href="../../rule-sections/09-finance/02/#fin-req-006">FIN-REQ-006</a>, <a href="../../rule-sections/09-finance/06/#fin-req-019">FIN-REQ-019</a></p>
+<p><strong>Требования:</strong> <a href="../../rule-sections/09-finance/01/#fin-req-001">FIN-REQ-001</a>, <a href="../../rule-sections/09-finance/01/#fin-req-002">FIN-REQ-002</a>, <a href="../../rule-sections/09-finance/01/#fin-req-003">FIN-REQ-003</a>, <a href="../../rule-sections/09-finance/01/#fin-req-005">FIN-REQ-005</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-006">FIN-REQ-006</a>, <a href="../../rule-sections/09-finance/06/#fin-req-019">FIN-REQ-019</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-046">FIN-REQ-046</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-048">FIN-REQ-048</a></p>
 <h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>участник;</li>
@@ -502,21 +513,23 @@
 <ol>
 <li>Участник оплачивает взнос полностью или частично.</li>
 <li>Бухгалтер регистрирует платёж в системе.</li>
-<li>Система связывает платёж с участником и соответствующим обязательством.</li>
+<li>Система фиксирует платёж отдельной записью финансового журнала.</li>
+<li>Система применяет платёж к самому раннему непогашенному начислению участника и последовательно к следующим, пока сумма платежа не исчерпана.</li>
 <li>Система пересчитывает остаток задолженности или переплату.</li>
 <li>Участник видит обновлённое состояние в личном кабинете.</li>
-<li>Операция фиксируется в журнале действий.</li>
 </ol>
 <h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <h5 id="a1">A1. Частичная оплата<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
 <p>Остаток обязательства сохраняется как задолженность.</p>
-<h5 id="a2">A2. Платёж превышает обязательство<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
-<p>Разница фиксируется как переплата.</p>
-<h5 id="a3">A3. Бухгалтер допустил ошибку<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
+<h5 id="a2">A2. Платёж закрывает несколько начислений<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
+<p>Платёж последовательно закрывает старейшие непогашенные начисления, включая начисления прошлых сезонов. Бухгалтер не выбирает распределение вручную.</p>
+<h5 id="a3">A3. Платёж превышает всю задолженность<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
+<p>Разница после погашения всех начислений фиксируется как переплата.</p>
+<h5 id="a4">A4. Бухгалтер допустил ошибку<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h5>
 <p>Исходная операция не удаляется. Создаётся корректирующая операция с основанием.</p>
-<h5 id="a4">A4. Оплата переводом<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h5>
+<h5 id="a5">A5. Оплата переводом<a class="headerlink" href="#a5" title="Permanent link">&para;</a></h5>
 <p>При регистрации перевода бухгалтер прикладывает подтверждающий документ. Без подтверждающего документа перевод не проводится.</p>
-<h5 id="a5">A5. Оплата наличными<a class="headerlink" href="#a5" title="Permanent link">&para;</a></h5>
+<h5 id="a6">A6. Оплата наличными<a class="headerlink" href="#a6" title="Permanent link">&para;</a></h5>
 <p>Бухгалтер может зарегистрировать наличный платёж без подтверждающего документа.</p>
 <h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>Финансовый баланс участника соответствует зарегистрированным операциям.</p>
