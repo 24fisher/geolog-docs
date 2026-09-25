@@ -367,7 +367,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Основной сценарий
+        Предусловия
       
     </span>
   </a>
@@ -376,6 +376,17 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основной сценарий
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Альтернативные сценарии
@@ -398,10 +409,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a2" class="md-nav__link">
+  <a href="#a2-bootstrap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A2. Системный администратор уже существует
+        A2. Bootstrap уже завершался
       
     </span>
   </a>
@@ -419,13 +430,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#a4-bootstrap-systemadministrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. После bootstrap удалён или потерян последний SystemAdministrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a5-production-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A5. Повторный production deploy
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Результат
@@ -453,30 +486,40 @@
 
 
 <p><a id="reg-case-005"></a></p>
-<h1 id="reg-case-005-bootstrap">REG-CASE-005. Bootstrap при отсутствии системного администратора<a class="headerlink" href="#reg-case-005-bootstrap" title="Permanent link">&para;</a></h1>
+<h1 id="reg-case-005-bootstrap">REG-CASE-005. Одноразовый bootstrap первого системного администратора<a class="headerlink" href="#reg-case-005-bootstrap" title="Permanent link">&para;</a></h1>
 <p><strong>Требования:</strong> <a href="../../rule-sections/04-registration/01/#reg-req-001">REG-REQ-001</a>, <a href="../../rule-sections/04-registration/01/#reg-req-002">REG-REQ-002</a>, <a href="../../rule-sections/04-registration/02/#reg-req-007">REG-REQ-007</a>, <a href="../../rule-sections/04-registration/03/#reg-req-015">REG-REQ-015</a>, <a href="../../rule-sections/04-registration/04/#reg-req-020">REG-REQ-020</a>, <a href="../../rule-sections/03-access/01-01/#access-req-001">ACCESS-REQ-001</a>, <a href="../../rule-sections/03-access/01-01/#access-req-003">ACCESS-REQ-003</a></p>
 <h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>владелец bootstrap-секрета.</li>
 </ul>
-<h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="_2">Предусловия<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>bootstrap никогда ранее успешно не завершался;</li>
+<li>production deploy создал и сохранил bootstrap-секрет на сервере вне Git.</li>
+</ul>
+<h4 id="_3">Основной сценарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ol>
-<li>В системе есть зарегистрированные учётные записи, но ни один связанный участник не имеет роли системного администратора.</li>
+<li>В системе есть обычные зарегистрированные учётные записи.</li>
 <li>Пользователь предъявляет корректный bootstrap-секрет.</li>
 <li>Система позволяет выбрать существующую зарегистрированную учётную запись.</li>
 <li>Выбранному участнику назначаются все постоянные роли текущей модели ролей.</li>
-<li>Логин, пароль, email и внешние привязки выбранной учётной записи сохраняются.</li>
-<li>После назначения полного bootstrap-набора первому участнику bootstrap становится недоступен.</li>
+<li>Логин, пароль, email и внешние привязки сохраняются.</li>
+<li>Система атомарно фиксирует постоянный признак завершённого bootstrap.</li>
+<li>Bootstrap становится недоступен навсегда.</li>
 </ol>
-<h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <h5 id="a1">A1. Система полностью пустая<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
-<p>Система позволяет создать первого взрослого участника и связанную учётную запись с логином, паролем, email и обязательным согласием. Участнику назначаются все постоянные роли текущей модели ролей.</p>
-<h5 id="a2">A2. Системный администратор уже существует<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
-<p>Если зарегистрированный системный администратор уже существует, bootstrap не выполняется даже при предъявлении корректного bootstrap-секрета.</p>
+<p>Система позволяет создать первого взрослого участника и связанную учётную запись с обычными требованиями к логину, паролю, email и согласию. Участнику назначаются все постоянные роли, после чего bootstrap атомарно отмечается завершённым.</p>
+<h5 id="a2-bootstrap">A2. Bootstrap уже завершался<a class="headerlink" href="#a2-bootstrap" title="Permanent link">&para;</a></h5>
+<p>Bootstrap не выполняется даже с корректным секретом независимо от текущего количества SystemAdministrator.</p>
 <h5 id="a3-bootstrap-">A3. Bootstrap-секрет неверен или отсутствует<a class="headerlink" href="#a3-bootstrap-" title="Permanent link">&para;</a></h5>
-<p>Система не раскрывает список учётных записей и не изменяет участников, роли или учётные данные.</p>
-<h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>В системе существует один зарегистрированный bootstrap-суперадминистратор с полным набором текущих постоянных ролей, после чего bootstrap закрыт.</p>
+<p>Система не раскрывает список учётных записей и не изменяет участников, роли, учётные данные или признак завершения bootstrap.</p>
+<h5 id="a4-bootstrap-systemadministrator">A4. После bootstrap удалён или потерян последний SystemAdministrator<a class="headerlink" href="#a4-bootstrap-systemadministrator" title="Permanent link">&para;</a></h5>
+<p>Bootstrap повторно не открывается. Система предотвращает снятие роли у последнего зарегистрированного SystemAdministrator по <a href="../../rule-sections/03-access/01-01/#access-req-003">ACCESS-REQ-003</a> и <a href="../access-case-009/#access-case-009">ACCESS-CASE-009</a>.</p>
+<h5 id="a5-production-deploy">A5. Повторный production deploy<a class="headerlink" href="#a5-production-deploy" title="Permanent link">&para;</a></h5>
+<p>Если bootstrap-секрет уже создан, deploy сохраняет существующий секрет и не создаёт новый. Если bootstrap уже завершён, deploy также не открывает bootstrap повторно.</p>
+<h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>Первоначальная инициализация выполнена ровно один раз; bootstrap закрыт постоянно, а дальнейшее управление ролями выполняется штатными механизмами.</p>
 
 
 
