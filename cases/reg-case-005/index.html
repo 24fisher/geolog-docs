@@ -401,7 +401,7 @@
   <a href="#a1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A1. Система полностью пустая
+        A1. Пользователь создаёт новую учётную запись
       
     </span>
   </a>
@@ -409,10 +409,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a2-bootstrap" class="md-nav__link">
+  <a href="#a2-email" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A2. Bootstrap уже завершался
+        A2. Email уже связан с незавершённой учётной записью
       
     </span>
   </a>
@@ -420,10 +420,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a3-bootstrap-" class="md-nav__link">
+  <a href="#a3-email-email" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A3. Bootstrap-секрет неверен или отсутствует
+        A3. Email уже является подтверждённым основным email зарегистрированной учётной записи
       
     </span>
   </a>
@@ -431,10 +431,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a4-bootstrap-systemadministrator" class="md-nav__link">
+  <a href="#a4-bootstrap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A4. После bootstrap удалён или потерян последний SystemAdministrator
+        A4. Bootstrap уже завершался
       
     </span>
   </a>
@@ -442,10 +442,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a5-production-deploy" class="md-nav__link">
+  <a href="#a5-bootstrap-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A5. Повторный production deploy
+        A5. Bootstrap-секрет неверен или отсутствует
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a6-bootstrap-systemadministrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A6. После bootstrap удалён или потерян последний SystemAdministrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a7-production-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A7. Повторный production deploy
       
     </span>
   </a>
@@ -499,24 +521,28 @@
 </ul>
 <h4 id="_3">Основной сценарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ol>
-<li>В системе есть обычные зарегистрированные учётные записи.</li>
 <li>Пользователь предъявляет корректный bootstrap-секрет.</li>
-<li>Система позволяет выбрать существующую зарегистрированную учётную запись.</li>
+<li>Система одновременно предоставляет выбор существующей зарегистрированной учётной записи и путь создания новой учётной записи для bootstrap.</li>
+<li>Пользователь выбирает существующую зарегистрированную учётную запись.</li>
 <li>Выбранному участнику назначаются все постоянные роли текущей модели ролей.</li>
 <li>Пароль, подтверждённый основной email и внешние привязки сохраняются.</li>
 <li>Система атомарно фиксирует постоянный признак завершённого bootstrap.</li>
 <li>Bootstrap становится недоступен навсегда.</li>
 </ol>
 <h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<h5 id="a1">A1. Система полностью пустая<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
-<p>Система позволяет создать первого взрослого участника и связанную учётную запись с обычными требованиями к паролю, подтверждённому основному email и согласию. Отдельный логин не создаётся. Участнику назначаются все постоянные роли, после чего bootstrap атомарно отмечается завершённым.</p>
-<h5 id="a2-bootstrap">A2. Bootstrap уже завершался<a class="headerlink" href="#a2-bootstrap" title="Permanent link">&para;</a></h5>
+<h5 id="a1">A1. Пользователь создаёт новую учётную запись<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
+<p>Наличие других зарегистрированных или незавершённых учётных записей не блокирует этот путь. Пользователь вводит данные взрослого участника, пароль, email и принимает согласие. Если такой email ещё не связан с учётной записью, система создаёт нового взрослого участника и связанную учётную запись. После подтверждения email bootstrap завершается назначением полного набора ролей.</p>
+<h5 id="a2-email">A2. Email уже связан с незавершённой учётной записью<a class="headerlink" href="#a2-email" title="Permanent link">&para;</a></h5>
+<p>Если введённый нормализованный email уже связан ровно с одной незавершённой учётной записью, включая импортированный или иной неподтверждённый адрес, система продолжает эту учётную запись вместо создания дубля участника. Введённый bootstrap-пароль становится паролем этой незавершённой учётной записи. На указанный email отправляется подтверждение; после подтверждения bootstrap может быть завершён для этого участника.</p>
+<h5 id="a3-email-email">A3. Email уже является подтверждённым основным email зарегистрированной учётной записи<a class="headerlink" href="#a3-email-email" title="Permanent link">&para;</a></h5>
+<p>Новая учётная запись не создаётся. Пользователь выбирает эту существующую зарегистрированную учётную запись в bootstrap и завершает назначение ролей без изменения её пароля, подтверждённого основного email и внешних привязок.</p>
+<h5 id="a4-bootstrap">A4. Bootstrap уже завершался<a class="headerlink" href="#a4-bootstrap" title="Permanent link">&para;</a></h5>
 <p>Bootstrap не выполняется даже с корректным секретом независимо от текущего количества SystemAdministrator.</p>
-<h5 id="a3-bootstrap-">A3. Bootstrap-секрет неверен или отсутствует<a class="headerlink" href="#a3-bootstrap-" title="Permanent link">&para;</a></h5>
+<h5 id="a5-bootstrap-">A5. Bootstrap-секрет неверен или отсутствует<a class="headerlink" href="#a5-bootstrap-" title="Permanent link">&para;</a></h5>
 <p>Система не раскрывает список учётных записей и не изменяет участников, роли, учётные данные или признак завершения bootstrap.</p>
-<h5 id="a4-bootstrap-systemadministrator">A4. После bootstrap удалён или потерян последний SystemAdministrator<a class="headerlink" href="#a4-bootstrap-systemadministrator" title="Permanent link">&para;</a></h5>
+<h5 id="a6-bootstrap-systemadministrator">A6. После bootstrap удалён или потерян последний SystemAdministrator<a class="headerlink" href="#a6-bootstrap-systemadministrator" title="Permanent link">&para;</a></h5>
 <p>Bootstrap повторно не открывается. Система предотвращает снятие роли у последнего зарегистрированного SystemAdministrator по <a href="../../rule-sections/03-access/01-01/#access-req-003">ACCESS-REQ-003</a> и <a href="../access-case-009/#access-case-009">ACCESS-CASE-009</a>.</p>
-<h5 id="a5-production-deploy">A5. Повторный production deploy<a class="headerlink" href="#a5-production-deploy" title="Permanent link">&para;</a></h5>
+<h5 id="a7-production-deploy">A7. Повторный production deploy<a class="headerlink" href="#a7-production-deploy" title="Permanent link">&para;</a></h5>
 <p>Если bootstrap-секрет уже создан, deploy сохраняет существующий секрет и не создаёт новый. Если bootstrap уже завершён, deploy также не открывает bootstrap повторно.</p>
 <h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>Первоначальная инициализация выполнена ровно один раз; bootstrap закрыт постоянно, а дальнейшее управление ролями выполняется штатными механизмами.</p>
