@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/doc-case-002/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/access-case-010/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Doc case 002 - Документация системы Geolog</title>
+        <title>Access case 010 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#doc-case-002-" class="md-skip">
+        <a href="#access-case-010" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Doc case 002
+              Access case 010
             
           </span>
         </div>
@@ -356,7 +356,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Основной сценарий
+        Предусловия
       
     </span>
   </a>
@@ -365,6 +365,89 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основной сценарий
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Альтернативные сценарии
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Альтернативные сценарии">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1-config-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Серверный config-флаг выключен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2-systemadministrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. Пользователь не SystemAdministrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Таймер ещё не завершён
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Подтверждение закрыто или пользователь покинул страницу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A5. Очистка не может быть завершена согласованно
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         Результат
@@ -391,22 +474,41 @@
 
 
 
-<p><a id="doc-case-002"></a></p>
-<h1 id="doc-case-002-">DOC-CASE-002. Просмотр бизнес-документации на сайте<a class="headerlink" href="#doc-case-002-" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/13-business-documentation/01/#doc-req-001">DOC-REQ-001</a>, <a href="../../rule-sections/13-business-documentation/01/#doc-req-004">DOC-REQ-004</a>, <a href="../../rule-sections/13-business-documentation/02/#doc-req-007">DOC-REQ-007</a>, <a href="../../rule-sections/13-business-documentation/03/#doc-req-008">DOC-REQ-008</a>, <a href="../../rule-sections/13-business-documentation/03/#doc-req-009">DOC-REQ-009</a>, <a href="../../rule-sections/13-business-documentation/03/#doc-req-010">DOC-REQ-010</a>, <a href="../../rule-sections/13-business-documentation/03/#doc-req-011">DOC-REQ-011</a>, <a href="../../rule-sections/13-business-documentation/03/#doc-req-012">DOC-REQ-012</a>, <a href="../../rule-sections/03-access/01-02/#access-req-010">ACCESS-REQ-010</a></p>
-<h4 id="_1">Основной сценарий<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p><a id="access-case-010"></a></p>
+<h1 id="access-case-010">ACCESS-CASE-010. Системный администратор очищает тестовые данные участников<a class="headerlink" href="#access-case-010" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/03-access/01-01/#access-req-002">ACCESS-REQ-002</a>, <a href="../../rule-sections/03-access/01-01/#access-req-016">ACCESS-REQ-016</a>, <a href="../../rule-sections/02-participants/01-01/#mem-req-003">MEM-REQ-003</a></p>
+<h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>система работает в тестовой или предэксплуатационной среде;</li>
+<li>серверной конфигурацией явно разрешена техническая очистка данных участников;</li>
+<li>текущий пользователь имеет роль SystemAdministrator.</li>
+</ul>
+<h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Авторизованный пользователь открывает раздел бизнес-документации на сайте системы.</li>
-<li>Сайт показывает текущий результат, сформированный репозиторным генератором.</li>
-<li>Пользователь видит дату генерации, версию и содержание.</li>
-<li>Сначала отображаются бизнес-правила, затем сгруппированные по предметным разделам бизнес-кейсы.</li>
-<li>Отдельные правила и кейсы визуально разделены, а заголовки категорий кейсов отличаются от самих кейсов.</li>
-<li>Навигация использует человекочитаемые названия, при этом прямые ссылки по устойчивым REQ-ID и CASE-ID продолжают работать.</li>
-<li>Пользователь не выбирает архивную редакцию: сайт показывает только текущую публикацию.</li>
+<li>Системный администратор открывает системные настройки.</li>
+<li>В самом низу страницы в красной «Опасной зоне» он выбирает действие «Очистить тестовые данные участников».</li>
+<li>Интерфейс показывает первое предупреждение и требует явного подтверждения намерения.</li>
+<li>После подтверждения показывается финальное предупреждение о необратимости операции и запускается видимый обратный отсчёт; кнопка «Удалить» остаётся неактивной до его завершения.</li>
+<li>После окончания отсчёта системный администратор нажимает активную кнопку «Удалить».</li>
+<li>Сервер повторно проверяет config-флаг и роль SystemAdministrator непосредственно перед выполнением операции.</li>
+<li>Система выполняет очистку как одну согласованную техническую операцию: удаляет или сбрасывает предусмотренный набор данных участников и связанных тестовых данных без частично очищенного состояния и нарушенных ссылок.</li>
+<li>В техническом журнале вне очищаемого набора сохраняются исполнитель, время и тип операции.</li>
+<li>Клиент перечитывает состояние с сервера и показывает результат очистки.</li>
+<li>После очистки bootstrap и предусмотренный первоначальный импорт остаются работоспособными и могут использоваться для повторного наполнения системы.</li>
 </ol>
-<h4 id="_2">Результат<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<p>Пользователь читает актуальные правила и кейсы в одном человекочитаемом документе и может переходить непосредственно к нужному правилу или кейсу.</p>
-<hr />
+<h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h5 id="a1-config-">A1. Серверный config-флаг выключен<a class="headerlink" href="#a1-config-" title="Permanent link">&para;</a></h5>
+<p>Сервер отклоняет операцию независимо от роли пользователя и состояния интерфейса. Рабочее действие очистки в UI не предлагается.</p>
+<h5 id="a2-systemadministrator">A2. Пользователь не SystemAdministrator<a class="headerlink" href="#a2-systemadministrator" title="Permanent link">&para;</a></h5>
+<p>Сервер отклоняет операцию даже при прямом вызове endpoint. Наличие других бизнес-ролей не даёт права на очистку.</p>
+<h5 id="a3">A3. Таймер ещё не завершён<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
+<p>Финальная кнопка «Удалить» остаётся неактивной, и UI не отправляет запрос очистки.</p>
+<h5 id="a4">A4. Подтверждение закрыто или пользователь покинул страницу<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h5>
+<p>Текущий обратный отсчёт отменяется. При следующей попытке процедура подтверждения и отсчёт начинаются заново.</p>
+<h5 id="a5">A5. Очистка не может быть завершена согласованно<a class="headerlink" href="#a5" title="Permanent link">&para;</a></h5>
+<p>Операция не должна оставлять систему в частично очищенном состоянии. Изменения очищаемого набора откатываются либо операция завершается как неуспешная до публикации частичного результата; технический журнал сохраняет доступную информацию о попытке/ошибке.</p>
+<h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>Тестовые данные участников очищены только после серверной авторизации и осознанного подтверждения, очистка не оставляет нарушенного промежуточного состояния, действие остаётся аудируемым, а систему можно штатно наполнить заново.</p>
 
 
 

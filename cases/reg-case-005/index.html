@@ -474,6 +474,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#a8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A8. Тестовая среда очищена штатной технической операцией
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -544,6 +555,8 @@
 <p>Bootstrap повторно не открывается. Система предотвращает снятие роли у последнего зарегистрированного SystemAdministrator по <a href="../../rule-sections/03-access/01-01/#access-req-003">ACCESS-REQ-003</a> и <a href="../access-case-009/#access-case-009">ACCESS-CASE-009</a>.</p>
 <h5 id="a7-production-deploy">A7. Повторный production deploy<a class="headerlink" href="#a7-production-deploy" title="Permanent link">&para;</a></h5>
 <p>Если bootstrap-секрет уже создан, deploy сохраняет существующий секрет и не создаёт новый. Если bootstrap уже завершён, deploy также не открывает bootstrap повторно.</p>
+<h5 id="a8">A8. Тестовая среда очищена штатной технической операцией<a class="headerlink" href="#a8" title="Permanent link">&para;</a></h5>
+<p>Если в тестовой или предэксплуатационной среде выполнена явно разрешённая очистка по <a href="../../rule-sections/03-access/01-01/#access-req-016">ACCESS-REQ-016</a>, операция может сбросить признак завершённого bootstrap вместе с тестовым состоянием. После очистки bootstrap снова доступен для первоначального наполнения этой среды. В production такое исключение запрещено.</p>
 <h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>Первоначальная инициализация выполнена ровно один раз; bootstrap закрыт постоянно, а дальнейшее управление ролями выполняется штатными механизмами.</p>
 
