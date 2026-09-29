@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/reg-case-001/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rules/04a-registration-email-confirmation/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Reg case 001 - Документация системы Geolog</title>
+        <title>Подтверждение email при первичной регистрации - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reg-case-001" class="md-skip">
+        <a href="#email" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reg case 001
+              Подтверждение email при первичной регистрации
             
           </span>
         </div>
@@ -252,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rules/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -279,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../cases/" class="md-nav__link">
         
   
   
@@ -353,10 +353,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#reg-req-021-email" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Участники
+        REG-REQ-021. Раздельные этапы подтверждения email и завершения регистрации
       
     </span>
   </a>
@@ -364,10 +364,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#reg-req-022" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Предусловия
+        REG-REQ-022. Повторная отправка письма подтверждения
       
     </span>
   </a>
@@ -375,137 +375,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#reg-req-023" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Основной сценарий
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Альтернативные сценарии
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Альтернативные сценарии">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A1. Ссылка истекла
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A2. Ссылка отозвана
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A3. Повторное использование ссылки
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A4. Пароль и подтверждение не совпадают
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A5. Пароль не соответствует требованиям
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a6-email" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A6. Email имеет неверный формат
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a7-email" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A7. Email ещё не подтверждён
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a8-email" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A8. Email уже используется другой учётной записью
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A9. Согласие не принято
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Результат
+        REG-REQ-023. Возврат из письма в незавершённую регистрацию
       
     </span>
   </a>
@@ -529,55 +402,29 @@
 
 
 
-<p><a id="reg-case-001"></a></p>
-<h1 id="reg-case-001">REG-CASE-001. Первичная регистрация существующего участника<a class="headerlink" href="#reg-case-001" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/04-registration/01/#reg-req-001">REG-REQ-001</a>, <a href="../../rule-sections/04-registration/01/#reg-req-002">REG-REQ-002</a>, <a href="../../rule-sections/04-registration/01/#reg-req-003">REG-REQ-003</a>, <a href="../../rule-sections/04-registration/01/#reg-req-004">REG-REQ-004</a>, <a href="../../rule-sections/04-registration/02/#reg-req-007">REG-REQ-007</a>, <a href="../../rule-sections/04-registration/03/#reg-req-013">REG-REQ-013</a>, <a href="../../rule-sections/04-registration/03/#reg-req-015">REG-REQ-015</a>, <a href="../../rules/04a-registration-email-confirmation/#reg-req-021">REG-REQ-021</a>, <a href="../../rules/04a-registration-email-confirmation/#reg-req-022">REG-REQ-022</a>, <a href="../../rules/04a-registration-email-confirmation/#reg-req-023">REG-REQ-023</a></p>
-<h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
-<ul>
-<li>участник;</li>
-<li>уполномоченное лицо, инициирующее первичную регистрацию.</li>
-</ul>
-<h4 id="_2">Предусловия<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<ul>
-<li>участник уже существует в базе данных;</li>
-<li>у участника сохранены как минимум имя и фамилия;</li>
-<li>у участника ещё нет завершённой учётной записи.</li>
-</ul>
-<h4 id="_3">Основной сценарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Для существующего участника формируется персональная одноразовая регистрационная ссылка.</li>
-<li>Ссылка действует в пределах текущего значения <code>RegistrationLinkLifetimeDays</code>.</li>
-<li>Участник переходит по ссылке, в том числе после сканирования QR-кода, представляющего эту же ссылку. Если у участника есть импортированные email, интерфейс предлагает выбрать один из них либо ввести новый адрес. Импортированные адреса до подтверждения остаются дополнительными неподтверждёнными контактами. Отдельный логин не создаётся.</li>
-<li>Участник вводит пароль и его подтверждение. Оба значения должны совпадать, а пароль должен удовлетворять <a href="../../rule-sections/04-registration/03/#reg-req-015">REG-REQ-015</a>.</li>
-<li>Пользователь нажимает <strong>«Подтвердить email»</strong>. После простой проверки формата система отправляет на выбранный или введённый адрес одноразовую ссылку подтверждения. Пользователь переходит по ссылке, после чего адрес получает состояние подтверждённого для текущей незавершённой регистрации, но ещё не становится основным email участника.</li>
-<li>До принятия согласия система показывает понятный текст информирования об обработке персональных данных по <a href="../../rule-sections/04-registration/02/#reg-req-007">REG-REQ-007</a> и предоставляет доступ к актуальному полному тексту.</li>
-<li>Участник самостоятельно принимает актуальную версию согласия на обработку персональных данных; согласие не должно быть заранее отмечено.</li>
-<li>Система связывает созданную учётную запись с существующим участником, не создавая нового физического лица и не заставляя повторно вводить известные имя и фамилию.</li>
-<li>Система разрешает отдельное действие <strong>«Зарегистрироваться»</strong> только после подтверждения текущего email и принятия актуальной версии согласия. При успешном завершении подтверждённый адрес атомарно становится единственным основным email участника, создаётся учётная запись и участнику становится доступен закрытый личный кабинет в пределах его статуса и ролей.</li>
-</ol>
-<h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<h5 id="a1">A1. Ссылка истекла<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
-<p>Истёкшая ссылка не завершает регистрацию. Для участника может быть выпущена новая ссылка.</p>
-<h5 id="a2">A2. Ссылка отозвана<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
-<p>Отозванная ссылка больше не принимается системой. Для продолжения регистрации используется перевыпущенная ссылка.</p>
-<h5 id="a3">A3. Повторное использование ссылки<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
-<p>После успешного завершения первичной регистрации одноразовая ссылка не создаёт дополнительную учётную запись.</p>
-<h5 id="a4">A4. Пароль и подтверждение не совпадают<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h5>
-<p>Регистрация не завершается. Интерфейс сообщает о несовпадении и сохраняет остальные введённые данные формы.</p>
-<h5 id="a5">A5. Пароль не соответствует требованиям<a class="headerlink" href="#a5" title="Permanent link">&para;</a></h5>
-<p>Регистрация не завершается. Пользователь получает понятное указание, какое требование к паролю не выполнено.</p>
-<h5 id="a6-email">A6. Email имеет неверный формат<a class="headerlink" href="#a6-email" title="Permanent link">&para;</a></h5>
-<p>Письмо подтверждения не отправляется, регистрация не завершается. Интерфейс показывает ошибку у поля email и сохраняет остальные введённые значения.</p>
-<h5 id="a7-email">A7. Email ещё не подтверждён<a class="headerlink" href="#a7-email" title="Permanent link">&para;</a></h5>
-<p>Регистрация не завершается и обычный вход не открывается. Пользователь остаётся в процессе регистрации и может повторно отправить письмо подтверждения.</p>
-<h5 id="a8-email">A8. Email уже используется другой учётной записью<a class="headerlink" href="#a8-email" title="Permanent link">&para;</a></h5>
-<p>Регистрация с этим адресом не завершается. Интерфейс сообщает, что адрес уже используется для входа, не раскрывая дополнительные сведения о другой учётной записи.</p>
-<h5 id="a9">A9. Согласие не принято<a class="headerlink" href="#a9" title="Permanent link">&para;</a></h5>
-<p>Регистрация не завершается, пока пользователь не ознакомится с информированием и самостоятельно не примет требуемое согласие.</p>
-<h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>Существующий участник получает собственную учётную запись без дублирования записи участника.</p>
+<h1 id="email">Подтверждение email при первичной регистрации<a class="headerlink" href="#email" title="Permanent link">&para;</a></h1>
+<p>Этот документ уточняет <a href="../../rule-sections/04-registration/01/#reg-req-003">REG-REQ-003</a>, <a href="../../rule-sections/04-registration/01/#reg-req-004">REG-REQ-004</a> и <a href="../../rule-sections/04-registration/02/#reg-req-007">REG-REQ-007</a> для незавершённой первичной регистрации.</p>
 <hr />
+<p><a id="reg-req-021"></a></p>
+<h4 id="reg-req-021-email">REG-REQ-021. Раздельные этапы подтверждения email и завершения регистрации<a class="headerlink" href="#reg-req-021-email" title="Permanent link">&para;</a></h4>
+<p>Отправка письма подтверждения и завершение регистрации являются разными действиями. Действие <strong>«Подтвердить email»</strong> только сохраняет текущее состояние незавершённой регистрации и отправляет письмо на выбранный адрес. Оно не создаёт завершённую учётную запись и не открывает обычный вход.</p>
+<p>В форме постоянно присутствует отдельное действие <strong>«Зарегистрироваться»</strong>. Пока текущий email не подтверждён, оно недоступно. После подтверждения текущего email и выполнения остальных обязательных условий формы действие становится доступно; только оно завершает регистрацию, создаёт или активирует учётную запись и делает подтверждённый адрес основным.</p>
+<p>Состояния <code>email введён</code>, <code>письмо отправлено</code>, <code>email подтверждён</code> и <code>регистрация завершена</code> различаются явно и не подменяют друг друга.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 <hr />
+<p><a id="reg-req-022"></a></p>
+<h4 id="reg-req-022">REG-REQ-022. Повторная отправка письма подтверждения<a class="headerlink" href="#reg-req-022" title="Permanent link">&para;</a></h4>
+<p>После успешной отправки письма повторная отправка на тот же текущий email блокируется на 60 секунд. Интерфейс показывает оставшееся время до повторной отправки. Ограничение обязательно проверяется сервером; блокировка кнопки в браузере не является механизмом защиты.</p>
+<p>По истечении задержки пользователь может повторно отправить письмо без создания новой учётной записи и без потери уже введённых данных. Повторная отправка отзывает ранее выданную неиспользованную ссылку подтверждения для этой незавершённой регистрации.</p>
+<p>Изменение email сбрасывает подтверждение предыдущего адреса: новый адрес должен быть подтверждён отдельно.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
+<hr />
+<p><a id="reg-req-023"></a></p>
+<h4 id="reg-req-023">REG-REQ-023. Возврат из письма в незавершённую регистрацию<a class="headerlink" href="#reg-req-023" title="Permanent link">&para;</a></h4>
+<p>Ссылка подтверждения возвращает пользователя в ту же незавершённую регистрацию. Сервер хранит состояние, необходимое для продолжения процесса, поэтому переход по ссылке не требует повторного ввода уже сохранённых обязательных данных.</p>
+<p>После успешного перехода интерфейс показывает <strong>«Email подтверждён»</strong>, подтверждённый адрес больше нельзя изменить в этой регистрации, действие отправки письма заменяется статусом подтверждения, а <strong>«Зарегистрироваться»</strong> становится доступно при выполнении остальных обязательных условий.</p>
+<p>Сам переход по ссылке не завершает регистрацию автоматически.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: MVP</span></p>
 
 
 
