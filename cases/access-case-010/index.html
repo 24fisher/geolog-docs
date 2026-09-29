@@ -480,7 +480,7 @@
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>система работает в тестовой или предэксплуатационной среде;</li>
-<li>серверной конфигурацией явно разрешена техническая очистка данных участников;</li>
+<li>на чистой системе серверный config-флаг технической очистки включён по умолчанию; оператор может явно отключить его конфигурацией;</li>
 <li>текущий пользователь имеет роль SystemAdministrator.</li>
 </ul>
 <h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
@@ -498,7 +498,7 @@
 </ol>
 <h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <h5 id="a1-config-">A1. Серверный config-флаг выключен<a class="headerlink" href="#a1-config-" title="Permanent link">&para;</a></h5>
-<p>Сервер отклоняет операцию независимо от роли пользователя и состояния интерфейса. Рабочее действие очистки в UI не предлагается.</p>
+<p>Сервер отклоняет операцию независимо от роли пользователя и состояния интерфейса. Рабочее действие очистки в UI не предлагается. Перед вводом системы в штатную эксплуатацию это должно быть явно заданное production-состояние.</p>
 <h5 id="a2-systemadministrator">A2. Пользователь не SystemAdministrator<a class="headerlink" href="#a2-systemadministrator" title="Permanent link">&para;</a></h5>
 <p>Сервер отклоняет операцию даже при прямом вызове endpoint. Наличие других бизнес-ролей не даёт права на очистку.</p>
 <h5 id="a3">A3. Таймер ещё не завершён<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
