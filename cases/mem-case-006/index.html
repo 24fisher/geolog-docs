@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/mem-case-004/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/mem-case-006/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Mem case 004 - Документация системы Geolog</title>
+        <title>Mem case 006 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mem-case-004" class="md-skip">
+        <a href="#mem-case-006" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mem case 004
+              Mem case 006
             
           </span>
         </div>
@@ -378,10 +378,71 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Альтернативы
+        Альтернативные сценарии
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Альтернативные сценарии">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Только женщины
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. Равенство, неизвестные данные или отсутствие допустимых совпадений
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Пользователь меняет автоматический выбор
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Недопустимая либо устаревшая ссылка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a5-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A5. Повторный preview
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -413,32 +474,37 @@
 
 
 
-<p><a id="mem-case-004"></a></p>
-<h1 id="mem-case-004">MEM-CASE-004. Бригадир создаётся тем же импортом<a class="headerlink" href="#mem-case-004" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/02-participants/02/#mem-req-006">MEM-REQ-006</a>, <a href="../../rule-sections/02-participants/02/#mem-req-007">MEM-REQ-007</a>, <a href="../../rule-sections/02-participants/02/#mem-req-008">MEM-REQ-008</a>, <a href="../../rules/02b-import-guarantor-and-sex/#mem-req-013">MEM-REQ-013</a></p>
+<p><a id="mem-case-006"></a></p>
+<h1 id="mem-case-006">MEM-CASE-006. Автоматическое и ручное разрешение связей первоначального импорта<a class="headerlink" href="#mem-case-006" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/02-participants/02/#mem-req-004">MEM-REQ-004</a>, <a href="../../rule-sections/02-participants/02/#mem-req-006">MEM-REQ-006</a>, <a href="../../rule-sections/02-participants/02/#mem-req-007">MEM-REQ-007</a>, <a href="../../rules/02b-import-guarantor-and-sex/#mem-req-013">MEM-REQ-013</a>, <a href="../../rule-sections/02a-candidates/01-01/#cand-req-007">CAND-REQ-007</a>, <a href="../../rules/10d-work-curatorship/#work-req-024">WORK-REQ-024</a></p>
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>исходный реестр содержит участника с заполненной колонкой «Бригада»;</li>
-<li>указанный бригадир также присутствует в другой строке этого же импортируемого файла;</li>
-<li>бригадир отсутствует в Geolog до начала импорта;</li>
-<li>связь определяется однозначно.</li>
+<li>выполняется первоначальная миграция клубного реестра;</li>
+<li>строка содержит поручителя или закреплённого бригадира;</li>
+<li>связанные участники уже существуют либо создаются этим же набором.</li>
 </ul>
 <h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Preview показывает участника и распознанного закреплённого бригадира.</li>
-<li>При применении система сначала создаёт или сопоставляет все записи участников набора.</li>
-<li>После первого прохода система строит итоговый набор участников, включающий только что созданного бригадира.</li>
-<li>Вторым проходом система разрешает связь «закреплённый бригадир».</li>
-<li>Связь сохраняется для участника.</li>
-<li>После импорта административный реестр показывает этого бригадира в данных участника.</li>
+<li>Система отбирает допустимых участников для типа связи и проверяет однозначное совпадение ФИО.</li>
+<li>Если оно не найдено, выполняется поиск по нормализованной фамилии.</li>
+<li>Единственный допустимый вариант выбирается автоматически. При нескольких вариантах, состоящих только из женщин, выбор продолжается среди них; иначе — среди мужчин.</li>
+<li>Система выбирает старшего по известной дате/году рождения. При неизвестном возрасте или равенстве применяется наиболее ранний известный год начала первого кандидатского периода.</li>
+<li>Единственный результат показывается в preview с исходным обозначением и основанием выбора.</li>
+<li>Пользователь подтверждает набор; apply сохраняет показанные связи независимо от порядка строк.</li>
 </ol>
-<h4 id="_3">Альтернативы<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Если ФИО не разрешает бригадира, применяется <a href="../../rules/02b-import-guarantor-and-sex/#mem-req-013">MEM-REQ-013</a>. Оставшаяся неоднозначность разрешается в preview выбором допустимого участника либо «Отсутствует»; до решения применение запрещено.</li>
-<li>Порядок строк в файле не влияет на результат связи.</li>
-</ul>
+<h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h5 id="a1">A1. Только женщины<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
+<p>Применяются те же приоритеты возраста и стажа. Наличие подходящего мужчины переключает выбор на мужчин.</p>
+<h5 id="a2">A2. Равенство, неизвестные данные или отсутствие допустимых совпадений<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
+<p>Связь представлена управляемым полем. Пользователь выбирает допустимого участника (включая строку того же набора) либо «Отсутствует». До явного решения применение всего набора запрещено.</p>
+<h5 id="a3">A3. Пользователь меняет автоматический выбор<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
+<p>Ручное значение, включая «Отсутствует», имеет приоритет. Различающие данные однофамильцев видны до подтверждения.</p>
+<h5 id="a4">A4. Недопустимая либо устаревшая ссылка<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h5>
+<p>Точное совпадение ФИО не разрешает поручительство кандидата или бывшего участника. Подмена значения запроса и изменение допустимости после preview отклоняются сервером без частичного применения набора.</p>
+<h5 id="a5-preview">A5. Повторный preview<a class="headerlink" href="#a5-preview" title="Permanent link">&para;</a></h5>
+<p>При неизменных данных набор автоматически выбранных связей и основания выбора совпадают. Неопределённость не снимается порядком строк или идентификаторов.</p>
 <h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>Связи между участниками одного импортируемого набора не теряются из-за того, что связанный человек отсутствовал в базе до начала импорта.</p>
+<p>Каждая связь либо разрешена воспроизводимым правилом, либо явно указана пользователем; неразрешённые связи и частично применённые наборы отсутствуют.</p>
 <hr />
 <hr />
 
