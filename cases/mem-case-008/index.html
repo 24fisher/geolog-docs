@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/case-groups/mem-import-cases/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/mem-case-008/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Дополнительные бизнес-кейсы первоначальной миграции - Документация системы Geolog</title>
+        <title>Mem case 008 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-" class="md-skip">
+        <a href="#mem-case-008" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Дополнительные бизнес-кейсы первоначальной миграции
+              Mem case 008
             
           </span>
         </div>
@@ -279,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cases/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -346,6 +346,108 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Предусловия
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основной сценарий
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Альтернативные сценарии
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Альтернативные сценарии">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Другие служебные роли
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. Правление было назначено предыдущим импортом
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Исходный реестр добавляет разрешённую роль
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Импорт определяет бригадира
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Результат
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -361,13 +463,35 @@
 
 
 
-<h1 id="-">Дополнительные бизнес-кейсы первоначальной миграции<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
-<p>Выберите кейс.</p>
+<p><a id="mem-case-008"></a></p>
+<h1 id="mem-case-008">MEM-CASE-008. Повторный импорт сохраняет назначенные роли доступа<a class="headerlink" href="#mem-case-008" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/02-participants/02/#mem-req-004">MEM-REQ-004</a>, <a href="../../rule-sections/02-participants/02/#mem-req-005">MEM-REQ-005</a>, <a href="../../rule-sections/02-participants/02/#mem-req-006">MEM-REQ-006</a>, <a href="../../rule-sections/02-participants/01-02/#mem-req-011">MEM-REQ-011</a>, <a href="../../rules/02b-import-guarantor-and-sex/#mem-req-013">MEM-REQ-013</a></p>
+<h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="../../cases/mem-case-006/">Автоматическое и ручное разрешение связей первоначального импорта</a> <span class="status-pair"><span class="spec-status spec-status--draft">Черновик</span><span class="implementation-status implementation-status--not_implemented">Не реализовано</span></span></li>
-<li><a href="../../cases/mem-case-007/">Пол импортированного взрослого предварительно определяется по имени</a> <span class="status-pair"><span class="spec-status spec-status--draft">Черновик</span><span class="implementation-status implementation-status--not_implemented">Не реализовано</span></span></li>
-<li><a href="../../cases/mem-case-008/">Повторный импорт сохраняет назначенные роли доступа</a> <span class="status-pair"><span class="spec-status spec-status--draft">Черновик</span><span class="implementation-status implementation-status--not_implemented">Не реализовано</span></span></li>
+<li>в Geolog существует взрослый участник с ролями «Участник» и «Член правления»;</li>
+<li>исходный реестр содержит строку того же человека как обычного члена клуба без обозначения роли правления;</li>
+<li>данных достаточно для однозначного автоматического сопоставления по <a href="../../rule-sections/02-participants/02/#mem-req-004">MEM-REQ-004</a>;</li>
+<li>импорт выполняет уполномоченный пользователь.</li>
 </ul>
+<h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Preview сопоставляет строку с существующим участником, не предлагая создание дубликата.</li>
+<li>Пользователь подтверждает импорт.</li>
+<li>Apply обновляет ту же запись участника и сохраняет роли «Участник» и «Член правления».</li>
+<li>Повторная загрузка того же реестра снова сопоставляет ту же запись и сохраняет тот же набор ролей.</li>
+<li>Повтор запроса Apply для уже применённого preview возвращает сохранённый результат без повторного изменения ролей и дублирования факта импорта.</li>
+</ol>
+<h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h5 id="a1">A1. Другие служебные роли<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
+<p>Назначенные ранее роли бригадира, бухгалтера, системного администратора и ответственного за бумажные пропуска также сохраняются, в том числе в сочетании друг с другом и с ролью правления. Отсутствующие роли не добавляются без предусмотренного правилами основания.</p>
+<h5 id="a2">A2. Правление было назначено предыдущим импортом<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
+<p>Если предыдущая строка содержала «П», а новая содержит обычное членство «Ч», ранее назначенная роль правления сохраняется. Импорт не трактует отсутствие «П» как явное снятие роли.</p>
+<h5 id="a3">A3. Исходный реестр добавляет разрешённую роль<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
+<p>Однозначное обозначение «П» у действующего участника добавляет роль правления согласно <a href="../../rule-sections/02-participants/02/#mem-req-006">MEM-REQ-006</a>, сохраняя остальные назначенные роли.</p>
+<h5 id="a4">A4. Импорт определяет бригадира<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h5>
+<p>Разрешённая связь добавляет роль бригадира связанному участнику, сохраняя его прочие роли. Это действует и для участника в том же наборе, и для существующего участника вне набора; повторный импорт сохраняет результат.</p>
+<h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>Импорт сохраняет идентичность человека и ранее назначенные роли доступа. Отсутствующие обозначения в исходном реестре не подменяют отдельное явное управление ролями в Geolog.</p>
 
 
 
