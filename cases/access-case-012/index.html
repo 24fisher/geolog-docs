@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/case-groups/fin-participant-card-cases/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/access-case-012/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Финансовая проекция реестров участника - Документация системы Geolog</title>
+        <title>Access case 012 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#access-case-012" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Финансовая проекция реестров участника
+              Access case 012
             
           </span>
         </div>
@@ -279,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cases/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -346,6 +346,97 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Предусловия
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основной сценарий
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Альтернативные сценарии
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Альтернативные сценарии">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Фотография отсутствует
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2-telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. Telegram не привязан или пользовательская ссылка недоступна
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Просматривающий пользователь имеет специальную роль
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Результат
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -361,11 +452,31 @@
 
 
 
-<h1 id="_1">Финансовая проекция реестров участника<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Выберите кейс.</p>
+<p><a id="access-case-012"></a></p>
+<h1 id="access-case-012">ACCESS-CASE-012. Кандидат или член клуба открывает общеклубный список участников<a class="headerlink" href="#access-case-012" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/03-access/01-01/#access-req-002">ACCESS-REQ-002</a>, <a href="../../rules/03a-profile-photo-access/#access-req-017">ACCESS-REQ-017</a>, <a href="../../rule-sections/03-access/05-02/#access-req-018">ACCESS-REQ-018</a></p>
+<h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="../../cases/fin-case-011/">Правление и бухгалтер используют разные рабочие представления данных участника</a> <span class="status-pair"><span class="spec-status spec-status--draft">Черновик</span><span class="implementation-status implementation-status--not_implemented">Не реализовано</span></span></li>
+<li>пользователь авторизован в Geolog;</li>
+<li>пользователь является кандидатом или действующим членом клуба.</li>
 </ul>
+<h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Пользователь открывает <strong>«Клуб → Участники»</strong>.</li>
+<li>Система возвращает только взрослых участников с текущим положением «Кандидат» или «Член клуба» и минимальное read-only представление каждого: ФИО, профильную фотографию при наличии, текущее клубное положение и специальные роли. Дети, приостановленные, выбывшие и исключённые записи в справочник не входят.</li>
+<li>Если у участника есть подтверждённая привязка Telegram и доступна пользовательская ссылка для связи, система также возвращает безопасную ссылку Telegram.</li>
+<li>Интерфейс позволяет найти человека по ФИО и визуально понять его клубное положение и специальные роли.</li>
+<li>Никаких административных действий или расширенных персональных данных из этого экрана не предоставляется.</li>
+</ol>
+<h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h5 id="a1">A1. Фотография отсутствует<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
+<p>Показывается нейтральный placeholder; отсутствие фотографии не считается ошибкой.</p>
+<h5 id="a2-telegram">A2. Telegram не привязан или пользовательская ссылка недоступна<a class="headerlink" href="#a2-telegram" title="Permanent link">&para;</a></h5>
+<p>Telegram-действие для этого участника не показывается. Технический Telegram ID и телефон вместо ссылки не раскрываются.</p>
+<h5 id="a3">A3. Просматривающий пользователь имеет специальную роль<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
+<p>Состав полей общеклубного справочника не расширяется. Для административных, бухгалтерских или иных рабочих данных пользователь переходит в соответствующую ролевую рабочую область.</p>
+<h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>Кандидаты и члены клуба могут узнавать друг друга и видеть клубные роли без раскрытия лишней персональной информации.</p>
 
 
 
