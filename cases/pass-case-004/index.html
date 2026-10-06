@@ -401,7 +401,7 @@
   <a href="#a1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A1. Отметка поставлена ошибочно
+        A1. Часть пропусков уже в кеше
       
     </span>
   </a>
@@ -409,10 +409,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#a2" class="md-nav__link">
+  <a href="#a11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A2. Выгружается только часть очереди
+        A1.1. После генерации участник сменил фамилию
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. Ответственный отменяет job
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Job упала
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4-eligible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Во время сезона появились новые eligible участники
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a5-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A5. Повторный старт во время активной job
       
     </span>
   </a>
@@ -453,34 +497,47 @@
 
 
 <p><a id="pass-case-004"></a></p>
-<h1 id="pass-case-004">PASS-CASE-004. Подготовка списка взрослых пропусков к печати<a class="headerlink" href="#pass-case-004" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/12-passes/02-01/#pass-req-003">PASS-REQ-003</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-004">PASS-REQ-004</a>, <a href="../../rule-sections/12-passes/02-02/#pass-req-020">PASS-REQ-020</a>, <a href="../../rule-sections/12-passes/02-02/#pass-req-021">PASS-REQ-021</a>, <a href="../../rule-sections/12-passes/02-02/#pass-req-022">PASS-REQ-022</a>, <a href="../../rule-sections/11-notifications/01/#notif-req-001">NOTIF-REQ-001</a>, <a href="../../rule-sections/11-notifications/01/#notif-req-002">NOTIF-REQ-002</a></p>
+<h1 id="pass-case-004">PASS-CASE-004. Пакетная генерация взрослых сезонных пропусков<a class="headerlink" href="#pass-case-004" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/12-passes/02-01/#pass-req-003">PASS-REQ-003</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-004">PASS-REQ-004</a>, <a href="../../rule-sections/12-passes/02-02/#pass-req-020">PASS-REQ-020</a>, <a href="../../rule-sections/12-passes/02-02/#pass-req-021">PASS-REQ-021</a>, <a href="../../rule-sections/12-passes/02-02/#pass-req-022">PASS-REQ-022</a>, <a href="../../rule-sections/12-passes/05-01/#pass-req-034">PASS-REQ-034</a>, <a href="../../rule-sections/12-passes/05-01/#pass-req-035">PASS-REQ-035</a>, <a href="../../rule-sections/12-passes/05-01/#pass-req-036">PASS-REQ-036</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-037">PASS-REQ-037</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-038">PASS-REQ-038</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-039">PASS-REQ-039</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-040">PASS-REQ-040</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-041">PASS-REQ-041</a>, <a href="../../rule-sections/12-passes/05-03/#pass-req-043">PASS-REQ-043</a>, <a href="../../rule-sections/11-notifications/01/#notif-req-001">NOTIF-REQ-001</a>, <a href="../../rule-sections/11-notifications/01/#notif-req-002">NOTIF-REQ-002</a></p>
 <h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>ответственный за бумажные пропуска;</li>
-<li>взрослые участники, для которых изготавливаются пропуска.</li>
+<li>взрослые кандидаты и члены клуба выбранного сезона.</li>
 </ul>
 <h4 id="_2">Предусловия<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>создан текущий сезон;</li>
-<li>для участников определена необходимость сезонного бумажного пропуска.</li>
+<li>существует выбранный сезон;</li>
+<li>сервер может рассчитать eligibility участников по действующим обязательствам;</li>
+<li>нет второй активной generation job для этого же сезона.</li>
 </ul>
 <h4 id="_3">Основной сценарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Ответственный открывает очередь изготовления бумажных пропусков.</li>
-<li>Фильтрует и отбирает записи, которые необходимо передать на печать.</li>
-<li>Формирует табличный экспорт для печати и ламинирования.</li>
-<li>После фактического изготовления конкретных пропусков отмечает их как изготовленные.</li>
-<li>Система сохраняет автора и время каждой отметки.</li>
-<li>Каждый участник с новым состоянием «изготовлен» получает уведомление и видит это состояние в личном кабинете.</li>
+<li>Ответственный открывает «Изготовление пропусков».</li>
+<li>Система выбирает целевой сезон по <a href="../../rule-sections/12-passes/05-01/#pass-req-035">PASS-REQ-035</a> и показывает полный реестр взрослых участников.</li>
+<li>Система показывает counts: всего в реестре, eligible, уже cached, требуется сгенерировать.</li>
+<li>Ответственный нажимает «Сгенерировать пропуска».</li>
+<li>Система показывает предупреждение о длительности и возможной нагрузке на систему.</li>
+<li>После подтверждения создаётся background job.</li>
+<li>Job проходит только по eligible участникам без cached artifact.</li>
+<li>Для каждого такого участника система генерирует SVG, сохраняет artifact и metadata, фиксирует факт изготовления и уведомляет участника.</li>
+<li>UI получает состояние job и показывает progress bar, количество созданных и оставшихся файлов.</li>
+<li>После завершения ответственный скачивает ZIP со всеми cached artifacts выбранного сезона.</li>
 </ol>
 <h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<h5 id="a1">A1. Отметка поставлена ошибочно<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
-<p>Ответственный исправляет состояние отдельной операцией. История первоначальной отметки и исправления сохраняется.</p>
-<h5 id="a2">A2. Выгружается только часть очереди<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
-<p>Экспорт содержит только выбранных или отфильтрованных участников; остальные записи продолжают находиться в очереди изготовления.</p>
+<h5 id="a1">A1. Часть пропусков уже в кеше<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
+<p>Актуальные artifacts с неизменной фамилией не регенерируются; job пропускает их и учитывает как cached.</p>
+<h5 id="a11">A1.1. После генерации участник сменил фамилию<a class="headerlink" href="#a11" title="Permanent link">&para;</a></h5>
+<p>Artifact с прежней фамилией считается stale и больше не учитывается как cached. Участник снова входит в число требующих генерации, а новый запуск создаёт SVG с актуальной фамилией.</p>
+<h5 id="a2-job">A2. Ответственный отменяет job<a class="headerlink" href="#a2-job" title="Permanent link">&para;</a></h5>
+<p>Job переходит в <code>cancelling</code>, завершает текущий файл, не запускает новые элементы и становится <code>cancelled</code>. Уже созданные artifacts сохраняются.</p>
+<h5 id="a3-job">A3. Job упала<a class="headerlink" href="#a3-job" title="Permanent link">&para;</a></h5>
+<p>Уже созданные artifacts сохраняются. Повторный запуск обрабатывает только отсутствующие.</p>
+<h5 id="a4-eligible">A4. Во время сезона появились новые eligible участники<a class="headerlink" href="#a4-eligible" title="Permanent link">&para;</a></h5>
+<p>При следующем запуске генерируются только их отсутствующие artifacts.</p>
+<h5 id="a5-job">A5. Повторный старт во время активной job<a class="headerlink" href="#a5-job" title="Permanent link">&para;</a></h5>
+<p>Вторая job не создаётся; система возвращает состояние уже активной.</p>
 <h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>Ответственный может передать печатнику рабочий список и затем поштучно зафиксировать фактическое изготовление без смешения этого события с последующей выдачей.</p>
+<p>Ответственный получает устойчивый кеш сезонных SVG и может скачивать единый ZIP без повторной генерации существующих файлов.</p>
 <hr />
 <hr />
 

@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/pass-case-007/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/pass-case-015/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Pass case 007 - Документация системы Geolog</title>
+        <title>Pass case 015 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pass-case-007" class="md-skip">
+        <a href="#pass-case-015" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pass case 007
+              Pass case 015
             
           </span>
         </div>
@@ -378,45 +378,6 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Альтернативные сценарии
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Альтернативные сценарии">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a1-winteraccessstartdate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A1. После WinterAccessStartDate бумажный пропуск ещё не получен
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A2. Электронная система технически недоступна
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Результат
       
     </span>
@@ -441,31 +402,25 @@
 
 
 
-<p><a id="pass-case-007"></a></p>
-<h1 id="pass-case-007">PASS-CASE-007. Переход от электронного пропуска к сезонному бумажному<a class="headerlink" href="#pass-case-007" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/12-passes/01/#pass-req-001">PASS-REQ-001</a>, <a href="../../rule-sections/12-passes/01/#pass-req-002">PASS-REQ-002</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-003">PASS-REQ-003</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-005">PASS-REQ-005</a>, <a href="../../rule-sections/12-passes/04-01/#pass-req-016">PASS-REQ-016</a>, <a href="../../rule-sections/12-passes/04-01/#pass-req-017">PASS-REQ-017</a>, <a href="../../rule-sections/12-passes/02-02/#pass-req-027">PASS-REQ-027</a>, <a href="../../rule-sections/12-passes/04-02/#pass-req-028">PASS-REQ-028</a>, <a href="../../rule-sections/12-passes/05-01/#pass-req-032">PASS-REQ-032</a></p>
+<p><a id="pass-case-015"></a></p>
+<h1 id="pass-case-015">PASS-CASE-015. Повторная сезонная догенерация<a class="headerlink" href="#pass-case-015" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/12-passes/05-01/#pass-req-034">PASS-REQ-034</a>, <a href="../../rule-sections/12-passes/05-01/#pass-req-036">PASS-REQ-036</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-038">PASS-REQ-038</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-039">PASS-REQ-039</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-041">PASS-REQ-041</a></p>
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>сезон уже начался автоматически после завершения основного периода субботников;</li>
-<li>участник имеет действующий допуск;</li>
-<li>сезонный бумажный пропуск участнику ещё не выдан.</li>
+<li>в выбранном сезоне часть eligible участников уже имеет cached artifact;</li>
+<li>после предыдущей генерации появились новые eligible участники и/или у ранее сгенерированных участников изменилась фамилия.</li>
 </ul>
 <h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ol>
-<li>После начала сезона участник может открыть и предъявить экспериментальный электронный пропуск в PWA.</li>
-<li>До <code>WinterAccessStartDate</code> сезонный бумажный пропуск взрослого участника не выдаётся и не используется как действующий сезонный бумажный пропуск.</li>
-<li>Электронный пропуск используется в тестовом режиме как временно предъявляемый механизм до получения бумажного пропуска.</li>
-<li>С <code>WinterAccessStartDate</code> изготовленный бумажный пропуск может быть фактически выдан участнику.</li>
-<li>При выдаче система сохраняет дату, время, сезон, участника и автора операции.</li>
-<li>После выдачи бумажный пропуск учитывается как основная система пропуска, а электронный механизм сохраняет экспериментальный статус.</li>
+<li>Ответственный повторно открывает «Изготовление пропусков».</li>
+<li>Система пересчитывает eligibility и показывает полный реестр.</li>
+<li>У ранее сгенерированных участников виден cached artifact.</li>
+<li>У новых eligible участников и участников со stale artifact после смены фамилии отображается «требуется генерация».</li>
+<li>Ответственный запускает batch.</li>
+<li>Job создаёт отсутствующие artifacts и заменяет stale artifacts новыми файлами с актуальной фамилией.</li>
 </ol>
-<h4 id="_3">Альтернативные сценарии<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<h5 id="a1-winteraccessstartdate">A1. После <code>WinterAccessStartDate</code> бумажный пропуск ещё не получен<a class="headerlink" href="#a1-winteraccessstartdate" title="Permanent link">&para;</a></h5>
-<p>До фактической выдачи участник с действующим допуском продолжает иметь возможность предъявить тестовый электронный пропуск.</p>
-<h5 id="a2">A2. Электронная система технически недоступна<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
-<p>Система не создаёт новую санкцию и не определяет самостоятельно окончательный порядок физического допуска; применяется действующий организационный порядок клуба.</p>
-<h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>Период между началом сезона и фактическим получением бумажного пропуска покрывается экспериментальным электронным механизмом без превращения его в постоянную замену бумажной системы.</p>
+<h4 id="_3">Результат<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>Повторная работа в феврале или позднее не требует ручного поиска новых участников и не перегенерирует уже готовые пропуска.</p>
 
 
 

@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/12-passes/05/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/rule-sections/12-passes/05-02/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Допуск к катанию - Документация системы Geolog</title>
+        <title>Векторный формат сезонного пропуска - Документация системы Geolog</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Допуск к катанию
+              Векторный формат сезонного пропуска
             
           </span>
         </div>
@@ -353,10 +353,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#pass-req-037" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Подразделы
+        PASS-REQ-037. Векторный формат сезонного пропуска
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-req-038" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PASS-REQ-038. Пакетная генерация
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-req-039-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PASS-REQ-039. Фоновая job и прогресс
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-req-040" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PASS-REQ-040. Отмена пакетной генерации
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pass-req-041" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PASS-REQ-041. Идемпотентность и повторная генерация в течение сезона
       
     </span>
   </a>
@@ -380,13 +424,53 @@
 
 
 
-<h1 id="_1">Допуск к катанию<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">Подразделы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../05-01/">Критерий действующего допуска к катанию</a></li>
-<li><a href="../05-02/">Векторный формат сезонного пропуска</a></li>
-<li><a href="../05-03/">Точечная генерация одного участника</a></li>
-</ul>
+<h1 id="_1">Векторный формат сезонного пропуска<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><a id="pass-req-037"></a></p>
+<h4 id="pass-req-037">PASS-REQ-037. Векторный формат сезонного пропуска<a class="headerlink" href="#pass-req-037" title="Permanent link">&para;</a></h4>
+<p>Для автоматизированного изготовления взрослого сезонного пропуска система формирует векторный файл SVG.</p>
+<p>Файл содержит как минимум:
+- фамилию участника;
+- название клуба;
+- логотип клуба;
+- пользовательское название сезона в формате <code>YY-YY</code>.</p>
+<p>Имя файла должно позволять однозначно связать artifact с участником и сезоном без раскрытия лишних персональных данных.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<hr />
+<p><a id="pass-req-038"></a></p>
+<h4 id="pass-req-038">PASS-REQ-038. Пакетная генерация<a class="headerlink" href="#pass-req-038" title="Permanent link">&para;</a></h4>
+<p>Ответственный за бумажные пропуска может запустить пакетную генерацию для выбранного сезона.</p>
+<p>Перед запуском система показывает:
+- количество взрослых участников в сезонном реестре;
+- количество eligible участников;
+- количество уже имеющих cached artifact;
+- количество файлов, которые реально требуется сгенерировать.</p>
+<p>Перед подтверждением отображается предупреждение, что генерация может занять значительное время и временно повлиять на производительность системы, поэтому её не следует запускать без необходимости.</p>
+<p>Пакетная генерация обрабатывает только eligible участников без cached artifact. Уже существующие cached artifacts пропускаются.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<hr />
+<p><a id="pass-req-039"></a></p>
+<h4 id="pass-req-039-job">PASS-REQ-039. Фоновая job и прогресс<a class="headerlink" href="#pass-req-039-job" title="Permanent link">&para;</a></h4>
+<p>Пакетная генерация выполняется как отдельная фоновая job и не удерживает один HTTP-запрос до завершения всей операции.</p>
+<p>Запуск возвращает идентификатор job. Система хранит состояние job как минимум: <code>queued</code>, <code>running</code>, <code>cancelling</code>, <code>cancelled</code>, <code>completed</code>, <code>failed</code>.</p>
+<p>Для job сохраняются как минимум общее количество элементов, количество успешно сгенерированных, количество пропущенных из-за кеша, количество ошибок, время запуска и завершения.</p>
+<p>UI показывает progress bar, отношение <code>generated / total</code> и количество оставшихся элементов.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<hr />
+<p><a id="pass-req-040"></a></p>
+<h4 id="pass-req-040">PASS-REQ-040. Отмена пакетной генерации<a class="headerlink" href="#pass-req-040" title="Permanent link">&para;</a></h4>
+<p>Ответственный может запросить отмену активной пакетной генерации.</p>
+<p>Отмена является кооперативной: система завершает уже начатую генерацию текущего файла, затем не начинает новые элементы и переводит job в <code>cancelled</code>.</p>
+<p>Уже успешно созданные artifacts и факты изготовления сохраняются в кеше и не удаляются.</p>
+<p>Повторный запуск после отмены или ошибки продолжает генерацию только для отсутствующих artifacts.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<hr />
+<p><a id="pass-req-041"></a></p>
+<h4 id="pass-req-041">PASS-REQ-041. Идемпотентность и повторная генерация в течение сезона<a class="headerlink" href="#pass-req-041" title="Permanent link">&para;</a></h4>
+<p>Повторный пакетный запуск для того же сезона безопасен и идемпотентен относительно уже cached artifacts.</p>
+<p>Если в течение сезона новые участники выполняют обязательства перед клубом, они автоматически начинают отображаться как eligible и требующие генерации. Аналогично участник с изменённой фамилией и ранее сгенерированным artifact снова отображается как требующий генерации, потому что старый artifact считается stale. Следующий пакетный запуск создаёт файлы только для новых eligible участников и участников со stale artifact.</p>
+<p>Для одного сезона одновременно может существовать не более одной активной пакетной generation job. Повторный запрос запуска во время активной job не создаёт вторую параллельную обработку и возвращает существующее состояние активной job.</p>
+<p><span style="color: var(--md-default-fg-color--light); font-size: 0.85em;">Этап: После MVP</span></p>
+<hr />
 
 
 
