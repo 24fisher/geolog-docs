@@ -398,10 +398,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a1" class="md-nav__link">
+  <a href="#a1-cached-artifact" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A1. Пропуск уже отмечен как выданный
+        A1. У участника нет актуального cached artifact
       
     </span>
   </a>
@@ -412,7 +412,29 @@
   <a href="#a2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A2. Дежурный ошибся участником
+        A2. Пропуск уже отмечен как выданный
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Выдача выполняется раньше разрешённой даты
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Пользователь ошибся участником
       
     </span>
   </a>
@@ -465,36 +487,43 @@
 
 <p><a id="pass-case-001"></a></p>
 <h1 id="pass-case-001">PASS-CASE-001. Выдача сезонного бумажного пропуска взрослому<a class="headerlink" href="#pass-case-001" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/12-passes/01/#pass-req-002">PASS-REQ-002</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-003">PASS-REQ-003</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-004">PASS-REQ-004</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-005">PASS-REQ-005</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-006">PASS-REQ-006</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-007">PASS-REQ-007</a></p>
+<p><strong>Требования:</strong> <a href="../../rule-sections/12-passes/01/#pass-req-002">PASS-REQ-002</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-003">PASS-REQ-003</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-004">PASS-REQ-004</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-005">PASS-REQ-005</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-006">PASS-REQ-006</a>, <a href="../../rule-sections/12-passes/02-01/#pass-req-007">PASS-REQ-007</a>, <a href="../../rule-sections/12-passes/02-02/#pass-req-022">PASS-REQ-022</a>, <a href="../../rule-sections/12-passes/02-02/#pass-req-027">PASS-REQ-027</a>, <a href="../../rule-sections/12-passes/05-01/#pass-req-036">PASS-REQ-036</a></p>
 <h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>взрослый участник клуба;</li>
-<li>дежурный с правом выдачи пропусков.</li>
+<li>взрослый кандидат или член клуба;</li>
+<li>уполномоченный пользователь с правом выдачи пропусков.</li>
 </ul>
 <h4 id="_2">Предусловия<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>создан текущий сезон;</li>
-<li>для участника предусмотрен именной бумажный пропуск;</li>
-<li>пропуск изготовлен и находится у выдающего.</li>
+<li>выбран сезон;</li>
+<li>для участника существует актуальный cached artifact сезонного бумажного пропуска;</li>
+<li>дата выдачи разрешена по <a href="../../rule-sections/12-passes/02-02/#pass-req-027">PASS-REQ-027</a>;</li>
+<li>пропуск ещё не отмечен как выданный.</li>
 </ul>
 <h4 id="_3">Основной сценарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Дежурный открывает в PWA интерфейс выдачи пропусков.</li>
-<li>Находит участника по списку или поиску; при необходимости использует фильтр по состоянию выдачи.</li>
-<li>Проверяет, что выбран правильный участник и пропуск готов к выдаче.</li>
+<li>Уполномоченный пользователь открывает интерфейс выдачи пропусков.</li>
+<li>Вводит ФИО участника в поиск.</li>
+<li>Система находит участника среди тех, для кого в выбранном сезоне существует актуальный cached artifact.</li>
+<li>Пользователь выбирает нужного участника и видит ФИО, сезон и состояние выдачи.</li>
 <li>Фактически передаёт ему бумажный пропуск.</li>
-<li>Нажимает действие выдачи.</li>
+<li>Нажимает <strong>«Выдать»</strong>.</li>
 <li>Система сохраняет сезон, участника, дату и время и пользователя, отметившего выдачу.</li>
 <li>Состояние бумажного пропуска меняется на «Выдан» независимо от состояния экспериментального электронного пропуска.</li>
-<li>Участник видит в личном кабинете состояние, факт и при наличии дату выдачи и номер бумажного пропуска.</li>
+<li>Участник видит в личном кабинете факт и дату выдачи.</li>
 </ol>
+<p>Ручной номер взрослого сезонного пропуска не вводится. Отдельное действие «Отметить изготовленным» отсутствует: изготовление уже зафиксировано успешной генерацией cached artifact.</p>
 <h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<h5 id="a1">A1. Пропуск уже отмечен как выданный<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
-<p>Система не создаёт вторую обычную выдачу молча. Дежурный видит существующий факт выдачи. Исправление выполняется отдельным действием с причиной.</p>
-<h5 id="a2">A2. Дежурный ошибся участником<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
+<h5 id="a1-cached-artifact">A1. У участника нет актуального cached artifact<a class="headerlink" href="#a1-cached-artifact" title="Permanent link">&para;</a></h5>
+<p>Система не предлагает обычное действие <strong>«Выдать»</strong> и не позволяет зарегистрировать выдачу прямым запросом.</p>
+<h5 id="a2">A2. Пропуск уже отмечен как выданный<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
+<p>Система показывает существующий факт и дату выдачи и не создаёт вторую обычную выдачу. Исправление выполняется отдельным действием с причиной.</p>
+<h5 id="a3">A3. Выдача выполняется раньше разрешённой даты<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
+<p>Система не позволяет зарегистрировать обычную выдачу до даты по <a href="../../rule-sections/12-passes/02-02/#pass-req-027">PASS-REQ-027</a>.</p>
+<h5 id="a4">A4. Пользователь ошибся участником<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h5>
 <p>Ошибочная запись корректируется с сохранением исходного события, причины исправления и автора корректировки.</p>
 <h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>Фактическая выдача сезонного бумажного пропуска отражена в системе и видна участнику независимо от экспериментального электронного пропуска.</p>
+<p>Фактическая выдача сгенерированного сезонного бумажного пропуска отражена в системе коротким сценарием «найти участника → выдать» и видна участнику независимо от экспериментального электронного пропуска.</p>
 <h4 id="_6">Аудит<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>Фиксируются выдача и все последующие исправления.</p>
 <hr />
