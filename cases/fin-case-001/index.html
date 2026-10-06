@@ -463,6 +463,61 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#a7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A7. Участник является действующим членом клуба или кандидатом на дату старта сезона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A8. Кандидат принят после начала сезона
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A9. Кандидат становится членом клуба в том же сезоне
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A10. Система восстанавливает состояние после пропущенной сезонной границы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A11. Участник приостановлен или исключён
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -498,7 +553,7 @@
 
 <p><a id="fin-case-001"></a></p>
 <h1 id="fin-case-001">FIN-CASE-001. Оплата клубного взноса<a class="headerlink" href="#fin-case-001" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/09-finance/01/#fin-req-001">FIN-REQ-001</a>, <a href="../../rule-sections/09-finance/01/#fin-req-002">FIN-REQ-002</a>, <a href="../../rule-sections/09-finance/01/#fin-req-003">FIN-REQ-003</a>, <a href="../../rule-sections/09-finance/01/#fin-req-005">FIN-REQ-005</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-006">FIN-REQ-006</a>, <a href="../../rule-sections/09-finance/06/#fin-req-019">FIN-REQ-019</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-046">FIN-REQ-046</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-048">FIN-REQ-048</a></p>
+<p><strong>Требования:</strong> <a href="../../rule-sections/09-finance/01/#fin-req-001">FIN-REQ-001</a>, <a href="../../rule-sections/09-finance/01/#fin-req-002">FIN-REQ-002</a>, <a href="../../rule-sections/09-finance/01/#fin-req-003">FIN-REQ-003</a>, <a href="../../rule-sections/09-finance/01/#fin-req-005">FIN-REQ-005</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-006">FIN-REQ-006</a>, <a href="../../rule-sections/09-finance/06/#fin-req-019">FIN-REQ-019</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-046">FIN-REQ-046</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-047">FIN-REQ-047</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-048">FIN-REQ-048</a>, <a href="../../rule-sections/02a-candidates/01-02/#cand-req-012">CAND-REQ-012</a>, <a href="../../rule-sections/05-seasons/02/#season-req-008">SEASON-REQ-008</a>, <a href="../../rule-sections/05-seasons/02/#season-req-009">SEASON-REQ-009</a></p>
 <h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>участник;</li>
@@ -531,6 +586,16 @@
 <p>При регистрации перевода бухгалтер прикладывает подтверждающий документ. Без подтверждающего документа перевод не проводится.</p>
 <h5 id="a6">A6. Оплата наличными<a class="headerlink" href="#a6" title="Permanent link">&para;</a></h5>
 <p>Бухгалтер может зарегистрировать наличный платёж без подтверждающего документа.</p>
+<h5 id="a7">A7. Участник является действующим членом клуба или кандидатом на дату старта сезона<a class="headerlink" href="#a7" title="Permanent link">&para;</a></h5>
+<p>В дату старта сезона система создаёт одно начисление полного сезонного членского взноса, если для участника не действует правило, исключающее новые начисления.</p>
+<h5 id="a8">A8. Кандидат принят после начала сезона<a class="headerlink" href="#a8" title="Permanent link">&para;</a></h5>
+<p>В дату фактического приёма в кандидаты система создаёт полный сезонный членский взнос за текущий сезон. Пропорциональное уменьшение суммы по оставшейся части сезона не применяется.</p>
+<h5 id="a9">A9. Кандидат становится членом клуба в том же сезоне<a class="headerlink" href="#a9" title="Permanent link">&para;</a></h5>
+<p>Новое начисление сезонного членского взноса не создаётся: обязательство за этот сезон уже возникло в кандидатском статусе.</p>
+<h5 id="a10">A10. Система восстанавливает состояние после пропущенной сезонной границы<a class="headerlink" href="#a10" title="Permanent link">&para;</a></h5>
+<p>Система по истории статусов и параметрам сезонов Geolog создаёт только отсутствующие начисления, которые должны были возникнуть. Повторный запуск восстановления не создаёт дубликаты. За периоды до цифрового учёта новые сезонные начисления не создаются; используются перенесённые исторические остатки.</p>
+<h5 id="a11">A11. Участник приостановлен или исключён<a class="headerlink" href="#a11" title="Permanent link">&para;</a></h5>
+<p>Для приостановленного члена новые членские взносы не начисляются по <a href="../../rule-sections/09-finance/01/#fin-req-004">FIN-REQ-004</a>. После исключения новые финансовые обязательства не возникают.</p>
 <h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>Финансовый баланс участника соответствует зарегистрированным операциям.</p>
 <hr />
