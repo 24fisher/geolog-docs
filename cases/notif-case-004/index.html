@@ -415,7 +415,7 @@
 
 <p><a id="notif-case-004"></a></p>
 <h1 id="notif-case-004-email">NOTIF-CASE-004. Доставка уведомления на основной email пользователя<a class="headerlink" href="#notif-case-004-email" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/11-notifications/03/#notif-req-016">NOTIF-REQ-016</a>, <a href="../../rule-sections/04-registration/01/#reg-req-004">REG-REQ-004</a>, <a href="../../rule-sections/04-registration/04/#reg-req-017">REG-REQ-017</a></p>
+<p><strong>Требования:</strong> <a href="../../rule-sections/11-notifications/03/#notif-req-016">NOTIF-REQ-016</a>, <a href="../../rule-sections/11-notifications/03/#notif-req-018">NOTIF-REQ-018</a>, <a href="../../rule-sections/04-registration/01/#reg-req-004">REG-REQ-004</a>, <a href="../../rule-sections/04-registration/04/#reg-req-017">REG-REQ-017</a></p>
 <h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>для пользователя создаётся персональное уведомление общего механизма;</li>
@@ -436,6 +436,8 @@
 <ul>
 <li>Если основного email нет или он не подтверждён, email-доставка пропускается без ошибки бизнес-процесса.</li>
 <li>Если пользователь отключил email-рассылку, новые уведомления не отправляются по email, но продолжают создаваться во внутреннем центре и доставляться через другие доступные каналы.</li>
+<li>Если runtime-тогл конкретного типа email-рассылки выключен, письмо этого типа не отправляется независимо от пользовательской настройки; внутреннее уведомление и другие каналы продолжают работать.</li>
+<li>Письма первичной регистрации для подтверждения email по <a href="../../rules/04a-registration-email-confirmation/#reg-req-021">REG-REQ-021</a>–<a href="../../rules/04a-registration-email-confirmation/#reg-req-023">REG-REQ-023</a> не зависят от rollout-тоглов новых информационных email-рассылок.</li>
 <li>Если email изменён, но новый адрес ещё не подтверждён, доставка приостанавливается до подтверждения; сохранённая настройка включения/отключения не сбрасывается.</li>
 <li>Если отправка письма завершилась ошибкой, внутренняя доставка не отменяется, а попытка email-доставки остаётся наблюдаемой как неуспешная.</li>
 </ul>

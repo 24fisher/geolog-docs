@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/pass-case-015/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/fin-case-012/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Pass case 015 - Документация системы Geolog</title>
+        <title>Fin case 012 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pass-case-015" class="md-skip">
+        <a href="#fin-case-012" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pass case 015
+              Fin case 012
             
           </span>
         </div>
@@ -356,7 +356,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Предусловия
+        Участники
       
     </span>
   </a>
@@ -367,7 +367,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Основной сценарий
+        Предусловия
       
     </span>
   </a>
@@ -376,6 +376,78 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основной сценарий
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Альтернативные сценарии
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Альтернативные сценарии">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A1. Выбран перевод по номеру счёта
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A2. Пользователь отправил подтверждение, но платёж ещё не зарегистрирован
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A3. Фактически поступившая сумма отличается от подсказки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A4. Повторное восстановление начисления
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Результат
@@ -402,26 +474,43 @@
 
 
 
-<p><a id="pass-case-015"></a></p>
-<h1 id="pass-case-015">PASS-CASE-015. Повторная сезонная догенерация<a class="headerlink" href="#pass-case-015" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/12-passes/05-01/#pass-req-034">PASS-REQ-034</a>, <a href="../../rule-sections/12-passes/05-01/#pass-req-036">PASS-REQ-036</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-038">PASS-REQ-038</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-039">PASS-REQ-039</a>, <a href="../../rule-sections/12-passes/05-02/#pass-req-041">PASS-REQ-041</a></p>
-<h4 id="_1">Предусловия<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p><a id="fin-case-012"></a></p>
+<h1 id="fin-case-012">FIN-CASE-012. Участник сообщает об оплате обязательства<a class="headerlink" href="#fin-case-012" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/09-finance/01/#fin-req-001">FIN-REQ-001</a>, <a href="../../rule-sections/09-finance/01/#fin-req-002">FIN-REQ-002</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-006">FIN-REQ-006</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-048">FIN-REQ-048</a>, <a href="../../rule-sections/09-finance/07/#fin-req-050">FIN-REQ-050</a>, <a href="../../rule-sections/09-finance/07/#fin-req-051">FIN-REQ-051</a>, <a href="../../rule-sections/09-finance/07/#fin-req-052">FIN-REQ-052</a>, <a href="../../rule-sections/09-finance/07/#fin-req-053">FIN-REQ-053</a>, <a href="../../rules/10a-work-shortfall/#work-req-059">WORK-REQ-059</a>, <a href="../../rule-sections/11-notifications/01/#notif-req-001">NOTIF-REQ-001</a>, <a href="../../rule-sections/11-notifications/02/#notif-req-013">NOTIF-REQ-013</a></p>
+<h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>в выбранном сезоне часть eligible участников уже имеет cached artifact;</li>
-<li>после предыдущей генерации появились новые eligible участники и/или у ранее сгенерированных участников изменилась фамилия.</li>
+<li>участник;</li>
+<li>бухгалтер.</li>
 </ul>
-<h4 id="_2">Основной сценарий<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="_2">Предусловия<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>у участника существует непогашенное денежное начисление;</li>
+<li>в системе настроены актуальные реквизиты перевода.</li>
+</ul>
+<h4 id="_3">Основной сценарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Ответственный повторно открывает «Изготовление пропусков».</li>
-<li>Система пересчитывает eligibility и показывает полный реестр.</li>
-<li>У ранее сгенерированных участников виден cached artifact.</li>
-<li>У новых eligible участников и участников со stale artifact после смены фамилии отображается «требуется генерация».</li>
-<li>Ответственный запускает batch.</li>
-<li>Job создаёт отсутствующие artifacts и заменяет stale artifacts новыми файлами с актуальной фамилией.</li>
+<li>Система создаёт начисление и одно обычное уведомление участнику во внутреннем центре PWA. Для этого события email не отправляется; Telegram и Web Push работают по общим настройкам каналов.</li>
+<li>Участник открывает уведомление либо экран «Мои взносы» и выбирает «Сообщить об оплате».</li>
+<li>Система показывает актуального получателя, банк и реквизит выбранного способа перевода.</li>
+<li>Если flow открыт из состояния отсутствия допуска, сервер показывает доступные расчётные варианты и их суммы.</li>
+<li>Для варианта с недоработкой система показывает непогашенные дни, сезонную ставку, результат умножения и общий поясняющий текст с нормами для мужчин и женщин.</li>
+<li>Участник выполняет перевод вне Geolog, прикладывает банковский скриншот/подтверждение и отправляет сообщение об оплате.</li>
+<li>Система сохраняет сообщение как ожидающее обработки, не уменьшая задолженность.</li>
+<li>Бухгалтер проверяет подтверждение и регистрирует фактически поступивший платёж по действующему финансовому процессу.</li>
+<li>Сервер распределяет зарегистрированный платёж по <a href="../../rule-sections/09-finance/02-01/#fin-req-048">FIN-REQ-048</a>, пересчитывает баланс и зависимый от него допуск.</li>
+<li>Участник видит обновлённое финансовое состояние; при полном погашении блокирующей задолженности допуск восстанавливается по действующим правилам.</li>
 </ol>
-<h4 id="_3">Результат<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>Повторная работа в феврале или позднее не требует ручного поиска новых участников и не перегенерирует уже готовые пропуска.</p>
-<hr />
+<h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h5 id="a1">A1. Выбран перевод по номеру счёта<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
+<p>Инструкция показывает номер счёта вместо телефона, сохраняя имя получателя и банк.</p>
+<h5 id="a2">A2. Пользователь отправил подтверждение, но платёж ещё не зарегистрирован<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
+<p>Интерфейс показывает ожидание бухгалтерской обработки; долг и допуск не меняются.</p>
+<h5 id="a3">A3. Фактически поступившая сумма отличается от подсказки<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h5>
+<p>Бухгалтер регистрирует фактическую сумму. Дальнейшее распределение выполняется сервером по <a href="../../rule-sections/09-finance/02-01/#fin-req-048">FIN-REQ-048</a>, а не по клиентскому выбору расчётного варианта.</p>
+<h5 id="a4">A4. Повторное восстановление начисления<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h5>
+<p>Система не создаёт второе уведомление об одном и том же начислении.</p>
+<h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>Участник получает понятный путь от начисления к реквизитам и передаче подтверждения, а финансовое состояние меняется только после бухгалтерской регистрации фактического платежа.</p>
 
 
 
