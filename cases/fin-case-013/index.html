@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/fin-case-004/">
+        <link rel="canonical" href="https://24fisher.github.io/geolog-docs/cases/fin-case-013/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Fin case 004 - Документация системы Geolog</title>
+        <title>Fin case 013 - Документация системы Geolog</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fin-case-004" class="md-skip">
+        <a href="#fin-case-013" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fin case 004
+              Fin case 013
             
           </span>
         </div>
@@ -378,7 +378,51 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Основной сценарий
+        Основной сценарий: сообщение об оплате
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Альтернативный сценарий A1: запрос на возмещение
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Альтернативный сценарий A2: отказ по входящей заявке
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Альтернативный сценарий A3: неденежное списание или взаимозачёт
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Альтернативный сценарий A4: отчётное представление
       
     </span>
   </a>
@@ -387,56 +431,6 @@
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Альтернативные сценарии
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Альтернативные сценарии">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A1. Перевод без обязательного подтверждающего документа
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A2. Наличный платёж
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a3-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A3. Требуемое решение-основание расхода отсутствует
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         Результат
@@ -463,38 +457,56 @@
 
 
 
-<p><a id="fin-case-004"></a></p>
-<h1 id="fin-case-004">FIN-CASE-004. Ручная регистрация финансовой операции<a class="headerlink" href="#fin-case-004" title="Permanent link">&para;</a></h1>
-<p><strong>Требования:</strong> <a href="../../rule-sections/09-finance/01/#fin-req-005">FIN-REQ-005</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-006">FIN-REQ-006</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-007">FIN-REQ-007</a>, <a href="../../rule-sections/09-finance/06/#fin-req-018">FIN-REQ-018</a>, <a href="../../rule-sections/09-finance/02-02/#fin-req-028">FIN-REQ-028</a>, <a href="../../rule-sections/09-finance/08-01/#fin-req-056">FIN-REQ-056</a></p>
+<p><a id="fin-case-013"></a></p>
+<h1 id="fin-case-013">FIN-CASE-013. Рабочий цикл бухгалтерии<a class="headerlink" href="#fin-case-013" title="Permanent link">&para;</a></h1>
+<p><strong>Требования:</strong> <a href="../../rule-sections/09-finance/01/#fin-req-002">FIN-REQ-002</a>, <a href="../../rule-sections/09-finance/01/#fin-req-005">FIN-REQ-005</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-006">FIN-REQ-006</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-007">FIN-REQ-007</a>, <a href="../../rule-sections/09-finance/05-01/#fin-req-015">FIN-REQ-015</a>, <a href="../../rule-sections/09-finance/06/#fin-req-018">FIN-REQ-018</a>, <a href="../../rule-sections/09-finance/02-01/#fin-req-048">FIN-REQ-048</a>, <a href="../../rule-sections/09-finance/08-01/#fin-req-054">FIN-REQ-054</a>, <a href="../../rule-sections/09-finance/08-01/#fin-req-055">FIN-REQ-055</a>, <a href="../../rule-sections/09-finance/08-01/#fin-req-056">FIN-REQ-056</a>, <a href="../../rule-sections/09-finance/08-01/#fin-req-057">FIN-REQ-057</a>, <a href="../../rule-sections/09-finance/08-01/#fin-req-058">FIN-REQ-058</a>, <a href="../../rule-sections/09-finance/08-02/#fin-req-059">FIN-REQ-059</a>, <a href="../../rule-sections/09-finance/08-02/#fin-req-060">FIN-REQ-060</a>, <a href="../../rule-sections/09-finance/08-02/#fin-req-061">FIN-REQ-061</a></p>
 <h4 id="_1">Участники<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
+<li>участник;</li>
 <li>бухгалтер.</li>
 </ul>
 <h4 id="_2">Предусловия<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>фактическое движение денег уже состоялось;</li>
-<li>операция не возникла из пользовательской заявки или другого штатного процесса Geolog.</li>
+<li>финансовый контур введён в эксплуатацию с зафиксированными датой начала учёта и входящим остатком.</li>
 </ul>
-<h4 id="_3">Основной сценарий<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="_3">Основной сценарий: сообщение об оплате<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Бухгалтер открывает раздел «Ручная операция».</li>
-<li>Выбирает тип и направление операции.</li>
-<li>Указывает фактическую сумму, дату, способ оплаты, участника или получателя при наличии и необходимые для типа операции сведения.</li>
-<li>Прикладывает подтверждающий документ, когда он обязателен.</li>
-<li>Для клубного расхода указывает статью или категорию и решение-основание, когда оно требуется.</li>
-<li>Система проверяет одну операцию и сохраняет её в журнале «Операции».</li>
-<li>Система пересчитывает фактический денежный остаток и связанные взаиморасчёты, если тип операции на них влияет.</li>
+<li>Участник сообщает об оплате существующего обязательства и прикладывает предусмотренное подтверждение.</li>
+<li>Запрос появляется во «Входящих» с типом «Оплата».</li>
+<li>Бухгалтер открывает запрос, проверяет введённые участником данные и подтверждение, не вводя их повторно.</li>
+<li>До решения бухгалтера денежная операция не создаётся и задолженность не уменьшается.</li>
+<li>Бухгалтер подтверждает фактически поступивший платёж.</li>
+<li>Система создаёт приходную операцию, применяет платёж к обязательствам по действующим правилам и удаляет запрос из активной очереди, сохраняя его в истории.</li>
+<li>Операция доступна в разделе «Операции», а обновлённый остаток обязательства — во «Взаиморасчётах».</li>
 </ol>
-<h4 id="_4">Альтернативные сценарии<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<h5 id="a1">A1. Перевод без обязательного подтверждающего документа<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h5>
-<p>Операция не проводится до приложения документа.</p>
-<h5 id="a2">A2. Наличный платёж<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h5>
-<p>Подтверждающий документ не обязателен, если отдельное правило не требует обратного.</p>
-<h5 id="a3-">A3. Требуемое решение-основание расхода отсутствует<a class="headerlink" href="#a3-" title="Permanent link">&para;</a></h5>
-<p>Система сохраняет фактически совершённый расход с явной отметкой об отсутствии основания для последующего рассмотрения.</p>
-<h4 id="_5">Результат<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>Одна фактически состоявшаяся операция зарегистрирована и отражена в финансовом журнале. Массового табличного ввода для последующего переноса бумажного учёта система не предоставляет.</p>
-<hr />
+<h4 id="a1">Альтернативный сценарий A1: запрос на возмещение<a class="headerlink" href="#a1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Участник отправляет запрос на возмещение расходов.</li>
+<li>Запрос появляется во «Входящих» с типом «Возмещение».</li>
+<li>Бухгалтер проверяет заявку и принимает предусмотренное решение.</li>
+<li>Одобрение не создаёт расходную денежную операцию. До выплаты обязательство клуба перед участником отображается во «Взаиморасчётах».</li>
+<li>Бухгалтер фактически выплачивает деньги вручную переводом через внешнее банковское приложение либо наличными.</li>
+<li>После фактической передачи денег бухгалтер отдельно отмечает выплату исполненной.</li>
+<li>Система создаёт расходную операцию, закрывает обязательство клуба и сохраняет связь операции с исходной заявкой.</li>
+</ol>
+<h4 id="a2">Альтернативный сценарий A2: отказ по входящей заявке<a class="headerlink" href="#a2" title="Permanent link">&para;</a></h4>
+<p>Бухгалтер отклоняет заявку по правилам соответствующего процесса. Денежная операция не создаётся; заявка и причина решения сохраняются в истории.</p>
+<h4 id="a3">Альтернативный сценарий A3: неденежное списание или взаимозачёт<a class="headerlink" href="#a3" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Уполномоченный пользователь открывает соответствующий взаиморасчёт.</li>
+<li>Указывает сумму и требуемое основание.</li>
+<li>Система изменяет остаток обязательства и сохраняет историю урегулирования.</li>
+<li>Приходная или расходная денежная операция не создаётся.</li>
+</ol>
+<h4 id="a4">Альтернативный сценарий A4: отчётное представление<a class="headerlink" href="#a4" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Бухгалтер открывает «Операции».</li>
+<li>Задаёт период и необходимые фильтры или группировки.</li>
+<li>Система рассчитывает входящий остаток периода, приходы, расходы и исходящий остаток из единого журнала операций.</li>
+<li>Отдельный вручную заполняемый финансовый отчёт не создаётся.</li>
+</ol>
+<h4 id="_4">Результат<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>Заявки, обязательства и фактические движения денег остаются разными сущностями, а четыре рабочих раздела бухгалтерии дают единый непротиворечивый доступ к ним.</p>
 
 
 
